@@ -57,10 +57,12 @@ class findSub():
         with open(fileName + "_output.txt",'w') as newFile:
             for data in self.result:
                 newFile.write(data + "\n")
+        print "Finish Task"
 
 if __name__ == '__main__':
     model = findSub()
-    fileName = "Example/s0101"
+    #fileName = "Example/Government Surveillance"
+    fileName = "Example/asdf"
     fileType = ".srt"
     model.set_intput_file_path(fileName, fileType)
     model.output()
