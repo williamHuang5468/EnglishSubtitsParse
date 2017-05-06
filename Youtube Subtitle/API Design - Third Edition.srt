@@ -1,0 +1,4568 @@
+1
+00:00:00,000 --> 00:00:02,060
+you
+
+2
+00:00:02,760 --> 00:00:08,799
+hello welcome<font color="#E5E5E5"> to today's webcast API</font>
+
+3
+00:00:06,340 --> 00:00:10,059
+design<font color="#CCCCCC"> 3rd edition if you</font><font color="#E5E5E5"> haven't</font>
+
+4
+00:00:08,799 --> 00:00:12,160
+checked it out already we highly
+
+5
+00:00:10,059 --> 00:00:15,430
+encourage you<font color="#E5E5E5"> to check out the API craft</font>
+
+6
+00:00:12,160 --> 00:00:17,619
+group on<font color="#E5E5E5"> Google it's filled with folks</font>
+
+7
+00:00:15,430 --> 00:00:20,259
+who<font color="#E5E5E5"> are doing wonderful things around</font>
+
+8
+00:00:17,619 --> 00:00:24,550
+API design API implementation and the
+
+9
+00:00:20,259 --> 00:00:25,929
+business of AP<font color="#E5E5E5"> is this webcast and all</font>
+
+10
+00:00:24,550 --> 00:00:27,880
+the webcasts that we've done<font color="#E5E5E5"> in</font><font color="#CCCCCC"> the past</font>
+
+11
+00:00:25,929 --> 00:00:30,970
+and will do in the future are available
+
+12
+00:00:27,880 --> 00:00:33,670
+on YouTube at youtube.com slash<font color="#CCCCCC"> Apogee</font>
+
+13
+00:00:30,970 --> 00:00:36,960
+and the slides will be available on
+
+14
+00:00:33,670 --> 00:00:39,399
+SlideShare<font color="#CCCCCC"> it's slideshare.net / effigy</font>
+
+15
+00:00:36,960 --> 00:00:42,579
+I'm Brian<font color="#E5E5E5"> Malloy you</font><font color="#CCCCCC"> can find me on</font>
+
+16
+00:00:39,399 --> 00:00:44,399
+Twitter as landlessness<font color="#CCCCCC"> kevin's</font><font color="#E5E5E5"> fire you</font>
+
+17
+00:00:42,579 --> 00:00:47,980
+can find me on twitter at<font color="#E5E5E5"> kevin's water</font>
+
+18
+00:00:44,399 --> 00:00:52,440
+<font color="#CCCCCC">Donna moment talks a lot about design</font>
+
+19
+00:00:47,980 --> 00:00:55,260
+and there's a particular article he uses
+
+20
+00:00:52,440 --> 00:00:57,460
+to talk about<font color="#E5E5E5"> the differences between</font>
+
+21
+00:00:55,260 --> 00:00:59,469
+simplicity and features you know we
+
+22
+00:00:57,460 --> 00:01:02,079
+<font color="#E5E5E5">always get pounded with hey we need more</font>
+
+23
+00:00:59,469 --> 00:01:06,130
+features while we need to keep it more
+
+24
+00:01:02,079 --> 00:01:07,750
+simple and he has a quote<font color="#E5E5E5"> here that I</font>
+
+25
+00:01:06,130 --> 00:01:11,380
+really like<font color="#CCCCCC"> that says the issue isn't</font>
+
+26
+00:01:07,750 --> 00:01:12,490
+about simplicity is about design so as
+
+27
+00:01:11,380 --> 00:01:14,800
+we<font color="#CCCCCC"> go through this today we're going</font><font color="#E5E5E5"> to</font>
+
+28
+00:01:12,490 --> 00:01:17,130
+<font color="#E5E5E5">try to give</font><font color="#CCCCCC"> some pointers</font><font color="#E5E5E5"> of how you can</font>
+
+29
+00:01:14,800 --> 00:01:20,740
+take what's normally pretty complex and
+
+30
+00:01:17,130 --> 00:01:22,480
+add that usability to look forward at
+
+31
+00:01:20,740 --> 00:01:23,740
+the end developer as well so if you
+
+32
+00:01:22,480 --> 00:01:25,660
+<font color="#CCCCCC">think about it it's more like like</font>
+
+33
+00:01:23,740 --> 00:01:28,510
+<font color="#E5E5E5">you're building a big</font><font color="#CCCCCC"> cathedral right</font>
+
+34
+00:01:25,660 --> 00:01:29,920
+<font color="#E5E5E5">which has so much complexity but to the</font>
+
+35
+00:01:28,510 --> 00:01:32,950
+people walk you through there to the
+
+36
+00:01:29,920 --> 00:01:35,470
+users it has to be beautiful<font color="#E5E5E5"> so that's</font>
+
+37
+00:01:32,950 --> 00:01:37,390
+our goal on the agenda today<font color="#E5E5E5"> we're going</font>
+
+38
+00:01:35,470 --> 00:01:40,270
+<font color="#E5E5E5">to do a recap of previous editions of</font>
+
+39
+00:01:37,390 --> 00:01:41,770
+this API design presentation<font color="#CCCCCC"> we'd have</font>
+
+40
+00:01:40,270 --> 00:01:43,740
+<font color="#E5E5E5">thought a little bit about epi modeling</font>
+
+41
+00:01:41,770 --> 00:01:46,450
+how that can help you and your team
+
+42
+00:01:43,740 --> 00:01:47,920
+<font color="#E5E5E5">getting some issues around security or</font>
+
+43
+00:01:46,450 --> 00:01:50,140
+some methods for for implementing
+
+44
+00:01:47,920 --> 00:01:52,900
+security new API talk a little bit about
+
+45
+00:01:50,140 --> 00:01:55,330
+message design get into some benefits of
+
+46
+00:01:52,900 --> 00:01:58,120
+hypermedia and talk a little bit about
+
+47
+00:01:55,330 --> 00:02:00,040
+modeling transactions so the design
+
+48
+00:01:58,120 --> 00:02:02,080
+materials that we've covered in the past
+
+49
+00:02:00,040 --> 00:02:03,910
+in the the first two editions of this
+
+50
+00:02:02,080 --> 00:02:07,240
+webcast are also available in an e-book
+
+51
+00:02:03,910 --> 00:02:09,160
+called Web API design like McDonald's
+
+52
+00:02:07,240 --> 00:02:10,840
+has served billions of burgers over
+
+53
+00:02:09,160 --> 00:02:12,010
+10,000 people have downloaded this
+
+54
+00:02:10,840 --> 00:02:14,739
+design book
+
+55
+00:02:12,010 --> 00:02:17,349
+and it's our intention to base the next
+
+56
+00:02:14,739 --> 00:02:19,079
+edition<font color="#E5E5E5"> of the API design book on the on</font>
+
+57
+00:02:17,349 --> 00:02:22,209
+the<font color="#E5E5E5"> webcast that we're doing today as</font>
+
+58
+00:02:19,079 --> 00:02:24,430
+Kevin<font color="#E5E5E5"> mentioned in the past we focused</font>
+
+59
+00:02:22,209 --> 00:02:26,079
+on some aspects of API design which are
+
+60
+00:02:24,430 --> 00:02:28,269
+we've recapped on this cheat sheet here
+
+61
+00:02:26,079 --> 00:02:30,010
+if you really look at the previous
+
+62
+00:02:28,269 --> 00:02:32,049
+editions of this of<font color="#CCCCCC"> this content we</font>
+
+63
+00:02:30,010 --> 00:02:34,629
+really focused on you are I design that
+
+64
+00:02:32,049 --> 00:02:35,470
+was<font color="#E5E5E5"> the heart of</font><font color="#CCCCCC"> the</font><font color="#E5E5E5"> matter and we</font>
+
+65
+00:02:34,629 --> 00:02:37,810
+hinted that some things around
+
+66
+00:02:35,470 --> 00:02:39,909
+versioning errors and some client
+
+67
+00:02:37,810 --> 00:02:43,420
+considerations so what we want to<font color="#E5E5E5"> do</font>
+
+68
+00:02:39,909 --> 00:02:45,400
+today is is go beyond these topics and
+
+69
+00:02:43,420 --> 00:02:46,780
+talk<font color="#E5E5E5"> about things like designing your</font>
+
+70
+00:02:45,400 --> 00:02:48,549
+messages especially the response
+
+71
+00:02:46,780 --> 00:02:49,720
+messages and then take a look<font color="#CCCCCC"> at some</font>
+
+72
+00:02:48,549 --> 00:02:53,049
+other things like what's<font color="#CCCCCC"> happening with</font>
+
+73
+00:02:49,720 --> 00:02:55,060
+with hypermedia great so how do you
+
+74
+00:02:53,049 --> 00:02:57,670
+start<font color="#E5E5E5"> with our API so I</font><font color="#CCCCCC"> talk a lot</font><font color="#E5E5E5"> about</font>
+
+75
+00:02:55,060 --> 00:02:59,920
+about API modeling and a lot of<font color="#E5E5E5"> folks</font>
+
+76
+00:02:57,670 --> 00:03:02,349
+have questions around that so<font color="#E5E5E5"> before we</font>
+
+77
+00:02:59,920 --> 00:03:03,970
+get<font color="#E5E5E5"> too deep into what we can do with</font>
+
+78
+00:03:02,349 --> 00:03:05,560
+some of these responses and then some<font color="#CCCCCC"> of</font>
+
+79
+00:03:03,970 --> 00:03:07,930
+these different methodologies we can
+
+80
+00:03:05,560 --> 00:03:10,090
+take on just want to spend<font color="#E5E5E5"> a moment</font>
+
+81
+00:03:07,930 --> 00:03:13,000
+talking about what<font color="#E5E5E5"> API modeling really</font>
+
+82
+00:03:10,090 --> 00:03:16,090
+is and in the software world with we do
+
+83
+00:03:13,000 --> 00:03:18,280
+modeling all the time this is really
+
+84
+00:03:16,090 --> 00:03:20,530
+using those same concepts except
+
+85
+00:03:18,280 --> 00:03:22,389
+applying it to your API so<font color="#E5E5E5"> usually</font>
+
+86
+00:03:20,530 --> 00:03:23,680
+advise folks to to collaborate with all
+
+87
+00:03:22,389 --> 00:03:25,599
+the stakeholders<font color="#E5E5E5"> involved that's</font>
+
+88
+00:03:23,680 --> 00:03:27,310
+marketing business analyst software
+
+89
+00:03:25,599 --> 00:03:30,639
+engineers key business people these<font color="#E5E5E5"> are</font>
+
+90
+00:03:27,310 --> 00:03:33,299
+<font color="#E5E5E5">folks in</font><font color="#CCCCCC"> your epit most likely develop a</font>
+
+91
+00:03:30,639 --> 00:03:35,709
+language that everyone understands and
+
+92
+00:03:33,299 --> 00:03:39,340
+use that<font color="#E5E5E5"> language in building your</font>
+
+93
+00:03:35,709 --> 00:03:42,099
+resources building out the parts of<font color="#E5E5E5"> your</font>
+
+94
+00:03:39,340 --> 00:03:45,099
+<font color="#E5E5E5">messages it's it's</font><font color="#CCCCCC"> really key to keeping</font>
+
+95
+00:03:42,099 --> 00:03:46,900
+everyone on the same page and of<font color="#CCCCCC"> course</font>
+
+96
+00:03:45,099 --> 00:03:49,989
+document how you do that is up to you
+
+97
+00:03:46,900 --> 00:03:51,459
+write a lot of folks use UML some people
+
+98
+00:03:49,989 --> 00:03:53,410
+have their own version of you know
+
+99
+00:03:51,459 --> 00:03:55,060
+modeling language that they use that's
+
+100
+00:03:53,410 --> 00:03:58,900
+that's fine whatever<font color="#E5E5E5"> you're comfortable</font>
+
+101
+00:03:55,060 --> 00:04:01,329
+with<font color="#CCCCCC"> and then continue to iterate the</font>
+
+102
+00:03:58,900 --> 00:04:03,639
+key point here is don't go off on your
+
+103
+00:04:01,329 --> 00:04:05,049
+own right is as soon as you say<font color="#E5E5E5"> you know</font>
+
+104
+00:04:03,639 --> 00:04:07,599
+what I'm going<font color="#CCCCCC"> to solve this for the</font>
+
+105
+00:04:05,049 --> 00:04:09,609
+company all by<font color="#E5E5E5"> myself you'll put in</font>
+
+106
+00:04:07,599 --> 00:04:11,709
+hours<font color="#E5E5E5"> and hours of work only realize</font>
+
+107
+00:04:09,609 --> 00:04:14,680
+that<font color="#CCCCCC"> hey marketing doesn't really use</font>
+
+108
+00:04:11,709 --> 00:04:15,630
+this term that way or this really isn't
+
+109
+00:04:14,680 --> 00:04:17,550
+the direction
+
+110
+00:04:15,630 --> 00:04:19,230
+want to go with our resources in our API
+
+111
+00:04:17,550 --> 00:04:23,820
+so deftly include that API team they're
+
+112
+00:04:19,230 --> 00:04:25,560
+really important part so security I know
+
+113
+00:04:23,820 --> 00:04:26,970
+through some of our FG webcast you're
+
+114
+00:04:25,560 --> 00:04:28,290
+talking about security before we're
+
+115
+00:04:26,970 --> 00:04:30,120
+going<font color="#E5E5E5"> to touch on it again because it's</font>
+
+116
+00:04:28,290 --> 00:04:33,060
+a pretty important thing the Twitter API
+
+117
+00:04:30,120 --> 00:04:34,860
+uses in for their streaming API anyway
+
+118
+00:04:33,060 --> 00:04:37,830
+they have the option<font color="#CCCCCC"> of using HTTP basic</font>
+
+119
+00:04:34,860 --> 00:04:41,720
+authentication which is essentially a
+
+120
+00:04:37,830 --> 00:04:44,010
+username<font color="#CCCCCC"> and password base64</font><font color="#E5E5E5"> encoded</font>
+
+121
+00:04:41,720 --> 00:04:46,820
+that's that's one way to go<font color="#E5E5E5"> for sure</font>
+
+122
+00:04:44,010 --> 00:04:49,340
+amazon decided to roll their own
+
+123
+00:04:46,820 --> 00:04:51,750
+authorization their own authentication
+
+124
+00:04:49,340 --> 00:04:54,200
+so they built on top of HTTP
+
+125
+00:04:51,750 --> 00:04:57,560
+authorization and they have this AWS
+
+126
+00:04:54,200 --> 00:05:00,120
+authorization type Google is using OAuth
+
+127
+00:04:57,560 --> 00:05:03,360
+specifically they're using OAuth 2 point
+
+128
+00:05:00,120 --> 00:05:07,200
+0 and bearer tokens our recommendation
+
+129
+00:05:03,360 --> 00:05:10,440
+<font color="#CCCCCC">is to go the google route use OAuth 2</font>
+
+130
+00:05:07,200 --> 00:05:12,540
+HTTP basic is only so secure lots<font color="#E5E5E5"> of</font>
+
+131
+00:05:10,440 --> 00:05:14,940
+<font color="#E5E5E5">folks are moving away from it and</font>
+
+132
+00:05:12,540 --> 00:05:16,830
+<font color="#E5E5E5">willing your own is a huge hassle you</font>
+
+133
+00:05:14,940 --> 00:05:19,550
+don't have typically<font color="#E5E5E5"> we don't have the</font>
+
+134
+00:05:16,830 --> 00:05:22,440
+resources<font color="#E5E5E5"> the security resources to</font>
+
+135
+00:05:19,550 --> 00:05:25,560
+verify that our design is<font color="#E5E5E5"> is perfect in</font>
+
+136
+00:05:22,440 --> 00:05:27,690
+is it's rock solid Oh off has been
+
+137
+00:05:25,560 --> 00:05:29,940
+through the paces quite a bit and there
+
+138
+00:05:27,690 --> 00:05:32,940
+are even<font color="#E5E5E5"> more secure options coming</font><font color="#CCCCCC"> in</font>
+
+139
+00:05:29,940 --> 00:05:34,260
+the future<font color="#E5E5E5"> for access tokens</font><font color="#CCCCCC"> all right</font>
+
+140
+00:05:32,940 --> 00:05:35,700
+so when we<font color="#CCCCCC"> approach message design</font>
+
+141
+00:05:34,260 --> 00:05:39,120
+that's one of the key topics that we
+
+142
+00:05:35,700 --> 00:05:40,710
+want to<font color="#E5E5E5"> cover today and we're going to</font>
+
+143
+00:05:39,120 --> 00:05:43,710
+do that started out pretty simple here
+
+144
+00:05:40,710 --> 00:05:45,060
+first of<font color="#E5E5E5"> all regardless of how you</font>
+
+145
+00:05:43,710 --> 00:05:46,620
+design the messages you have to answer
+
+146
+00:05:45,060 --> 00:05:48,440
+what kind of format you want it to be<font color="#E5E5E5"> in</font>
+
+147
+00:05:46,620 --> 00:05:51,450
+<font color="#E5E5E5">it's our strong suggestion that you</font>
+
+148
+00:05:48,440 --> 00:05:52,830
+support both JSON and XML there are
+
+149
+00:05:51,450 --> 00:05:54,030
+folks who have libraries that do great
+
+150
+00:05:52,830 --> 00:05:55,590
+stuff with accent mother be loved and
+
+151
+00:05:54,030 --> 00:05:57,390
+<font color="#E5E5E5">there are folks who can't stand XML have</font>
+
+152
+00:05:55,590 --> 00:05:59,010
+great libraries that do stuff with<font color="#CCCCCC"> JSON</font>
+
+153
+00:05:57,390 --> 00:06:00,420
+that they love unless you<font color="#E5E5E5"> have really</font>
+
+154
+00:05:59,010 --> 00:06:03,300
+strong business requirements or
+
+155
+00:06:00,420 --> 00:06:05,370
+objectives that<font color="#CCCCCC"> will limit you to XML or</font>
+
+156
+00:06:03,300 --> 00:06:07,530
+JSON you ought<font color="#E5E5E5"> to just support both and</font>
+
+157
+00:06:05,370 --> 00:06:09,990
+if you're not sure about which one to
+
+158
+00:06:07,530 --> 00:06:11,970
+make the default pic JSON if you know
+
+159
+00:06:09,990 --> 00:06:13,770
+<font color="#E5E5E5">should be XML go ahead and make it XML</font>
+
+160
+00:06:11,970 --> 00:06:16,470
+but you're not sure our<font color="#E5E5E5"> suggestion is to</font>
+
+161
+00:06:13,770 --> 00:06:19,500
+make your default JSON now<font color="#E5E5E5"> over here</font><font color="#CCCCCC"> is</font>
+
+162
+00:06:16,470 --> 00:06:21,900
+talk about how you model in your in your
+
+163
+00:06:19,500 --> 00:06:23,220
+response message both<font color="#E5E5E5"> a single item like</font>
+
+164
+00:06:21,900 --> 00:06:24,870
+a single resource and also will
+
+165
+00:06:23,220 --> 00:06:26,510
+clutching of resources and we're going
+
+166
+00:06:24,870 --> 00:06:29,210
+to do that by taking<font color="#E5E5E5"> a</font><font color="#CCCCCC"> look at how</font>
+
+167
+00:06:26,510 --> 00:06:31,730
+three big public api's do it what you
+
+168
+00:06:29,210 --> 00:06:34,670
+see<font color="#CCCCCC"> here is a response from Twitter</font>
+
+169
+00:06:31,730 --> 00:06:36,890
+Foursquare and Instagram for each of the
+
+170
+00:06:34,670 --> 00:06:38,360
+primary objects from those systems so
+
+171
+00:06:36,890 --> 00:06:40,160
+for example in<font color="#E5E5E5"> Twitter you're looking at</font>
+
+172
+00:06:38,360 --> 00:06:41,720
+a tweet in Foursquare you're looking at
+
+173
+00:06:40,160 --> 00:06:44,660
+the check-in and Instagram you're
+
+174
+00:06:41,720 --> 00:06:45,740
+looking at a media or an image and what
+
+175
+00:06:44,660 --> 00:06:47,990
+we do here is what we're looking at is
+
+176
+00:06:45,740 --> 00:06:49,730
+the<font color="#CCCCCC"> top-level</font><font color="#E5E5E5"> view</font><font color="#CCCCCC"> of</font><font color="#E5E5E5"> each of these so</font>
+
+177
+00:06:47,990 --> 00:06:52,000
+you see twitter is pretty verbose at the
+
+178
+00:06:49,730 --> 00:06:54,740
+top level<font color="#CCCCCC"> four square has included meta</font>
+
+179
+00:06:52,000 --> 00:06:57,110
+notifications and response and instagram
+
+180
+00:06:54,740 --> 00:06:58,010
+has included meta and data now the<font color="#CCCCCC"> next</font>
+
+181
+00:06:57,110 --> 00:06:59,720
+side we're going to do a double<font color="#E5E5E5"> click</font>
+
+182
+00:06:58,010 --> 00:07:01,910
+down on both Foursquare Instagram to see
+
+183
+00:06:59,720 --> 00:07:03,830
+what they reveal beneath<font color="#E5E5E5"> that so what</font>
+
+184
+00:07:01,910 --> 00:07:05,180
+we've done is a single single click down
+
+185
+00:07:03,830 --> 00:07:07,040
+on Instagram so we're just<font color="#E5E5E5"> seeing what's</font>
+
+186
+00:07:05,180 --> 00:07:09,530
+inside<font color="#CCCCCC"> there meta attribute and</font><font color="#E5E5E5"> then the</font>
+
+187
+00:07:07,040 --> 00:07:11,390
+force where we had just click twice once
+
+188
+00:07:09,530 --> 00:07:12,740
+we clicked on response and then that's a
+
+189
+00:07:11,390 --> 00:07:14,720
+check in and then we<font color="#CCCCCC"> opened up check in</font>
+
+190
+00:07:12,740 --> 00:07:17,720
+so what you see<font color="#CCCCCC"> here is that</font><font color="#E5E5E5"> real real</font>
+
+191
+00:07:14,720 --> 00:07:22,070
+core object is represented at the heart
+
+192
+00:07:17,720 --> 00:07:23,390
+of each of these in the case of some
+
+193
+00:07:22,070 --> 00:07:25,790
+objects there are more verbose than
+
+194
+00:07:23,390 --> 00:07:27,290
+others it's question is what is written
+
+195
+00:07:25,790 --> 00:07:30,010
+for us to learn from<font color="#CCCCCC"> this in terms of</font>
+
+196
+00:07:27,290 --> 00:07:32,450
+how we go about designing our primary
+
+197
+00:07:30,010 --> 00:07:35,210
+resource and this is what<font color="#CCCCCC"> we think you</font>
+
+198
+00:07:32,450 --> 00:07:37,550
+ought<font color="#E5E5E5"> to do include a property for meta</font>
+
+199
+00:07:35,210 --> 00:07:40,550
+where you can<font color="#E5E5E5"> put in meta information</font>
+
+200
+00:07:37,550 --> 00:07:42,560
+about the object and<font color="#E5E5E5"> then include the</font>
+
+201
+00:07:40,550 --> 00:07:45,440
+actual name<font color="#E5E5E5"> of the object type itself as</font>
+
+202
+00:07:42,560 --> 00:07:47,240
+the<font color="#CCCCCC"> primary where area where you</font><font color="#E5E5E5"> hold</font>
+
+203
+00:07:45,440 --> 00:07:48,890
+the data to contrast that I'm<font color="#E5E5E5"> just gonna</font>
+
+204
+00:07:47,240 --> 00:07:52,030
+<font color="#E5E5E5">go back one slide quickly here if you</font>
+
+205
+00:07:48,890 --> 00:07:54,140
+contrast that foursquare put their
+
+206
+00:07:52,030 --> 00:07:55,520
+information under response and then
+
+207
+00:07:54,140 --> 00:07:56,840
+under checking so I like<font color="#E5E5E5"> the fact they</font>
+
+208
+00:07:55,520 --> 00:07:58,460
+use<font color="#CCCCCC"> check-in but I don't like the fact</font>
+
+209
+00:07:56,840 --> 00:08:00,260
+that they buried under response because
+
+210
+00:07:58,460 --> 00:08:02,210
+you've already separated the response
+
+211
+00:08:00,260 --> 00:08:04,220
+from<font color="#E5E5E5"> the rest of the metadata by having</font>
+
+212
+00:08:02,210 --> 00:08:05,360
+a meditech there and Instagram they just
+
+213
+00:08:04,220 --> 00:08:06,710
+call it data which is<font color="#E5E5E5"> kind of really</font>
+
+214
+00:08:05,360 --> 00:08:09,140
+annoying I think both to me and Kevin
+
+215
+00:08:06,710 --> 00:08:11,930
+yeah it's just kind of a throwaway word
+
+216
+00:08:09,140 --> 00:08:13,640
+so we like the idea having the dog there
+
+217
+00:08:11,930 --> 00:08:16,610
+and I<font color="#E5E5E5"> think it's really</font><font color="#CCCCCC"> clever what</font>
+
+218
+00:08:13,640 --> 00:08:17,960
+Foursquare has done with notifications
+
+219
+00:08:16,610 --> 00:08:19,550
+because you can imagine every response
+
+220
+00:08:17,960 --> 00:08:21,410
+that you get back<font color="#CCCCCC"> from the API there</font>
+
+221
+00:08:19,550 --> 00:08:23,540
+might be some global state or global
+
+222
+00:08:21,410 --> 00:08:25,130
+information that's<font color="#E5E5E5"> changed that you</font>
+
+223
+00:08:23,540 --> 00:08:26,660
+could also you know take advantage of
+
+224
+00:08:25,130 --> 00:08:28,670
+kind of piggyback in that information on
+
+225
+00:08:26,660 --> 00:08:30,260
+the API response so i<font color="#CCCCCC"> can surely clara</font>
+
+226
+00:08:28,670 --> 00:08:32,540
+that they've included notifications in
+
+227
+00:08:30,260 --> 00:08:33,530
+in the response so<font color="#CCCCCC"> that you know how</font>
+
+228
+00:08:32,539 --> 00:08:34,619
+<font color="#E5E5E5">that translates is foremost app</font>
+
+229
+00:08:33,530 --> 00:08:36,839
+developers who are using this
+
+230
+00:08:34,620 --> 00:08:38,099
+<font color="#E5E5E5">yeah they go okay both the notifications</font>
+
+231
+00:08:36,839 --> 00:08:39,539
+coming back every time with every
+
+232
+00:08:38,099 --> 00:08:41,849
+response i can go<font color="#E5E5E5"> ahead and include that</font>
+
+233
+00:08:39,539 --> 00:08:43,680
+and kind<font color="#E5E5E5"> of that information so i can</font>
+
+234
+00:08:41,849 --> 00:08:45,960
+throw stuff you know at the top of the
+
+235
+00:08:43,679 --> 00:08:48,960
+<font color="#E5E5E5">screen or somewhere interesting in my</font>
+
+236
+00:08:45,960 --> 00:08:50,339
+app so that's our guidance on doing the
+
+237
+00:08:48,960 --> 00:08:51,720
+resource kind of take the best of<font color="#E5E5E5"> both</font>
+
+238
+00:08:50,339 --> 00:08:55,140
+worlds from<font color="#E5E5E5"> Foursquare and Instagram and</font>
+
+239
+00:08:51,720 --> 00:08:56,670
+use a meta meta data area<font color="#E5E5E5"> name your</font>
+
+240
+00:08:55,140 --> 00:08:58,140
+primary resource and then include
+
+241
+00:08:56,670 --> 00:09:00,210
+notifications or other global
+
+242
+00:08:58,140 --> 00:09:01,440
+information if that makes sense so
+
+243
+00:09:00,210 --> 00:09:03,230
+that's the<font color="#E5E5E5"> single that's a single</font>
+
+244
+00:09:01,440 --> 00:09:05,100
+<font color="#E5E5E5">resource now how do we represent</font>
+
+245
+00:09:03,230 --> 00:09:07,080
+collections of resources this<font color="#E5E5E5"> is the</font>
+
+246
+00:09:05,100 --> 00:09:08,520
+case we have more than<font color="#CCCCCC"> one so we're</font>
+
+247
+00:09:07,080 --> 00:09:10,500
+gonna take<font color="#E5E5E5"> a look at this again now what</font>
+
+248
+00:09:08,520 --> 00:09:12,300
+you'll see here is a Twitter Foursquare
+
+249
+00:09:10,500 --> 00:09:15,870
+and Instagram they all do pretty much
+
+250
+00:09:12,300 --> 00:09:18,390
+<font color="#CCCCCC">the same thing which is throwing the</font>
+
+251
+00:09:15,870 --> 00:09:20,400
+<font color="#E5E5E5">objects into an array of multiple</font>
+
+252
+00:09:18,390 --> 00:09:22,620
+objects and with one minor exception
+
+253
+00:09:20,400 --> 00:09:25,260
+this is an important point Twitter
+
+254
+00:09:22,620 --> 00:09:27,150
+Foursquare and Instagram all include the
+
+255
+00:09:25,260 --> 00:09:29,010
+same<font color="#E5E5E5"> exact information in the collection</font>
+
+256
+00:09:27,150 --> 00:09:30,660
+that they do in this single so<font color="#E5E5E5"> that if</font>
+
+257
+00:09:29,010 --> 00:09:33,089
+you're thinking<font color="#E5E5E5"> about how you make this</font>
+
+258
+00:09:30,660 --> 00:09:34,260
+<font color="#CCCCCC">decision for your API as Kevin and I</font>
+
+259
+00:09:33,089 --> 00:09:35,460
+were talking about<font color="#E5E5E5"> it I think</font><font color="#CCCCCC"> both of</font>
+
+260
+00:09:34,260 --> 00:09:37,440
+our inclination was well what you really
+
+261
+00:09:35,460 --> 00:09:39,630
+want to<font color="#E5E5E5"> do is provide a limited subset</font>
+
+262
+00:09:37,440 --> 00:09:40,740
+of the data in the collection and then
+
+263
+00:09:39,630 --> 00:09:42,839
+when you want to drill down it then you
+
+264
+00:09:40,740 --> 00:09:44,339
+provide the poor bigger verbose thing
+
+265
+00:09:42,839 --> 00:09:46,800
+with the idea that you're going to
+
+266
+00:09:44,339 --> 00:09:47,970
+<font color="#E5E5E5">preserve on bandwidth but</font><font color="#CCCCCC"> I at least</font>
+
+267
+00:09:46,800 --> 00:09:49,470
+meeting I know if<font color="#E5E5E5"> you won't go to</font><font color="#CCCCCC"> I</font>
+
+268
+00:09:47,970 --> 00:09:51,510
+really<font color="#E5E5E5"> warm up to the idea of including</font>
+
+269
+00:09:49,470 --> 00:09:54,029
+the<font color="#E5E5E5"> same exact information in both of</font>
+
+270
+00:09:51,510 --> 00:09:55,860
+the collection and in the single in the
+
+271
+00:09:54,029 --> 00:09:58,200
+single response just<font color="#E5E5E5"> because there's a</font>
+
+272
+00:09:55,860 --> 00:09:59,520
+sense of predictability there and it
+
+273
+00:09:58,200 --> 00:10:01,320
+seems more deterministic and you count
+
+274
+00:09:59,520 --> 00:10:02,940
+on<font color="#E5E5E5"> it being there the one exception that</font>
+
+275
+00:10:01,320 --> 00:10:04,980
+i mentioned is actually Foursquare
+
+276
+00:10:02,940 --> 00:10:08,459
+includes one extra property called
+
+277
+00:10:04,980 --> 00:10:09,630
+source the standalone resource they
+
+278
+00:10:08,459 --> 00:10:11,310
+don't include on the collection<font color="#E5E5E5"> I'm not</font>
+
+279
+00:10:09,630 --> 00:10:13,500
+<font color="#CCCCCC">really sure what the what the point</font><font color="#E5E5E5"> of</font>
+
+280
+00:10:11,310 --> 00:10:16,709
+that<font color="#E5E5E5"> one was so you can pair other stuff</font>
+
+281
+00:10:13,500 --> 00:10:17,900
+together my feeling is do the same thing
+
+282
+00:10:16,709 --> 00:10:20,640
+make sure you<font color="#CCCCCC"> include that metadata</font>
+
+283
+00:10:17,900 --> 00:10:22,080
+include your notifications or other
+
+284
+00:10:20,640 --> 00:10:24,300
+global information that impact the app
+
+285
+00:10:22,080 --> 00:10:26,910
+<font color="#E5E5E5">and then you know put in the nice</font>
+
+286
+00:10:24,300 --> 00:10:28,380
+portable version of the primary resource
+
+287
+00:10:26,910 --> 00:10:30,180
+in this case it<font color="#E5E5E5"> would be dogs for our</font>
+
+288
+00:10:28,380 --> 00:10:31,500
+<font color="#E5E5E5">modeling include all that same</font>
+
+289
+00:10:30,180 --> 00:10:33,480
+information<font color="#E5E5E5"> that was that would be</font>
+
+290
+00:10:31,500 --> 00:10:34,860
+<font color="#CCCCCC">included in a single resource and you're</font>
+
+291
+00:10:33,480 --> 00:10:36,839
+off<font color="#CCCCCC"> and running</font><font color="#E5E5E5"> now if you have a</font>
+
+292
+00:10:34,860 --> 00:10:38,339
+ridiculous model where the single
+
+293
+00:10:36,839 --> 00:10:40,020
+resource is super huge and you are
+
+294
+00:10:38,339 --> 00:10:41,760
+worried about bandwidth then you can
+
+295
+00:10:40,020 --> 00:10:42,019
+kind of trim down the one that goes in
+
+296
+00:10:41,760 --> 00:10:43,970
+<font color="#E5E5E5">the</font>
+
+297
+00:10:42,019 --> 00:10:46,819
+and although Kevin doesn't always agree
+
+298
+00:10:43,970 --> 00:10:48,170
+with<font color="#E5E5E5"> it you can use partial selection to</font>
+
+299
+00:10:46,819 --> 00:10:49,550
+help you narrow that down as well and
+
+300
+00:10:48,170 --> 00:10:52,279
+you<font color="#CCCCCC"> can see</font><font color="#E5E5E5"> the previous versions of</font>
+
+301
+00:10:49,550 --> 00:10:54,739
+this talk professional selections so to
+
+302
+00:10:52,279 --> 00:10:55,879
+do search results this is an important
+
+303
+00:10:54,739 --> 00:10:58,279
+point this<font color="#CCCCCC"> is actually a quote from the</font>
+
+304
+00:10:55,879 --> 00:11:00,139
+Facebook API documentation selecting
+
+305
+00:10:58,279 --> 00:11:01,639
+results is not the same as searching and
+
+306
+00:11:00,139 --> 00:11:04,459
+sometimes it's easy to<font color="#E5E5E5"> over-exaggerate</font>
+
+307
+00:11:01,639 --> 00:11:05,689
+why these are separate activities<font color="#E5E5E5"> but</font>
+
+308
+00:11:04,459 --> 00:11:07,459
+essentially the idea of searching is you
+
+309
+00:11:05,689 --> 00:11:09,709
+can create a just some sort<font color="#E5E5E5"> of natural</font>
+
+310
+00:11:07,459 --> 00:11:12,350
+language string in the<font color="#E5E5E5"> query box and it</font>
+
+311
+00:11:09,709 --> 00:11:14,059
+can search across resource types so
+
+312
+00:11:12,350 --> 00:11:15,769
+instead of<font color="#E5E5E5"> limiting to say select like</font>
+
+313
+00:11:14,059 --> 00:11:18,379
+hey giving all the photos you're saying
+
+314
+00:11:15,769 --> 00:11:20,029
+generally give me anything about fubar
+
+315
+00:11:18,379 --> 00:11:21,649
+and you get<font color="#E5E5E5"> the results across all the</font>
+
+316
+00:11:20,029 --> 00:11:23,420
+resource types so<font color="#CCCCCC"> you're let's</font><font color="#E5E5E5"> take a</font>
+
+317
+00:11:21,649 --> 00:11:27,079
+look<font color="#E5E5E5"> at how three api's approach this</font>
+
+318
+00:11:23,420 --> 00:11:30,110
+this is being<font color="#E5E5E5"> their search api</font><font color="#CCCCCC"> google</font>
+
+319
+00:11:27,079 --> 00:11:34,189
+<font color="#E5E5E5">custom</font><font color="#CCCCCC"> search and read it for searching</font>
+
+320
+00:11:30,110 --> 00:11:35,629
+their listings and without taking a lot
+
+321
+00:11:34,189 --> 00:11:36,889
+of<font color="#E5E5E5"> time to drill into the details of</font>
+
+322
+00:11:35,629 --> 00:11:38,689
+what is coming back<font color="#E5E5E5"> in the response</font>
+
+323
+00:11:36,889 --> 00:11:41,449
+design here just keep in<font color="#CCCCCC"> mind that there</font>
+
+324
+00:11:38,689 --> 00:11:43,339
+is metadata about<font color="#CCCCCC"> the results there's</font>
+
+325
+00:11:41,449 --> 00:11:45,619
+another data about the query and then
+
+326
+00:11:43,339 --> 00:11:47,299
+there's the actual data itself that is
+
+327
+00:11:45,619 --> 00:11:49,100
+being we is being returned from the
+
+328
+00:11:47,299 --> 00:11:50,089
+search so<font color="#CCCCCC"> it pretty</font><font color="#E5E5E5"> overwhelming you'd</font>
+
+329
+00:11:49,100 --> 00:11:51,619
+be<font color="#CCCCCC"> would start digging into this to</font>
+
+330
+00:11:50,089 --> 00:11:53,089
+figure out which stuff should you
+
+331
+00:11:51,619 --> 00:11:54,619
+include in the search response in which
+
+332
+00:11:53,089 --> 00:11:56,809
+stuff should you should<font color="#E5E5E5"> not so here's</font>
+
+333
+00:11:54,619 --> 00:11:58,490
+our suggestion for the most part follow
+
+334
+00:11:56,809 --> 00:12:00,079
+Google custom search they do really<font color="#E5E5E5"> good</font>
+
+335
+00:11:58,490 --> 00:12:01,879
+stuff<font color="#E5E5E5"> on this well we did those we took</font>
+
+336
+00:12:00,079 --> 00:12:04,579
+the key pieces<font color="#E5E5E5"> of metadata that they</font>
+
+337
+00:12:01,879 --> 00:12:06,679
+included we just they put it under<font color="#E5E5E5"> a</font>
+
+338
+00:12:04,579 --> 00:12:09,350
+different couple of nested objects we
+
+339
+00:12:06,679 --> 00:12:11,420
+just consolidated all under one metadata
+
+340
+00:12:09,350 --> 00:12:13,299
+property so here we're saying include
+
+341
+00:12:11,420 --> 00:12:16,249
+the limit and offset for the pagination
+
+342
+00:12:13,299 --> 00:12:17,990
+include the total results that are
+
+343
+00:12:16,249 --> 00:12:19,699
+available because<font color="#E5E5E5"> that's how do you want</font>
+
+344
+00:12:17,990 --> 00:12:21,410
+to do pagination in a family way and
+
+345
+00:12:19,699 --> 00:12:24,470
+important to include the<font color="#E5E5E5"> the</font><font color="#CCCCCC"> query</font>
+
+346
+00:12:21,410 --> 00:12:25,519
+string that that was sent to make the
+
+347
+00:12:24,470 --> 00:12:27,290
+crew happen and then if you want to show
+
+348
+00:12:25,519 --> 00:12:28,610
+off<font color="#CCCCCC"> how fast your search</font><font color="#E5E5E5"> engine is you</font>
+
+349
+00:12:27,290 --> 00:12:30,860
+go<font color="#CCCCCC"> ahead</font><font color="#E5E5E5"> and conclude the search time</font>
+
+350
+00:12:28,610 --> 00:12:32,449
+then of course in the results property
+
+351
+00:12:30,860 --> 00:12:34,419
+would<font color="#CCCCCC"> be the actual array of all the</font>
+
+352
+00:12:32,449 --> 00:12:37,790
+results that<font color="#E5E5E5"> came back from the search</font>
+
+353
+00:12:34,419 --> 00:12:38,720
+so<font color="#E5E5E5"> best that on the next one now we're</font>
+
+354
+00:12:37,790 --> 00:12:40,610
+switching gears here how do you
+
+355
+00:12:38,720 --> 00:12:45,709
+represent links inside the response sure
+
+356
+00:12:40,610 --> 00:12:47,450
+<font color="#CCCCCC">cell links links are queues inside of</font>
+
+357
+00:12:45,709 --> 00:12:51,100
+your message that point so different
+
+358
+00:12:47,450 --> 00:12:53,330
+right so if<font color="#E5E5E5"> we look at the netflix API</font>
+
+359
+00:12:51,100 --> 00:12:54,620
+they're using something called web
+
+360
+00:12:53,330 --> 00:12:58,670
+linking there's actually a spec around
+
+361
+00:12:54,620 --> 00:13:00,830
+this an RFC you can see an HR up there
+
+362
+00:12:58,670 --> 00:13:02,870
+<font color="#E5E5E5">that's pointing to a URL where</font><font color="#CCCCCC"> you can</font>
+
+363
+00:13:00,830 --> 00:13:05,360
+find what we're looking for you see of a
+
+364
+00:13:02,870 --> 00:13:06,770
+rel value there in that link and<font color="#CCCCCC"> they're</font>
+
+365
+00:13:05,360 --> 00:13:08,090
+special meaning<font color="#E5E5E5"> to that real value if</font>
+
+366
+00:13:06,770 --> 00:13:09,170
+you look at netflix if documentation
+
+367
+00:13:08,090 --> 00:13:12,350
+will say<font color="#E5E5E5"> that we don't person about</font>
+
+368
+00:13:09,170 --> 00:13:14,090
+actor is an actor in a film and a title
+
+369
+00:13:12,350 --> 00:13:17,720
+associated associated with that Elijah
+
+370
+00:13:14,090 --> 00:13:19,310
+<font color="#CCCCCC">would visit the github API that we're</font>
+
+371
+00:13:17,720 --> 00:13:20,870
+going<font color="#CCCCCC"> for more of a Netflix API when</font>
+
+372
+00:13:19,310 --> 00:13:23,270
+they were in beta but now<font color="#CCCCCC"> there they've</font>
+
+373
+00:13:20,870 --> 00:13:25,790
+changed it<font color="#E5E5E5"> up a little bit under their</font>
+
+374
+00:13:23,270 --> 00:13:27,860
+organization is<font color="#CCCCCC"> easy</font><font color="#E5E5E5"> or so if you look</font>
+
+375
+00:13:25,790 --> 00:13:30,290
+<font color="#E5E5E5">at</font><font color="#CCCCCC"> a repository of the 17 organization</font>
+
+376
+00:13:27,860 --> 00:13:31,730
+you find the organization ser el you
+
+377
+00:13:30,290 --> 00:13:33,770
+would go to that URL to get to that
+
+378
+00:13:31,730 --> 00:13:35,630
+particular resource our<font color="#E5E5E5"> recommendation</font>
+
+379
+00:13:33,770 --> 00:13:36,890
+is to follow Netflix and the web looking
+
+380
+00:13:35,630 --> 00:13:39,380
+spec and a big part of that<font color="#E5E5E5"> is because</font>
+
+381
+00:13:36,890 --> 00:13:41,840
+there is a<font color="#E5E5E5"> specification around that and</font>
+
+382
+00:13:39,380 --> 00:13:43,460
+you can point your developers to that to
+
+383
+00:13:41,840 --> 00:13:47,000
+understand how to interact<font color="#E5E5E5"> with your API</font>
+
+384
+00:13:43,460 --> 00:13:49,970
+which is usually poor before it before
+
+385
+00:13:47,000 --> 00:13:52,330
+we<font color="#CCCCCC"> cloth</font><font color="#E5E5E5"> links and you might even set it</font>
+
+386
+00:13:49,970 --> 00:13:54,980
+in went by pretty quickly how how do you
+
+387
+00:13:52,330 --> 00:13:56,750
+help<font color="#CCCCCC"> people understand if they should</font>
+
+388
+00:13:54,980 --> 00:13:58,370
+put links in<font color="#E5E5E5"> their response or not it's</font>
+
+389
+00:13:56,750 --> 00:13:59,930
+<font color="#CCCCCC">just you always do it you never do it</font>
+
+390
+00:13:58,370 --> 00:14:01,670
+certain times you do it what's the
+
+391
+00:13:59,930 --> 00:14:05,360
+listed that he restricts for me to use
+
+392
+00:14:01,670 --> 00:14:07,310
+links yeah so I mean links are really
+
+393
+00:14:05,360 --> 00:14:09,490
+helpful<font color="#CCCCCC"> for developers right so if</font>
+
+394
+00:14:07,310 --> 00:14:12,080
+you're<font color="#CCCCCC"> looking at a response message and</font>
+
+395
+00:14:09,490 --> 00:14:15,860
+you see that there's a relationship
+
+396
+00:14:12,080 --> 00:14:17,780
+there between say a film and an actor
+
+397
+00:14:15,860 --> 00:14:19,370
+<font color="#E5E5E5">you can look at</font><font color="#CCCCCC"> that message and</font>
+
+398
+00:14:17,780 --> 00:14:22,310
+continue on your exploration of that API
+
+399
+00:14:19,370 --> 00:14:24,140
+right I find<font color="#E5E5E5"> myself going back to the</font>
+
+400
+00:14:22,310 --> 00:14:26,320
+documentation less and less and just
+
+401
+00:14:24,140 --> 00:14:32,060
+able<font color="#E5E5E5"> to focus on I'll exploring that epi</font>
+
+402
+00:14:26,320 --> 00:14:34,130
+so that's one huge benefit yeah and i
+
+403
+00:14:32,060 --> 00:14:36,650
+<font color="#E5E5E5">think the</font><font color="#CCCCCC"> contrast is the alternative is</font>
+
+404
+00:14:34,130 --> 00:14:38,090
+you what you hear the word templating
+
+405
+00:14:36,650 --> 00:14:39,920
+thrown around a lot like instead<font color="#E5E5E5"> of</font>
+
+406
+00:14:38,090 --> 00:14:41,930
+giving back the link you might just<font color="#CCCCCC"> give</font>
+
+407
+00:14:39,920 --> 00:14:43,910
+<font color="#E5E5E5">back the ID and a developer has to know</font>
+
+408
+00:14:41,930 --> 00:14:45,620
+that<font color="#CCCCCC"> this idea</font><font color="#E5E5E5"> gets plugged into the</font>
+
+409
+00:14:43,910 --> 00:14:47,570
+template in the right spot so in this
+
+410
+00:14:45,620 --> 00:14:49,550
+case coming back here's a<font color="#CCCCCC"> catalog of</font>
+
+411
+00:14:47,570 --> 00:14:50,870
+people so if<font color="#CCCCCC"> i</font><font color="#E5E5E5"> just saw the people i</font>
+
+412
+00:14:49,550 --> 00:14:52,430
+being that i would grab that ID and say
+
+413
+00:14:50,870 --> 00:14:53,939
+hey<font color="#E5E5E5"> i'm going to do a get on / people</font>
+
+414
+00:14:52,430 --> 00:14:55,829
+<font color="#E5E5E5">and drop the ID and</font>
+
+415
+00:14:53,939 --> 00:14:57,479
+at the end<font color="#CCCCCC"> rest or that's sort of trade</font>
+
+416
+00:14:55,829 --> 00:14:58,709
+off right correct and that takes some
+
+417
+00:14:57,479 --> 00:15:02,879
+context switching if you're doing
+
+418
+00:14:58,709 --> 00:15:05,129
+explore exploratory work and takes you
+
+419
+00:15:02,879 --> 00:15:06,089
+know some different coding structures
+
+420
+00:15:05,129 --> 00:15:07,859
+and<font color="#E5E5E5"> then to make sure that you do the</font>
+
+421
+00:15:06,089 --> 00:15:09,299
+ornate temples properly but yeah any
+
+422
+00:15:07,859 --> 00:15:11,339
+other kind of<font color="#E5E5E5"> thing is correlated this</font>
+
+423
+00:15:09,299 --> 00:15:12,809
+is all I need<font color="#E5E5E5"> going out of band if you</font>
+
+424
+00:15:11,339 --> 00:15:14,069
+don't include the<font color="#E5E5E5"> link in the response</font>
+
+425
+00:15:12,809 --> 00:15:15,720
+and the developers have to go a lot of
+
+426
+00:15:14,069 --> 00:15:17,489
+band you can go recent documentation or
+
+427
+00:15:15,720 --> 00:15:19,409
+something outside of<font color="#E5E5E5"> the API to figure</font>
+
+428
+00:15:17,489 --> 00:15:20,759
+out what<font color="#E5E5E5"> to do next so right we all</font>
+
+429
+00:15:19,409 --> 00:15:23,269
+other context switching as a big cost
+
+430
+00:15:20,759 --> 00:15:26,069
+<font color="#CCCCCC">and</font><font color="#E5E5E5"> US bank right happens cool beans</font>
+
+431
+00:15:23,269 --> 00:15:29,399
+<font color="#E5E5E5">okay so we'll move it how to represent</font>
+
+432
+00:15:26,069 --> 00:15:30,449
+actions<font color="#E5E5E5"> and as we do this Brian kept</font>
+
+433
+00:15:29,399 --> 00:15:32,879
+saying like is there a better definition
+
+434
+00:15:30,449 --> 00:15:35,639
+for this or what what our actions right
+
+435
+00:15:32,879 --> 00:15:37,049
+and actions are typically state
+
+436
+00:15:35,639 --> 00:15:38,369
+transitions coming off of that
+
+437
+00:15:37,049 --> 00:15:41,609
+particular resource that you're<font color="#CCCCCC"> looking</font>
+
+438
+00:15:38,369 --> 00:15:45,059
+at so we can get some<font color="#E5E5E5"> of the examples</font>
+
+439
+00:15:41,609 --> 00:15:46,619
+here give up documents this so again we
+
+440
+00:15:45,059 --> 00:15:48,269
+see we're<font color="#E5E5E5"> going away from</font><font color="#CCCCCC"> the message</font>
+
+441
+00:15:46,619 --> 00:15:49,649
+<font color="#E5E5E5">and we're looking at documentation to</font>
+
+442
+00:15:48,269 --> 00:15:52,470
+figure out how to do this in this case
+
+443
+00:15:49,649 --> 00:15:55,470
+we're doing an update to a repository on
+
+444
+00:15:52,470 --> 00:15:58,409
+github when the documents you know the
+
+445
+00:15:55,470 --> 00:15:59,819
+HTTP method that you need to use your I
+
+446
+00:15:58,409 --> 00:16:02,189
+template you need to use and on the
+
+447
+00:15:59,819 --> 00:16:04,169
+input fields I couldn't<font color="#E5E5E5"> find a good</font>
+
+448
+00:16:02,189 --> 00:16:07,229
+example of this<font color="#E5E5E5"> out in the</font><font color="#CCCCCC"> wild in</font>
+
+449
+00:16:04,169 --> 00:16:09,539
+public API is but if you look<font color="#CCCCCC"> at</font><font color="#E5E5E5"> the</font>
+
+450
+00:16:07,229 --> 00:16:10,829
+four based API example it is taking
+
+451
+00:16:09,539 --> 00:16:14,009
+exactly what<font color="#E5E5E5"> gift up is doing and</font>
+
+452
+00:16:10,829 --> 00:16:15,689
+applying that<font color="#E5E5E5"> in line</font><font color="#CCCCCC"> formed based</font>
+
+453
+00:16:14,009 --> 00:16:18,269
+meeting like HTML<font color="#E5E5E5"> form so if you leave</font>
+
+454
+00:16:15,689 --> 00:16:22,379
+with HTML you know reform tag there's a
+
+455
+00:16:18,269 --> 00:16:24,899
+method there's a URL in there where you
+
+456
+00:16:22,379 --> 00:16:27,419
+can you know where you go to dad execute
+
+457
+00:16:24,899 --> 00:16:28,409
+that method and their list of fields so
+
+458
+00:16:27,419 --> 00:16:30,779
+we're recommending the<font color="#E5E5E5"> form based</font>
+
+459
+00:16:28,409 --> 00:16:32,759
+approach seeing this more and more<font color="#E5E5E5"> in</font>
+
+460
+00:16:30,779 --> 00:16:33,839
+the<font color="#E5E5E5"> wild not not too many folks but i</font>
+
+461
+00:16:32,759 --> 00:16:36,809
+think it's it's something we need to
+
+462
+00:16:33,839 --> 00:16:41,519
+<font color="#E5E5E5">keep an eye on moving towards that form</font>
+
+463
+00:16:36,809 --> 00:16:43,499
+based approach allows a lot of<font color="#E5E5E5"> things</font>
+
+464
+00:16:41,519 --> 00:16:45,479
+for instance hidden fields or a big
+
+465
+00:16:43,499 --> 00:16:47,579
+thing<font color="#CCCCCC"> that we use in HTML forms today we</font>
+
+466
+00:16:45,479 --> 00:16:48,779
+throw those into your<font color="#CCCCCC"> API right that</font>
+
+467
+00:16:47,579 --> 00:16:50,309
+means you have David coming back and
+
+468
+00:16:48,779 --> 00:16:52,739
+forth keeping that stateless nature to
+
+469
+00:16:50,309 --> 00:16:53,970
+your API and still getting what you need
+
+470
+00:16:52,739 --> 00:16:57,239
+on the server without affecting your
+
+471
+00:16:53,970 --> 00:16:59,129
+clients at all so to<font color="#E5E5E5"> make this come to</font>
+
+472
+00:16:57,239 --> 00:17:01,409
+life for me when this comes when that
+
+473
+00:16:59,129 --> 00:17:03,449
+when they actually comes back in my HTTP
+
+474
+00:17:01,409 --> 00:17:05,209
+response I would<font color="#E5E5E5"> my code is</font><font color="#CCCCCC"> going to go</font>
+
+475
+00:17:03,449 --> 00:17:07,490
+ahead and<font color="#E5E5E5"> parse this and then</font>
+
+476
+00:17:05,209 --> 00:17:09,829
+whether<font color="#E5E5E5"> I'm creating an HTML form or iOS</font>
+
+477
+00:17:07,490 --> 00:17:12,020
+form and Android form I'm an introspect
+
+478
+00:17:09,829 --> 00:17:13,760
+this all the properties here and build
+
+479
+00:17:12,020 --> 00:17:15,709
+my form based off of<font color="#E5E5E5"> that exactly and</font>
+
+480
+00:17:13,760 --> 00:17:17,209
+then at<font color="#CCCCCC"> the end</font><font color="#E5E5E5"> of post or that started</font>
+
+481
+00:17:15,709 --> 00:17:19,159
+the method<font color="#CCCCCC"> that is telling me patch in</font>
+
+482
+00:17:17,209 --> 00:17:21,049
+this case is going to<font color="#E5E5E5"> go back to</font><font color="#CCCCCC"> this</font>
+
+483
+00:17:19,159 --> 00:17:22,250
+href so if<font color="#CCCCCC"> I were building HTML form</font>
+
+484
+00:17:21,049 --> 00:17:23,600
+that's obvious it's going to go there
+
+485
+00:17:22,250 --> 00:17:26,779
+and I'm doing<font color="#E5E5E5"> iOS it's going to be an</font>
+
+486
+00:17:23,599 --> 00:17:31,130
+API call with that data correct cool got
+
+487
+00:17:26,779 --> 00:17:33,080
+it how do<font color="#E5E5E5"> we represent metadata so we</font>
+
+488
+00:17:31,130 --> 00:17:36,020
+have a<font color="#CCCCCC"> couple examples here flickr</font>
+
+489
+00:17:33,080 --> 00:17:38,750
+include some metadata in line with their
+
+490
+00:17:36,020 --> 00:17:40,789
+items in this case it's a photo<font color="#CCCCCC"> there's</font>
+
+491
+00:17:38,750 --> 00:17:43,730
+not<font color="#E5E5E5"> a whole</font><font color="#CCCCCC"> lot of metadata there but</font>
+
+492
+00:17:40,789 --> 00:17:45,620
+you<font color="#CCCCCC"> know some exists</font><font color="#E5E5E5"> Dropbox they</font>
+
+493
+00:17:43,730 --> 00:17:49,960
+decided to have an entire metadata
+
+494
+00:17:45,620 --> 00:17:53,659
+resource to access so you know if<font color="#E5E5E5"> you go</font>
+
+495
+00:17:49,960 --> 00:17:55,940
+look at a file itself or a folder<font color="#E5E5E5"> in</font>
+
+496
+00:17:53,659 --> 00:17:57,470
+<font color="#E5E5E5">dropbox there's a lot</font><font color="#CCCCCC"> of data associated</font>
+
+497
+00:17:55,940 --> 00:17:59,270
+with that<font color="#CCCCCC"> if it's the path if it's you</font>
+
+498
+00:17:57,470 --> 00:18:01,880
+know how many<font color="#E5E5E5"> bikes are there all sorts</font>
+
+499
+00:17:59,270 --> 00:18:04,159
+of things so<font color="#E5E5E5"> you know we like having</font>
+
+500
+00:18:01,880 --> 00:18:06,919
+metadata in the response itself and
+
+501
+00:18:04,159 --> 00:18:08,750
+we'll move usually favor that but there
+
+502
+00:18:06,919 --> 00:18:11,510
+are cases to consider you<font color="#E5E5E5"> know having</font>
+
+503
+00:18:08,750 --> 00:18:14,270
+that meta resource and again that's when
+
+504
+00:18:11,510 --> 00:18:15,529
+<font color="#E5E5E5">your your metadata become so significant</font>
+
+505
+00:18:14,270 --> 00:18:17,450
+that it actually should be<font color="#E5E5E5"> modeled on</font>
+
+506
+00:18:15,529 --> 00:18:18,710
+your API so I<font color="#CCCCCC"> think this makes a</font><font color="#E5E5E5"> lot of</font>
+
+507
+00:18:17,450 --> 00:18:20,330
+sense for dropbox that<font color="#CCCCCC"> it makes</font><font color="#E5E5E5"> a lot of</font>
+
+508
+00:18:18,710 --> 00:18:21,710
+sense for for flipping<font color="#E5E5E5"> they should have</font>
+
+509
+00:18:20,330 --> 00:18:23,210
+talked it all over but you know some
+
+510
+00:18:21,710 --> 00:18:25,640
+<font color="#E5E5E5">kind of meta hitting interesting but</font>
+
+511
+00:18:23,210 --> 00:18:27,350
+it's good to<font color="#E5E5E5"> have that in time so you</font>
+
+512
+00:18:25,640 --> 00:18:28,820
+<font color="#E5E5E5">know as we're talking everything we've</font>
+
+513
+00:18:27,350 --> 00:18:30,500
+been talking<font color="#E5E5E5"> about for the vestry</font>
+
+514
+00:18:28,820 --> 00:18:33,020
+ministers around designing the message
+
+515
+00:18:30,500 --> 00:18:35,480
+of<font color="#E5E5E5"> response message the message design a</font>
+
+516
+00:18:33,020 --> 00:18:38,210
+lot of what hypermedia thinking does is
+
+517
+00:18:35,480 --> 00:18:42,649
+address the message design so what<font color="#E5E5E5"> can</font>
+
+518
+00:18:38,210 --> 00:18:45,740
+we learn from other media types so Adam
+
+519
+00:18:42,649 --> 00:18:47,510
+Adam<font color="#CCCCCC"> public one of the wheelie one of</font>
+
+520
+00:18:45,740 --> 00:18:50,929
+the first media types out there to<font color="#E5E5E5"> be</font>
+
+521
+00:18:47,510 --> 00:18:54,169
+used for<font color="#E5E5E5"> api's its attention was for</font>
+
+522
+00:18:50,929 --> 00:18:56,029
+feeds and editing you know articles<font color="#E5E5E5"> in</font>
+
+523
+00:18:54,169 --> 00:18:58,659
+the list and<font color="#E5E5E5"> things like that but</font><font color="#CCCCCC"> one</font>
+
+524
+00:18:56,029 --> 00:19:02,120
+important thing that<font color="#CCCCCC"> they showed us is</font>
+
+525
+00:18:58,659 --> 00:19:04,549
+to build a protocol around link
+
+526
+00:19:02,120 --> 00:19:06,970
+relations if you see if that link rel
+
+527
+00:19:04,549 --> 00:19:09,590
+equals at it should be in bold they're
+
+528
+00:19:06,970 --> 00:19:09,870
+<font color="#E5E5E5">there they're using that standard link</font>
+
+529
+00:19:09,590 --> 00:19:12,870
+<font color="#CCCCCC">role</font>
+
+530
+00:19:09,870 --> 00:19:14,550
+type to communicate to the developer or
+
+531
+00:19:12,870 --> 00:19:17,490
+the client that's consuming this this
+
+532
+00:19:14,550 --> 00:19:20,520
+API where to go to edit this<font color="#E5E5E5"> particular</font>
+
+533
+00:19:17,490 --> 00:19:22,740
+resource I wouldn't<font color="#E5E5E5"> see this this too</font>
+
+534
+00:19:20,520 --> 00:19:24,600
+much but XHTML this<font color="#E5E5E5"> next</font><font color="#CCCCCC"> lady dies</font>
+
+535
+00:19:22,740 --> 00:19:27,180
+rights for urs that's not what's going
+
+536
+00:19:24,600 --> 00:19:29,550
+<font color="#E5E5E5">on</font><font color="#CCCCCC"> here so the cool thing about</font><font color="#E5E5E5"> XHTML is</font>
+
+537
+00:19:27,180 --> 00:19:31,950
+that it's<font color="#E5E5E5"> a valid XML which means that</font>
+
+538
+00:19:29,550 --> 00:19:33,540
+partial errs like it quite a bit have a
+
+539
+00:19:31,950 --> 00:19:35,430
+difficult to build HTML parser because
+
+540
+00:19:33,540 --> 00:19:37,110
+they kind of allow quite a bit going<font color="#E5E5E5"> on</font>
+
+541
+00:19:35,430 --> 00:19:42,720
+in there whereas xml is pretty<font color="#E5E5E5"> well</font>
+
+542
+00:19:37,110 --> 00:19:44,460
+formed so this is<font color="#E5E5E5"> from psycho our status</font>
+
+543
+00:19:42,720 --> 00:19:46,830
+<font color="#E5E5E5">they're implementing an</font><font color="#CCCCCC"> alp</font>
+
+544
+00:19:44,460 --> 00:19:49,620
+specification that you can find out
+
+545
+00:19:46,830 --> 00:19:52,650
+there on the internet and helps has
+
+546
+00:19:49,620 --> 00:19:56,850
+certain meaning around classes such as
+
+547
+00:19:52,650 --> 00:19:59,130
+avatars users userlist<font color="#E5E5E5"> search you can</font>
+
+548
+00:19:56,850 --> 00:20:02,790
+see that<font color="#E5E5E5"> in XHTML we're including that</font>
+
+549
+00:19:59,130 --> 00:20:06,809
+in there and you really get that that
+
+550
+00:20:02,790 --> 00:20:09,030
+semantic connection so some people might
+
+551
+00:20:06,809 --> 00:20:11,100
+say<font color="#E5E5E5"> it's a weird use of XHTML but you</font>
+
+552
+00:20:09,030 --> 00:20:13,080
+know it exists it's out there and
+
+553
+00:20:11,100 --> 00:20:14,370
+there's a there's a gentleman on the API
+
+554
+00:20:13,080 --> 00:20:16,470
+craft who's really been pretty active
+
+555
+00:20:14,370 --> 00:20:19,020
+about pushing a system index HTML as a
+
+556
+00:20:16,470 --> 00:20:25,610
+standard right it's interesting<font color="#E5E5E5"> stuff</font>
+
+557
+00:20:19,020 --> 00:20:29,490
+cool<font color="#CCCCCC"> okay now we have a few Jason based</font>
+
+558
+00:20:25,610 --> 00:20:33,120
+hypermedia types this one's how how is
+
+559
+00:20:29,490 --> 00:20:35,970
+is really student towards augmenting
+
+560
+00:20:33,120 --> 00:20:39,390
+your existing API so if you have a<font color="#CCCCCC"> Jason</font>
+
+561
+00:20:35,970 --> 00:20:41,940
+message out there adding this underscore
+
+562
+00:20:39,390 --> 00:20:43,980
+links to your<font color="#E5E5E5"> existing Jason message</font>
+
+563
+00:20:41,940 --> 00:20:46,050
+which will hopefully not collide with
+
+564
+00:20:43,980 --> 00:20:48,630
+any with an existing<font color="#E5E5E5"> underscore links</font>
+
+565
+00:20:46,050 --> 00:20:49,920
+property you have<font color="#CCCCCC"> and your j subject can</font>
+
+566
+00:20:48,630 --> 00:20:53,490
+start adding some of those hypermedia
+
+567
+00:20:49,920 --> 00:20:54,929
+elements here<font color="#E5E5E5"> we see the link relation</font>
+
+568
+00:20:53,490 --> 00:20:56,460
+becomes like a key in this key value
+
+569
+00:20:54,929 --> 00:20:58,679
+pair inside the links object so we have
+
+570
+00:20:56,460 --> 00:21:00,809
+a link to self next and previous
+
+571
+00:20:58,679 --> 00:21:04,500
+iterating through orders in the
+
+572
+00:21:00,809 --> 00:21:06,090
+collection so sometimes<font color="#E5E5E5"> there are</font>
+
+573
+00:21:04,500 --> 00:21:09,710
+options for augmenting your existing API
+
+574
+00:21:06,090 --> 00:21:09,710
+without breaking clients
+
+575
+00:21:11,150 --> 00:21:17,220
+collection plus jason is a media type
+
+576
+00:21:15,060 --> 00:21:19,320
+out there that is trying to model<font color="#CCCCCC"> adam</font>
+
+577
+00:21:17,220 --> 00:21:21,540
+pub and what they were doing except in
+
+578
+00:21:19,320 --> 00:21:24,810
+Jason so it's you know a little more
+
+579
+00:21:21,540 --> 00:21:27,180
+palatable to to some folks it also
+
+580
+00:21:24,810 --> 00:21:29,850
+allows<font color="#CCCCCC"> for extensions and in it you can</font>
+
+581
+00:21:27,180 --> 00:21:31,170
+<font color="#E5E5E5">see that there are queries that are</font>
+
+582
+00:21:29,850 --> 00:21:32,820
+modeled here but there's also<font color="#E5E5E5"> write</font>
+
+583
+00:21:31,170 --> 00:21:34,910
+templates that you can use so<font color="#E5E5E5"> it sitting</font>
+
+584
+00:21:32,820 --> 00:21:39,030
+back<font color="#CCCCCC"> to those actions and allowing</font>
+
+585
+00:21:34,910 --> 00:21:42,510
+actually editing the different<font color="#E5E5E5"> resources</font>
+
+586
+00:21:39,030 --> 00:21:46,080
+that you<font color="#CCCCCC"> have so and then they're sorry</font>
+
+587
+00:21:42,510 --> 00:21:49,770
+and siren has a mixture of all of these
+
+588
+00:21:46,080 --> 00:21:51,810
+so it's it's really<font color="#E5E5E5"> taking a the goal</font>
+
+589
+00:21:49,770 --> 00:21:54,120
+anyways to take a lot of the the best of
+
+590
+00:21:51,810 --> 00:21:57,540
+what<font color="#CCCCCC"> we know about hypermedia and make a</font>
+
+591
+00:21:54,120 --> 00:21:59,670
+media type that is suitable api's so
+
+592
+00:21:57,540 --> 00:22:01,110
+here we<font color="#E5E5E5"> see actions just as we saw when</font>
+
+593
+00:21:59,670 --> 00:22:04,920
+we were talking about using<font color="#E5E5E5"> form-based</font>
+
+594
+00:22:01,110 --> 00:22:06,900
+api's and entities which imply
+
+595
+00:22:04,920 --> 00:22:08,870
+relationship there they<font color="#E5E5E5"> are also using</font>
+
+596
+00:22:06,900 --> 00:22:12,180
+that lick relation that we talked<font color="#CCCCCC"> about</font>
+
+597
+00:22:08,870 --> 00:22:13,920
+being in the<font color="#E5E5E5"> web linking spec and also</font>
+
+598
+00:22:12,180 --> 00:22:16,800
+makes for navigational purposes of you
+
+599
+00:22:13,920 --> 00:22:19,560
+know next<font color="#E5E5E5"> previous things like that cool</font>
+
+600
+00:22:16,800 --> 00:22:22,080
+and who's the author of summer<font color="#CCCCCC"> I guess I</font>
+
+601
+00:22:19,560 --> 00:22:25,590
+should display that<font color="#E5E5E5"> I am I the author</font>
+
+602
+00:22:22,080 --> 00:22:27,960
+sorry click siren school soon<font color="#CCCCCC"> all right</font>
+
+603
+00:22:25,590 --> 00:22:29,460
+how do we accept binary data all right
+
+604
+00:22:27,960 --> 00:22:31,710
+you know this question comes up a lot
+
+605
+00:22:29,460 --> 00:22:32,940
+maybe I craft group because there's no
+
+606
+00:22:31,710 --> 00:22:35,580
+one way to do<font color="#CCCCCC"> it because</font><font color="#E5E5E5"> there's no one</font>
+
+607
+00:22:32,940 --> 00:22:37,890
+way to do<font color="#CCCCCC"> it right and is it seems that</font>
+
+608
+00:22:35,580 --> 00:22:39,210
+folks only<font color="#E5E5E5"> need to do this sometimes but</font>
+
+609
+00:22:37,890 --> 00:22:42,450
+<font color="#E5E5E5">when they need to</font><font color="#CCCCCC"> do it it's very</font>
+
+610
+00:22:39,210 --> 00:22:44,970
+important that they<font color="#CCCCCC"> give ton soon so one</font>
+
+611
+00:22:42,450 --> 00:22:47,370
+method is to use multi-part form data
+
+612
+00:22:44,970 --> 00:22:49,560
+this<font color="#E5E5E5"> is exactly what your browser does</font>
+
+613
+00:22:47,370 --> 00:22:53,100
+when you're filling<font color="#E5E5E5"> out a form and you</font>
+
+614
+00:22:49,560 --> 00:22:54,770
+need to submit a file this<font color="#E5E5E5"> is kind of</font>
+
+615
+00:22:53,100 --> 00:22:56,610
+that looks like there's some
+
+616
+00:22:54,770 --> 00:22:59,360
+<font color="#E5E5E5">content-disposition that you put in</font>
+
+617
+00:22:56,610 --> 00:23:01,470
+there<font color="#CCCCCC"> too to name the field with a value</font>
+
+618
+00:22:59,360 --> 00:23:04,830
+and you have the option<font color="#E5E5E5"> of assigning</font>
+
+619
+00:23:01,470 --> 00:23:09,720
+different content types to each bit they
+
+620
+00:23:04,830 --> 00:23:11,550
+sent so the second part there is is a
+
+621
+00:23:09,720 --> 00:23:12,930
+<font color="#CCCCCC">JPEG image that's being sent along with</font>
+
+622
+00:23:11,550 --> 00:23:15,290
+that so you can<font color="#CCCCCC"> do the same thing in</font>
+
+623
+00:23:12,930 --> 00:23:15,290
+your<font color="#CCCCCC"> API</font>
+
+624
+00:23:16,460 --> 00:23:23,630
+another option is to<font color="#E5E5E5"> just in line some</font>
+
+625
+00:23:19,260 --> 00:23:27,059
+base64 encoded version of it so the
+
+626
+00:23:23,630 --> 00:23:28,710
+downside to that is when you<font color="#E5E5E5"> base 64</font>
+
+627
+00:23:27,059 --> 00:23:30,270
+encoded it gets a little bit bigger but
+
+628
+00:23:28,710 --> 00:23:33,000
+at least you can put it in a textual
+
+629
+00:23:30,270 --> 00:23:36,059
+representation right so you can have
+
+630
+00:23:33,000 --> 00:23:38,100
+your client do that base64 encoding and
+
+631
+00:23:36,059 --> 00:23:39,539
+then just<font color="#E5E5E5"> dump this string in there and</font>
+
+632
+00:23:38,100 --> 00:23:43,080
+submit it up to the server that will
+
+633
+00:23:39,539 --> 00:23:46,919
+decode it<font color="#CCCCCC"> and then the last</font><font color="#E5E5E5"> option is a</font>
+
+634
+00:23:43,080 --> 00:23:50,549
+two-step process it's you<font color="#E5E5E5"> know creating</font>
+
+635
+00:23:46,919 --> 00:23:52,890
+a new resource to hold that metadata
+
+636
+00:23:50,549 --> 00:23:58,470
+that you have and then submitting a file
+
+637
+00:23:52,890 --> 00:24:02,340
+that attaches to it and I always<font color="#E5E5E5"> say no</font>
+
+638
+00:23:58,470 --> 00:24:03,690
+opt for multi-part form data first there
+
+639
+00:24:02,340 --> 00:24:07,080
+<font color="#E5E5E5">are a lot of tools out there that will</font>
+
+640
+00:24:03,690 --> 00:24:11,880
+help you do<font color="#E5E5E5"> this as a client and that's</font>
+
+641
+00:24:07,080 --> 00:24:13,860
+pretty significant the big thing<font color="#CCCCCC"> that</font>
+
+642
+00:24:11,880 --> 00:24:15,240
+was no matter which one you choose and I
+
+643
+00:24:13,860 --> 00:24:17,130
+think multi-part for me is the way<font color="#E5E5E5"> to go</font>
+
+644
+00:24:15,240 --> 00:24:19,020
+just be consistent don't have three or
+
+645
+00:24:17,130 --> 00:24:20,789
+four<font color="#CCCCCC"> different ways in your API to</font>
+
+646
+00:24:19,020 --> 00:24:23,970
+upload a file it's just not<font color="#CCCCCC"> worth the</font>
+
+647
+00:24:20,789 --> 00:24:25,230
+<font color="#E5E5E5">headache caching caching is another one</font>
+
+648
+00:24:23,970 --> 00:24:26,490
+of<font color="#E5E5E5"> those topics that affect i'm really</font>
+
+649
+00:24:25,230 --> 00:24:27,419
+not talking about everything do with
+
+650
+00:24:26,490 --> 00:24:29,490
+caching is what are the design
+
+651
+00:24:27,419 --> 00:24:34,320
+implications are not caching is that
+
+652
+00:24:29,490 --> 00:24:36,240
+right right<font color="#E5E5E5"> cool so first we'll go</font>
+
+653
+00:24:34,320 --> 00:24:39,750
+<font color="#CCCCCC">through different ways to</font><font color="#E5E5E5"> do that</font><font color="#CCCCCC"> right</font>
+
+654
+00:24:36,240 --> 00:24:42,659
+so the three main ways to to do caching
+
+655
+00:24:39,750 --> 00:24:44,940
+one is exploration so you use a cache
+
+656
+00:24:42,659 --> 00:24:46,919
+control headers say this is private
+
+657
+00:24:44,940 --> 00:24:49,020
+which means that<font color="#E5E5E5"> only the clients can</font>
+
+658
+00:24:46,919 --> 00:24:51,750
+cash this no proxy in the middle should
+
+659
+00:24:49,020 --> 00:24:56,159
+be cashing this in a<font color="#CCCCCC"> max age in seconds</font>
+
+660
+00:24:51,750 --> 00:24:58,110
+so this is 30 days I think this<font color="#E5E5E5"> is</font><font color="#CCCCCC"> a</font>
+
+661
+00:24:56,159 --> 00:25:01,559
+<font color="#CCCCCC">direct message to the client saying hold</font>
+
+662
+00:24:58,110 --> 00:25:04,289
+on to this and<font color="#E5E5E5"> it should</font><font color="#CCCCCC"> be</font><font color="#E5E5E5"> good</font><font color="#CCCCCC"> for</font>
+
+663
+00:25:01,559 --> 00:25:09,720
+<font color="#E5E5E5">this length of time right another method</font>
+
+664
+00:25:04,289 --> 00:25:12,179
+is etags etags are sometimes calculated
+
+665
+00:25:09,720 --> 00:25:15,809
+is a checksum of a file or different
+
+666
+00:25:12,179 --> 00:25:17,909
+data elements that you<font color="#E5E5E5"> have you</font><font color="#CCCCCC"> can use</font>
+
+667
+00:25:15,809 --> 00:25:21,929
+your some databases<font color="#E5E5E5"> do a good like</font>
+
+668
+00:25:17,909 --> 00:25:24,540
+revision number on each document that
+
+669
+00:25:21,929 --> 00:25:26,919
+they have or you can<font color="#E5E5E5"> manage your</font><font color="#CCCCCC"> own</font>
+
+670
+00:25:24,540 --> 00:25:28,029
+keys for etags much like<font color="#E5E5E5"> Twitter</font>
+
+671
+00:25:26,919 --> 00:25:31,509
+they have like their own key generator
+
+672
+00:25:28,029 --> 00:25:33,340
+service but yeah so when you pull down<font color="#E5E5E5"> a</font>
+
+673
+00:25:31,509 --> 00:25:35,590
+resource representation will have any
+
+674
+00:25:33,340 --> 00:25:37,450
+tag associated with it and if you want
+
+675
+00:25:35,590 --> 00:25:40,769
+<font color="#E5E5E5">to make sure that you have the latest</font>
+
+676
+00:25:37,450 --> 00:25:42,999
+you<font color="#CCCCCC"> can do a gap at that same URL and</font>
+
+677
+00:25:40,769 --> 00:25:44,739
+include the header if not match<font color="#CCCCCC"> and</font>
+
+678
+00:25:42,999 --> 00:25:47,350
+include any tag that you already that
+
+679
+00:25:44,739 --> 00:25:50,489
+you<font color="#E5E5E5"> received if there are</font><font color="#CCCCCC"> no</font><font color="#E5E5E5"> tanks with</font>
+
+680
+00:25:47,350 --> 00:25:53,289
+that then you get the latest response
+
+681
+00:25:50,489 --> 00:25:57,249
+third option is using the last modified
+
+682
+00:25:53,289 --> 00:25:59,289
+header as a hint how fresh the the
+
+683
+00:25:57,249 --> 00:26:01,509
+representation is if you get that's
+
+684
+00:25:59,289 --> 00:26:03,249
+modified back with your representation
+
+685
+00:26:01,509 --> 00:26:04,899
+the next time you<font color="#CCCCCC"> go to get it you can</font>
+
+686
+00:26:03,249 --> 00:26:07,809
+<font color="#E5E5E5">put a header in there that says if</font>
+
+687
+00:26:04,899 --> 00:26:11,080
+modified since with that same date and
+
+688
+00:26:07,809 --> 00:26:12,399
+you only get it back if it's newer so
+
+689
+00:26:11,080 --> 00:26:16,679
+it's a network call but you don't get
+
+690
+00:26:12,399 --> 00:26:20,830
+the full<font color="#E5E5E5"> body of the message back and</font>
+
+691
+00:26:16,679 --> 00:26:22,960
+you know while there's no<font color="#CCCCCC"> one particular</font>
+
+692
+00:26:20,830 --> 00:26:26,080
+caching method to do at all times it
+
+693
+00:26:22,960 --> 00:26:27,369
+really depends on use cases a common
+
+694
+00:26:26,080 --> 00:26:28,659
+pitfall that we get into is<font color="#CCCCCC"> that we</font>
+
+695
+00:26:27,369 --> 00:26:30,519
+don't think about<font color="#E5E5E5"> the client we think</font>
+
+696
+00:26:28,659 --> 00:26:32,980
+about cashing in terms of saving
+
+697
+00:26:30,519 --> 00:26:34,239
+resources and saving bandwidth on the
+
+698
+00:26:32,980 --> 00:26:36,549
+server but we don't<font color="#CCCCCC"> think about it on</font>
+
+699
+00:26:34,239 --> 00:26:38,350
+the client right a lot<font color="#E5E5E5"> of times that</font>
+
+700
+00:26:36,549 --> 00:26:40,720
+client doesn't need to make<font color="#E5E5E5"> another</font>
+
+701
+00:26:38,350 --> 00:26:42,789
+network call and you know that saving
+
+702
+00:26:40,720 --> 00:26:44,649
+that time is very valuable for them so
+
+703
+00:26:42,789 --> 00:26:48,580
+<font color="#E5E5E5">just keep that away do we need a</font>
+
+704
+00:26:44,649 --> 00:26:50,399
+JavaScript API so often folks ask we see
+
+705
+00:26:48,580 --> 00:26:53,139
+this in a number<font color="#CCCCCC"> of ways where the API</font>
+
+706
+00:26:50,399 --> 00:26:54,850
+and maybe the domain of the system
+
+707
+00:26:53,139 --> 00:26:57,970
+itself has some a lot of complexity
+
+708
+00:26:54,850 --> 00:26:59,619
+around it so<font color="#E5E5E5"> maybe you do an API for say</font>
+
+709
+00:26:57,970 --> 00:27:01,119
+payment processing and you<font color="#E5E5E5"> can set</font>
+
+710
+00:26:59,619 --> 00:27:04,980
+payments from credit cards checking
+
+711
+00:27:01,119 --> 00:27:07,720
+accounts paypal google wallet and so on
+
+712
+00:27:04,980 --> 00:27:09,070
+your<font color="#CCCCCC"> api in order for a developer to</font>
+
+713
+00:27:07,720 --> 00:27:11,679
+learn<font color="#E5E5E5"> how to use the API and then</font>
+
+714
+00:27:09,070 --> 00:27:13,749
+<font color="#CCCCCC">Express how to use it to through the</font>
+
+715
+00:27:11,679 --> 00:27:14,980
+user interface to the<font color="#E5E5E5"> end user it can be</font>
+
+716
+00:27:13,749 --> 00:27:17,169
+very<font color="#E5E5E5"> difficult so</font><font color="#CCCCCC"> oftentimes</font><font color="#E5E5E5"> there's</font>
+
+717
+00:27:14,980 --> 00:27:19,749
+pressure on<font color="#CCCCCC"> the API to maybe want</font><font color="#E5E5E5"> to</font>
+
+718
+00:27:17,169 --> 00:27:21,159
+start giving hints about UI elements or
+
+719
+00:27:19,749 --> 00:27:22,389
+how to actually use<font color="#E5E5E5"> this and that's</font>
+
+720
+00:27:21,159 --> 00:27:25,179
+always<font color="#E5E5E5"> a mistake you want to clean</font>
+
+721
+00:27:22,389 --> 00:27:27,070
+separation between the the API and the
+
+722
+00:27:25,179 --> 00:27:28,720
+<font color="#E5E5E5">consumer however some people think of</font>
+
+723
+00:27:27,070 --> 00:27:31,840
+this as an<font color="#E5E5E5"> SDK some people call it an</font>
+
+724
+00:27:28,720 --> 00:27:34,090
+API the question is<font color="#CCCCCC"> you're so there's so</font>
+
+725
+00:27:31,840 --> 00:27:36,309
+much understanding of<font color="#E5E5E5"> JavaScript I</font><font color="#CCCCCC"> vsat</font>
+
+726
+00:27:34,090 --> 00:27:38,139
+a rudimentary level that<font color="#E5E5E5"> this kind of</font>
+
+727
+00:27:36,309 --> 00:27:39,270
+presents itself as an anomalous thing
+
+728
+00:27:38,139 --> 00:27:41,010
+like should hey we build
+
+729
+00:27:39,270 --> 00:27:42,690
+kpi we have<font color="#E5E5E5"> little bit of resources</font>
+
+730
+00:27:41,010 --> 00:27:43,950
+should<font color="#E5E5E5"> we use those guys to build the</font>
+
+731
+00:27:42,690 --> 00:27:45,840
+next<font color="#E5E5E5"> version of the API or should we do</font>
+
+732
+00:27:43,950 --> 00:27:48,090
+with JavaScript API I'm feeling more<font color="#E5E5E5"> and</font>
+
+733
+00:27:45,840 --> 00:27:49,770
+more that if you're doing an API and you
+
+734
+00:27:48,090 --> 00:27:51,240
+want a really<font color="#E5E5E5"> good adoption and you want</font>
+
+735
+00:27:49,770 --> 00:27:52,560
+to have an easier job of explaining how
+
+736
+00:27:51,240 --> 00:27:56,100
+to use it<font color="#E5E5E5"> to folks you should go ahead</font>
+
+737
+00:27:52,560 --> 00:27:58,170
+<font color="#E5E5E5">and also create a JavaScript library or</font>
+
+738
+00:27:56,100 --> 00:27:59,910
+JavaScript SDK or API however you want
+
+739
+00:27:58,170 --> 00:28:01,320
+to call it and if you want<font color="#E5E5E5"> to see an</font>
+
+740
+00:27:59,910 --> 00:28:02,940
+example of spokes who are doing this
+
+741
+00:28:01,320 --> 00:28:05,430
+really<font color="#E5E5E5"> really well take a look at</font>
+
+742
+00:28:02,940 --> 00:28:06,360
+LinkedIn the JavaScript API does a great
+
+743
+00:28:05,430 --> 00:28:07,740
+job of handling all of the
+
+744
+00:28:06,360 --> 00:28:09,030
+authentication stuff so the developers
+
+745
+00:28:07,740 --> 00:28:11,550
+<font color="#CCCCCC">don't have to get down on the weeds on</font>
+
+746
+00:28:09,030 --> 00:28:13,080
+that and the<font color="#CCCCCC"> the way that the</font><font color="#E5E5E5"> JavaScript</font>
+
+747
+00:28:11,550 --> 00:28:15,540
+library maps on<font color="#CCCCCC"> sit the pants of the</font>
+
+748
+00:28:13,080 --> 00:28:18,600
+core API is really transparent and it
+
+749
+00:28:15,540 --> 00:28:19,620
+fits really nicely so I do recommend if
+
+750
+00:28:18,600 --> 00:28:21,870
+this is a<font color="#E5E5E5"> question you were thinking</font>
+
+751
+00:28:19,620 --> 00:28:23,940
+about<font color="#E5E5E5"> go ahead and tackle the JavaScript</font>
+
+752
+00:28:21,870 --> 00:28:26,940
+API now should you do the iOS<font color="#E5E5E5"> API an</font>
+
+753
+00:28:23,940 --> 00:28:27,960
+Android API or SDK yeah maybe but<font color="#CCCCCC"> that</font>
+
+754
+00:28:26,940 --> 00:28:29,040
+you<font color="#E5E5E5"> know take a look at your priorities</font>
+
+755
+00:28:27,960 --> 00:28:30,570
+but definitely if<font color="#CCCCCC"> you</font><font color="#E5E5E5"> had to do one I</font>
+
+756
+00:28:29,040 --> 00:28:33,510
+would<font color="#E5E5E5"> do javascript and take a look at</font>
+
+757
+00:28:30,570 --> 00:28:36,360
+LinkedIn cool what about posting data so
+
+758
+00:28:33,510 --> 00:28:38,850
+talk a little bit about actions and you
+
+759
+00:28:36,360 --> 00:28:43,140
+know submitting changes to state of our
+
+760
+00:28:38,850 --> 00:28:45,990
+representations this is more about let's
+
+761
+00:28:43,140 --> 00:28:48,180
+<font color="#CCCCCC">talk</font><font color="#E5E5E5"> about how new serialize that data</font>
+
+762
+00:28:45,990 --> 00:28:50,370
+how and what what form does it take when
+
+763
+00:28:48,180 --> 00:28:53,030
+we take that request and send it to<font color="#E5E5E5"> the</font>
+
+764
+00:28:50,370 --> 00:28:56,130
+server one<font color="#CCCCCC"> options to use application</font>
+
+765
+00:28:53,030 --> 00:28:59,460
+xww form URL encoded really long name
+
+766
+00:28:56,130 --> 00:29:02,490
+but is it's<font color="#E5E5E5"> really simple it looks just</font>
+
+767
+00:28:59,460 --> 00:29:07,380
+like a query string so some folks said
+
+768
+00:29:02,490 --> 00:29:09,780
+XML as the request body can get kind of
+
+769
+00:29:07,380 --> 00:29:12,150
+verbose sometimes as XML tends to do but
+
+770
+00:29:09,780 --> 00:29:15,560
+that's<font color="#E5E5E5"> an option and then there's Jason</font>
+
+771
+00:29:12,150 --> 00:29:15,560
+right so
+
+772
+00:29:16,920 --> 00:29:22,440
+we favor the for me well and coated
+
+773
+00:29:20,640 --> 00:29:25,800
+version it's it's pretty simple it's
+
+774
+00:29:22,440 --> 00:29:27,240
+easy there are certainly many different
+
+775
+00:29:25,800 --> 00:29:29,820
+tools out there that folks can use for
+
+776
+00:29:27,240 --> 00:29:34,340
+<font color="#E5E5E5">that is it wrong to use the alternatives</font>
+
+777
+00:29:29,820 --> 00:29:36,690
+no but definitely favor the simplicity
+
+778
+00:29:34,340 --> 00:29:38,340
+<font color="#CCCCCC">all right how do we handle transactions</font>
+
+779
+00:29:36,690 --> 00:29:39,870
+of the<font color="#CCCCCC"> Caddy idea is we're not going to</font>
+
+780
+00:29:38,340 --> 00:29:41,160
+do a deep dive on transactions we're
+
+781
+00:29:39,870 --> 00:29:42,930
+just going to<font color="#CCCCCC"> gets at it and very likely</font>
+
+782
+00:29:41,160 --> 00:29:45,090
+will do<font color="#E5E5E5"> another web cast just on how to</font>
+
+783
+00:29:42,930 --> 00:29:46,440
+handle<font color="#E5E5E5"> transactions with</font><font color="#CCCCCC"> an API right</font>
+
+784
+00:29:45,090 --> 00:29:47,880
+let's take<font color="#E5E5E5"> a look at it me safely he's</font>
+
+785
+00:29:46,440 --> 00:29:51,300
+<font color="#E5E5E5">just so handsome in one way you could do</font>
+
+786
+00:29:47,880 --> 00:29:53,670
+this you<font color="#CCCCCC"> can model the transaction</font>
+
+787
+00:29:51,300 --> 00:29:55,200
+directly in your API right for for this
+
+788
+00:29:53,670 --> 00:29:58,830
+example we're going to use the concept
+
+789
+00:29:55,200 --> 00:30:00,960
+of a shopping cart you<font color="#E5E5E5"> can have in our</font>
+
+790
+00:29:58,830 --> 00:30:02,610
+API we have some user they create a
+
+791
+00:30:00,960 --> 00:30:06,060
+shopping cart with post they get a 201
+
+792
+00:30:02,610 --> 00:30:08,400
+<font color="#E5E5E5">created back then you know from the</font>
+
+793
+00:30:06,060 --> 00:30:12,480
+product<font color="#E5E5E5"> catalog they add you know some</font>
+
+794
+00:30:08,400 --> 00:30:15,840
+mittens to their their cart let me check
+
+795
+00:30:12,480 --> 00:30:18,300
+out right<font color="#E5E5E5"> I mean it's it's just a matter</font>
+
+796
+00:30:15,840 --> 00:30:20,940
+of creating that that transaction adding
+
+797
+00:30:18,300 --> 00:30:24,240
+items to it and then doing<font color="#CCCCCC"> a commit</font>
+
+798
+00:30:20,940 --> 00:30:27,420
+right certainly problems can happen you
+
+799
+00:30:24,240 --> 00:30:28,890
+can get errors back and you know you'll
+
+800
+00:30:27,420 --> 00:30:31,950
+have<font color="#E5E5E5"> to deal with that</font><font color="#CCCCCC"> yeah we'll talk</font>
+
+801
+00:30:28,890 --> 00:30:35,400
+we'll talk more on that cool so in
+
+802
+00:30:31,950 --> 00:30:38,130
+<font color="#CCCCCC">summary we talked about the previous</font>
+
+803
+00:30:35,400 --> 00:30:39,420
+editions for<font color="#CCCCCC"> URI design we've got a new</font>
+
+804
+00:30:38,130 --> 00:30:41,370
+book out there and there's a cheat sheet
+
+805
+00:30:39,420 --> 00:30:42,540
+at<font color="#E5E5E5"> the top of the slide deck I can just</font>
+
+806
+00:30:41,370 --> 00:30:44,850
+run you through really quickly what our
+
+807
+00:30:42,540 --> 00:30:48,390
+suggestions are for designing URIs and a
+
+808
+00:30:44,850 --> 00:30:50,250
+little<font color="#E5E5E5"> bit on errors and revisions it's</font>
+
+809
+00:30:48,390 --> 00:30:51,420
+kevin said start with<font color="#CCCCCC"> api modeling it's</font>
+
+810
+00:30:50,250 --> 00:30:53,160
+a good<font color="#CCCCCC"> idea</font><font color="#E5E5E5"> to create a common language</font>
+
+811
+00:30:51,420 --> 00:30:56,100
+and a comment understanding among your
+
+812
+00:30:53,160 --> 00:30:57,690
+API team use OAuth the latest version
+
+813
+00:30:56,100 --> 00:31:01,050
+<font color="#CCCCCC">other for</font><font color="#E5E5E5"> security it's almost always</font>
+
+814
+00:30:57,690 --> 00:31:03,330
+the right one<font color="#CCCCCC"> to use and keep in mind</font>
+
+815
+00:31:01,050 --> 00:31:05,250
+when you're designing your response
+
+816
+00:31:03,330 --> 00:31:08,580
+messages that the message design is for
+
+817
+00:31:05,250 --> 00:31:10,830
+developers to parse into those resources
+
+818
+00:31:08,580 --> 00:31:13,770
+into some objects in their language and
+
+819
+00:31:10,830 --> 00:31:15,930
+it's a good<font color="#E5E5E5"> idea to be terse and brief</font>
+
+820
+00:31:13,770 --> 00:31:17,520
+and let them get to the data as soon as
+
+821
+00:31:15,930 --> 00:31:18,660
+possible while also including metadata
+
+822
+00:31:17,520 --> 00:31:21,120
+and notifications and things like that
+
+823
+00:31:18,660 --> 00:31:22,740
+we give<font color="#E5E5E5"> you a quick a quick overview of</font>
+
+824
+00:31:21,120 --> 00:31:23,880
+<font color="#E5E5E5">what's happening in the hypermedia area</font>
+
+825
+00:31:22,740 --> 00:31:24,630
+with the different specs that are out
+
+826
+00:31:23,880 --> 00:31:25,680
+there
+
+827
+00:31:24,630 --> 00:31:27,600
+and as you dig into those you'll see
+
+828
+00:31:25,680 --> 00:31:28,650
+there's a lot to<font color="#CCCCCC"> learn in terms of how</font>
+
+829
+00:31:27,600 --> 00:31:31,020
+you should think about links and
+
+830
+00:31:28,650 --> 00:31:32,730
+designing your messages<font color="#E5E5E5"> and finally we</font>
+
+831
+00:31:31,020 --> 00:31:34,860
+talked<font color="#E5E5E5"> touched briefly on transactions</font>
+
+832
+00:31:32,730 --> 00:31:35,730
+and will do more about that later<font color="#CCCCCC"> at</font>
+
+833
+00:31:34,860 --> 00:31:36,750
+this<font color="#E5E5E5"> what we'd like to go</font><font color="#CCCCCC"> over to</font>
+
+834
+00:31:35,730 --> 00:31:38,610
+<font color="#E5E5E5">questions and I know there are some</font>
+
+835
+00:31:36,750 --> 00:31:42,660
+piling up in<font color="#E5E5E5"> the Q&A area here but feel</font>
+
+836
+00:31:38,610 --> 00:31:45,990
+free to<font color="#E5E5E5"> start adding some more the first</font>
+
+837
+00:31:42,660 --> 00:31:47,070
+this<font color="#E5E5E5"> is from</font><font color="#CCCCCC"> Burke Audrey thanks for</font>
+
+838
+00:31:45,990 --> 00:31:48,840
+writing the question the question is
+
+839
+00:31:47,070 --> 00:31:51,060
+they making that they may get to this
+
+840
+00:31:48,840 --> 00:31:53,100
+but we have an exception in quotes which
+
+841
+00:31:51,060 --> 00:31:54,630
+is very<font color="#E5E5E5"> verbal like we have a payment</font>
+
+842
+00:31:53,100 --> 00:31:56,220
+engine that we want to<font color="#E5E5E5"> expose and we</font>
+
+843
+00:31:54,630 --> 00:31:57,870
+can't decide on the best<font color="#E5E5E5"> way to model</font>
+
+844
+00:31:56,220 --> 00:32:00,450
+that we don't<font color="#E5E5E5"> need to store the results</font>
+
+845
+00:31:57,870 --> 00:32:02,820
+no post or put and get seem strange any
+
+846
+00:32:00,450 --> 00:32:05,730
+thoughts so yeah we encountered this
+
+847
+00:32:02,820 --> 00:32:07,680
+pretty often if<font color="#E5E5E5"> you are doing things in</font>
+
+848
+00:32:05,730 --> 00:32:10,110
+your<font color="#E5E5E5"> API and the words that express that</font>
+
+849
+00:32:07,680 --> 00:32:13,800
+are things like calculate or exchange or
+
+850
+00:32:10,110 --> 00:32:17,790
+convert<font color="#E5E5E5"> oftentimes those are on those</font>
+
+851
+00:32:13,800 --> 00:32:19,560
+are non resource like API on<font color="#E5E5E5"> its and we</font>
+
+852
+00:32:17,790 --> 00:32:22,140
+suggest and you can read this in the
+
+853
+00:32:19,560 --> 00:32:24,480
+e-book we suggest to be very careful to
+
+854
+00:32:22,140 --> 00:32:27,150
+<font color="#E5E5E5">use verbs for those types of things and</font>
+
+855
+00:32:24,480 --> 00:32:28,320
+documents and kind<font color="#E5E5E5"> of demarcate that the</font>
+
+856
+00:32:27,150 --> 00:32:29,820
+most part of this API as a bunch<font color="#CCCCCC"> of</font>
+
+857
+00:32:28,320 --> 00:32:30,990
+resources<font color="#E5E5E5"> in it but there are</font>
+
+858
+00:32:29,820 --> 00:32:33,870
+occasionally things you need to do which
+
+859
+00:32:30,990 --> 00:32:36,510
+are much more like algorithms and no
+
+860
+00:32:33,870 --> 00:32:38,280
+David<font color="#E5E5E5"> artifacts created from it so treat</font>
+
+861
+00:32:36,510 --> 00:32:41,460
+them separately and yeah I like the idea
+
+862
+00:32:38,280 --> 00:32:43,110
+of using verbs<font color="#CCCCCC"> to do that just as you</font>
+
+863
+00:32:41,460 --> 00:32:45,090
+out mine and that's a good general rule
+
+864
+00:32:43,110 --> 00:32:47,160
+for design right nothing is ever perfect
+
+865
+00:32:45,090 --> 00:32:50,670
+when you make it exception to the rule
+
+866
+00:32:47,160 --> 00:32:53,010
+make sure it's documented right cool
+
+867
+00:32:50,670 --> 00:32:54,930
+<font color="#E5E5E5">Michael</font><font color="#CCCCCC"> Stewart asks how the links work</font>
+
+868
+00:32:53,010 --> 00:32:56,040
+with the JSON response this is probably
+
+869
+00:32:54,930 --> 00:32:59,760
+asked at the point where we'd only shown
+
+870
+00:32:56,040 --> 00:33:01,950
+XML should we go back and show is that
+
+871
+00:32:59,760 --> 00:33:05,130
+Dana sirens<font color="#E5E5E5"> going to example that yeah</font>
+
+872
+00:33:01,950 --> 00:33:06,900
+<font color="#E5E5E5">right so there's there's a week at the</font>
+
+873
+00:33:05,130 --> 00:33:10,200
+bottom there that is just a link to self
+
+874
+00:33:06,900 --> 00:33:13,080
+which is<font color="#E5E5E5"> really common also the entities</font>
+
+875
+00:33:10,200 --> 00:33:14,670
+can be seen like links here to where<font color="#E5E5E5"> I'm</font>
+
+876
+00:33:13,080 --> 00:33:18,930
+an owner resource that we're linking to
+
+877
+00:33:14,670 --> 00:33:22,050
+a dog so sorry includes all this in a
+
+878
+00:33:18,930 --> 00:33:23,070
+renter array all the the rel values are
+
+879
+00:33:22,050 --> 00:33:27,650
+in it right because we<font color="#E5E5E5"> have more</font><font color="#CCCCCC"> than</font>
+
+880
+00:33:23,070 --> 00:33:31,410
+<font color="#CCCCCC">one some</font><font color="#E5E5E5"> other formats don't do that but</font>
+
+881
+00:33:27,650 --> 00:33:32,460
+example here is how how does<font color="#CCCCCC"> the more of</font>
+
+882
+00:33:31,410 --> 00:33:35,730
+a key value approach
+
+883
+00:33:32,460 --> 00:33:39,120
+can only have one rail value for the
+
+884
+00:33:35,730 --> 00:33:43,410
+resource cool thanks again Michael for
+
+885
+00:33:39,120 --> 00:33:45,300
+asking that question next one is<font color="#E5E5E5"> from</font>
+
+886
+00:33:43,410 --> 00:33:47,700
+Jason hunt maybe I missed this why would
+
+887
+00:33:45,300 --> 00:33:49,650
+you<font color="#E5E5E5"> put this form based API on top of</font>
+
+888
+00:33:47,700 --> 00:33:52,890
+rest doesn't rest already have a URL and
+
+889
+00:33:49,650 --> 00:33:55,350
+action yeah so that form based<font color="#E5E5E5"> API is</font>
+
+890
+00:33:52,890 --> 00:33:57,930
+just communicating which action you
+
+891
+00:33:55,350 --> 00:34:00,330
+should use to<font color="#CCCCCC"> do that and which</font><font color="#E5E5E5"> you are</font>
+
+892
+00:33:57,930 --> 00:34:01,740
+I you<font color="#E5E5E5"> should use to</font><font color="#CCCCCC"> make that call and</font>
+
+893
+00:34:00,330 --> 00:34:04,290
+again the alternatives put all that in
+
+894
+00:34:01,740 --> 00:34:05,910
+documentation but you lose a little bit
+
+895
+00:34:04,290 --> 00:34:07,800
+of<font color="#E5E5E5"> evolvability on that right if your</font>
+
+896
+00:34:05,910 --> 00:34:09,030
+your<font color="#E5E5E5"> I start changing if maybe you want</font>
+
+897
+00:34:07,800 --> 00:34:11,970
+to switch from a patch to a-put for
+
+898
+00:34:09,030 --> 00:34:13,350
+<font color="#E5E5E5">certain architectural reasons you'd have</font>
+
+899
+00:34:11,969 --> 00:34:15,209
+to update<font color="#E5E5E5"> documentation attention to</font>
+
+900
+00:34:13,350 --> 00:34:16,620
+break your clients putting it right into
+
+901
+00:34:15,210 --> 00:34:18,570
+<font color="#CCCCCC">the</font><font color="#E5E5E5"> message itself allows for that</font>
+
+902
+00:34:16,620 --> 00:34:20,580
+evolution fantastic and really<font color="#E5E5E5"> just</font>
+
+903
+00:34:18,570 --> 00:34:23,040
+<font color="#CCCCCC">stresses this</font><font color="#E5E5E5"> is you're talking about</font>
+
+904
+00:34:20,580 --> 00:34:24,810
+doing one of<font color="#E5E5E5"> the actions it's about that</font>
+
+905
+00:34:23,040 --> 00:34:25,830
+you're not the current requests and
+
+906
+00:34:24,810 --> 00:34:27,300
+responses but we are you going to do for
+
+907
+00:34:25,830 --> 00:34:29,970
+the<font color="#CCCCCC"> next request and response exactly</font>
+
+908
+00:34:27,300 --> 00:34:34,620
+<font color="#E5E5E5">but I'm moving for cool alright the next</font>
+
+909
+00:34:29,969 --> 00:34:36,899
+question is from lon Miller lon asks so
+
+910
+00:34:34,620 --> 00:34:41,160
+for the meta slide should each URL offer
+
+911
+00:34:36,900 --> 00:34:44,040
+a meta service foo / service / meta food
+
+912
+00:34:41,159 --> 00:34:45,689
+/ think / minute and so on<font color="#CCCCCC"> so we hinted</font>
+
+913
+00:34:44,040 --> 00:34:46,890
+at it how would<font color="#CCCCCC"> you</font><font color="#E5E5E5"> know that we should</font>
+
+914
+00:34:45,690 --> 00:34:48,170
+think<font color="#E5E5E5"> about having a dedicated meta</font>
+
+915
+00:34:46,889 --> 00:34:50,549
+resource so how would you<font color="#E5E5E5"> actually do it</font>
+
+916
+00:34:48,170 --> 00:34:52,830
+so<font color="#E5E5E5"> I don't think</font><font color="#CCCCCC"> I'd have a meta service</font>
+
+917
+00:34:50,550 --> 00:34:56,640
+but that doesn't<font color="#CCCCCC"> feel right to me and</font>
+
+918
+00:34:52,830 --> 00:34:59,340
+I'd make a meadow resource but only for
+
+919
+00:34:56,639 --> 00:35:01,430
+those resources that require it again we
+
+920
+00:34:59,340 --> 00:35:03,480
+really<font color="#CCCCCC"> favor putting that in the message</font>
+
+921
+00:35:01,430 --> 00:35:05,760
+encapsulated some kind of meta object
+
+922
+00:35:03,480 --> 00:35:08,250
+and inside the message<font color="#E5E5E5"> one all possible</font>
+
+923
+00:35:05,760 --> 00:35:11,970
+all right let's question from andreas
+
+924
+00:35:08,250 --> 00:35:14,070
+<font color="#E5E5E5">Tosh he asks XML vs. Jason isn't JSON</font>
+
+925
+00:35:11,970 --> 00:35:16,110
+limited / less maintainable for example
+
+926
+00:35:14,070 --> 00:35:17,610
+you<font color="#CCCCCC"> want</font><font color="#E5E5E5"> to add attributes later or for</font>
+
+927
+00:35:16,110 --> 00:35:21,420
+example<font color="#CCCCCC"> if you want to add the currency</font>
+
+928
+00:35:17,610 --> 00:35:23,040
+to a price later on see slides 1<font color="#E5E5E5"> 1 0 2 2</font>
+
+929
+00:35:21,420 --> 00:35:24,330
+1 12 of something on<font color="#CCCCCC"> Google which we</font>
+
+930
+00:35:23,040 --> 00:35:26,910
+<font color="#E5E5E5">won't click on it not because we can't</font>
+
+931
+00:35:24,330 --> 00:35:28,770
+share the screen sure you know this<font color="#E5E5E5"> is</font>
+
+932
+00:35:26,910 --> 00:35:31,110
+<font color="#CCCCCC">almost like the which is your favorite</font>
+
+933
+00:35:28,770 --> 00:35:35,760
+text editor battle there are pros and
+
+934
+00:35:31,110 --> 00:35:37,050
+cons all over the place with Jason with
+
+935
+00:35:35,760 --> 00:35:39,510
+some of these hypermedia formats I've
+
+936
+00:35:37,050 --> 00:35:41,700
+shown they are extensible if you look at
+
+937
+00:35:39,510 --> 00:35:44,550
+the<font color="#E5E5E5"> speck you can add</font>
+
+938
+00:35:41,700 --> 00:35:47,550
+I think there's a new link relation type
+
+939
+00:35:44,550 --> 00:35:50,040
+called profile I don't know if it is a
+
+940
+00:35:47,550 --> 00:35:52,680
+<font color="#E5E5E5">full-blown standard yet it might be an</font>
+
+941
+00:35:50,040 --> 00:35:55,410
+internet draft but the profile link
+
+942
+00:35:52,680 --> 00:35:57,599
+relation will be a way to mix in certain
+
+943
+00:35:55,410 --> 00:36:00,570
+functionality into an existing JSON API
+
+944
+00:35:57,599 --> 00:36:02,220
+right now it work with XML time cool my
+
+945
+00:36:00,570 --> 00:36:06,300
+<font color="#E5E5E5">taking that is XML definitely has a much</font>
+
+946
+00:36:02,220 --> 00:36:08,099
+stronger set of tooling and wisdom and
+
+947
+00:36:06,300 --> 00:36:11,099
+knowledge that's out there in the world
+
+948
+00:36:08,099 --> 00:36:14,720
+<font color="#E5E5E5">especially in the fortune 500 co 2000</font>
+
+949
+00:36:11,099 --> 00:36:16,680
+enterprises<font color="#E5E5E5"> JSON is the is the</font>
+
+950
+00:36:14,720 --> 00:36:18,300
+representation for javascript in
+
+951
+00:36:16,680 --> 00:36:19,920
+javascript is like the second everybody
+
+952
+00:36:18,300 --> 00:36:21,030
+<font color="#E5E5E5">second language in the world of</font>
+
+953
+00:36:19,920 --> 00:36:24,690
+programming it's not the first<font color="#E5E5E5"> language</font>
+
+954
+00:36:21,030 --> 00:36:26,339
+<font color="#CCCCCC">so those are I</font><font color="#E5E5E5"> think you we can we</font>
+
+955
+00:36:24,690 --> 00:36:27,750
+suggest supporting both make JSON your
+
+956
+00:36:26,339 --> 00:36:30,510
+default but definitely there are cases
+
+957
+00:36:27,750 --> 00:36:33,210
+where XML is gonna make<font color="#E5E5E5"> more sense lon</font>
+
+958
+00:36:30,510 --> 00:36:35,310
+dollar<font color="#CCCCCC"> SYE tags is the e-tag value of</font>
+
+959
+00:36:33,210 --> 00:36:37,260
+<font color="#E5E5E5">crc or a transaction receipt number of</font>
+
+960
+00:36:35,310 --> 00:36:40,290
+both<font color="#CCCCCC"> easy tag only useful for a</font>
+
+961
+00:36:37,260 --> 00:36:41,550
+<font color="#E5E5E5">deterministic service you know the e-tag</font>
+
+962
+00:36:40,290 --> 00:36:44,400
+can be calculated anyone you want
+
+963
+00:36:41,550 --> 00:36:48,119
+there's no general rule in HTTP spec
+
+964
+00:36:44,400 --> 00:36:50,900
+about how you calculate a new tag so
+
+965
+00:36:48,119 --> 00:36:54,089
+again I<font color="#E5E5E5"> mean use whatever makes sense</font>
+
+966
+00:36:50,900 --> 00:36:55,680
+cool Jason Kemp asks how our patch
+
+967
+00:36:54,089 --> 00:36:57,450
+requests handled on the<font color="#E5E5E5"> back end are you</font>
+
+968
+00:36:55,680 --> 00:36:59,160
+parsing it into a dynamic sequel string
+
+969
+00:36:57,450 --> 00:37:00,990
+or what are the best practices around
+
+970
+00:36:59,160 --> 00:37:04,619
+that we're currently using an ORM and to
+
+971
+00:37:00,990 --> 00:37:07,319
+DMV framework if that's not<font color="#CCCCCC"> net well I</font>
+
+972
+00:37:04,619 --> 00:37:09,000
+mean there are a bunch of pieces to<font color="#E5E5E5"> this</font>
+
+973
+00:37:07,319 --> 00:37:12,349
+question here first of all if you're
+
+974
+00:37:09,000 --> 00:37:15,839
+<font color="#CCCCCC">putting your you putting your API</font>
+
+975
+00:37:12,349 --> 00:37:17,490
+directly over your data layer there's
+
+976
+00:37:15,839 --> 00:37:20,040
+<font color="#CCCCCC">sherman there's a lot you have to think</font>
+
+977
+00:37:17,490 --> 00:37:22,170
+<font color="#E5E5E5">about</font><font color="#CCCCCC"> their would you generate a dynamic</font>
+
+978
+00:37:20,040 --> 00:37:23,490
+sequel string I don't know that doesn't
+
+979
+00:37:22,170 --> 00:37:27,440
+<font color="#CCCCCC">feel</font><font color="#E5E5E5"> too comfortable for me I probably</font>
+
+980
+00:37:23,490 --> 00:37:30,630
+<font color="#E5E5E5">modeling some kind of API model between</font>
+
+981
+00:37:27,440 --> 00:37:35,339
+between that debt service and the
+
+982
+00:37:30,630 --> 00:37:39,839
+back-end data stuff good cool Mike Rossi
+
+983
+00:37:35,339 --> 00:37:40,859
+asks what is your opinion of<font color="#CCCCCC"> odata Kevin</font>
+
+984
+00:37:39,839 --> 00:37:45,210
+what's your opinion of whole data with
+
+985
+00:37:40,859 --> 00:37:46,850
+my opinion about<font color="#CCCCCC"> it you</font><font color="#E5E5E5"> know I think the</font>
+
+986
+00:37:45,210 --> 00:37:47,960
+OData guys are headed
+
+987
+00:37:46,850 --> 00:37:50,450
+the direction with where they're going
+
+988
+00:37:47,960 --> 00:37:53,110
+they're the latest version at least last
+
+989
+00:37:50,450 --> 00:37:55,850
+I heard I'm not<font color="#E5E5E5"> entirely close to it I</font>
+
+990
+00:37:53,110 --> 00:37:57,680
+think<font color="#CCCCCC"> they've had and they were based on</font>
+
+991
+00:37:55,850 --> 00:38:00,070
+<font color="#E5E5E5">Adam pub at some point maybe they have</font>
+
+992
+00:37:57,680 --> 00:38:03,550
+other formats that they're doing<font color="#CCCCCC"> now</font>
+
+993
+00:38:00,070 --> 00:38:07,760
+again this is kind of how do we model
+
+994
+00:38:03,550 --> 00:38:10,220
+sequel over our API right they<font color="#E5E5E5"> really</font>
+
+995
+00:38:07,760 --> 00:38:13,250
+get into how you filter results<font color="#E5E5E5"> never</font>
+
+996
+00:38:10,220 --> 00:38:14,900
+comes like that you know<font color="#E5E5E5"> what there</font><font color="#CCCCCC"> are</font>
+
+997
+00:38:13,250 --> 00:38:19,430
+cases that<font color="#E5E5E5"> I am comfortable with that</font>
+
+998
+00:38:14,900 --> 00:38:22,280
+good<font color="#E5E5E5"> usually</font><font color="#CCCCCC"> I'm not</font><font color="#E5E5E5"> okay what's up cool</font>
+
+999
+00:38:19,430 --> 00:38:23,660
+question from the vector V in case we
+
+1000
+00:38:22,280 --> 00:38:25,430
+would like<font color="#CCCCCC"> to call</font><font color="#E5E5E5"> it</font><font color="#CCCCCC"> the eyes from</font>
+
+1001
+00:38:23,660 --> 00:38:27,170
+static pages for example HTML and not
+
+1002
+00:38:25,430 --> 00:38:28,460
+from PHP or other programs i imagine the
+
+1003
+00:38:27,170 --> 00:38:30,020
+key thing is that the build other
+
+1004
+00:38:28,460 --> 00:38:32,240
+program front of the server is there any
+
+1005
+00:38:30,020 --> 00:38:33,770
+way to embed the credentials on your
+
+1006
+00:38:32,240 --> 00:38:35,770
+<font color="#E5E5E5">respective of OAuth basic etcetera and</font>
+
+1007
+00:38:33,770 --> 00:38:38,900
+that make them fall prey to other eyes
+
+1008
+00:38:35,770 --> 00:38:42,020
+we deal<font color="#E5E5E5"> with</font><font color="#CCCCCC"> this all the time as we're</font>
+
+1009
+00:38:38,900 --> 00:38:45,470
+building<font color="#E5E5E5"> apps yeah so just with static</font>
+
+1010
+00:38:42,020 --> 00:38:49,300
+pages how do you protect<font color="#CCCCCC"> that you don't</font>
+
+1011
+00:38:45,470 --> 00:38:52,310
+you don't yeah and that's where using we
+
+1012
+00:38:49,300 --> 00:38:54,890
+of course<font color="#CCCCCC"> apogee we have a product a</font>
+
+1013
+00:38:52,310 --> 00:38:57,320
+free product available on FG com that
+
+1014
+00:38:54,890 --> 00:38:59,330
+will allow you to create a proxy and you
+
+1015
+00:38:57,320 --> 00:39:01,340
+can store some that information in the
+
+1016
+00:38:59,330 --> 00:39:04,150
+proxy keep it off of the dynamic pages
+
+1017
+00:39:01,340 --> 00:39:09,680
+and do some do some stuff back that way
+
+1018
+00:39:04,150 --> 00:39:12,140
+but it's<font color="#E5E5E5"> pretty tough overall yeah okay</font>
+
+1019
+00:39:09,680 --> 00:39:13,850
+next question is from bish how can a
+
+1020
+00:39:12,140 --> 00:39:15,380
+client requests templates for creating
+
+1021
+00:39:13,850 --> 00:39:17,450
+new resources and I think that's what
+
+1022
+00:39:15,380 --> 00:39:20,450
+<font color="#CCCCCC">you</font><font color="#E5E5E5"> talked about the action right</font>
+
+1023
+00:39:17,450 --> 00:39:21,740
+<font color="#E5E5E5">actually see that in siren and in the</font>
+
+1024
+00:39:20,450 --> 00:39:26,660
+collection plus Jason they have right
+
+1025
+00:39:21,740 --> 00:39:28,460
+templates easy enough<font color="#E5E5E5"> yeah so user use</font>
+
+1026
+00:39:26,660 --> 00:39:35,090
+dancers use a media type that supports
+
+1027
+00:39:28,460 --> 00:39:37,400
+it<font color="#CCCCCC"> alright um anis fuck swallow asks how</font>
+
+1028
+00:39:35,090 --> 00:39:40,640
+to facilitate the<font color="#CCCCCC"> XML transformation of</font>
+
+1029
+00:39:37,400 --> 00:39:42,890
+JSON response there are a bunch of tools
+
+1030
+00:39:40,640 --> 00:39:44,600
+that<font color="#E5E5E5"> can help you do that there's open</font>
+
+1031
+00:39:42,890 --> 00:39:46,940
+source packages at the G has some stuff
+
+1032
+00:39:44,600 --> 00:39:48,650
+other folks have some stuff to transform
+
+1033
+00:39:46,940 --> 00:39:50,750
+XML into JSON sometimes it's really
+
+1034
+00:39:48,650 --> 00:39:53,660
+<font color="#E5E5E5">straightforward in fact the XML the JSON</font>
+
+1035
+00:39:50,750 --> 00:39:55,120
+is actually often simpler than the other
+
+1036
+00:39:53,660 --> 00:39:56,650
+way around but
+
+1037
+00:39:55,120 --> 00:39:58,000
+which was out there don't<font color="#E5E5E5"> easier to find</font>
+
+1038
+00:39:56,650 --> 00:40:03,280
+out google you can<font color="#E5E5E5"> start with a pudgy if</font>
+
+1039
+00:39:58,000 --> 00:40:05,260
+you want<font color="#CCCCCC"> okay Christopher asks to</font>
+
+1040
+00:40:03,280 --> 00:40:07,210
+provide minimal security / tracking is
+
+1041
+00:40:05,260 --> 00:40:09,070
+an access token enough<font color="#E5E5E5"> I have a bunch of</font>
+
+1042
+00:40:07,210 --> 00:40:10,900
+JavaScript widgets which clients will
+
+1043
+00:40:09,070 --> 00:40:12,270
+embed into their user interfaces and i'm
+
+1044
+00:40:10,900 --> 00:40:14,170
+planning on proving each client
+
+1045
+00:40:12,270 --> 00:40:15,640
+providing i guess each client with<font color="#CCCCCC"> the</font>
+
+1046
+00:40:14,170 --> 00:40:18,280
+token the data is not private a<font color="#E5E5E5"> lot</font>
+
+1047
+00:40:15,640 --> 00:40:21,310
+seems like overkill oooff might be an
+
+1048
+00:40:18,280 --> 00:40:24,190
+overkill if you're not using user data
+
+1049
+00:40:21,310 --> 00:40:25,840
+right if your service manages user data
+
+1050
+00:40:24,190 --> 00:40:29,560
+and you have clients that need to access
+
+1051
+00:40:25,840 --> 00:40:31,690
+that user data Olaf is perfect otherwise
+
+1052
+00:40:29,560 --> 00:40:32,800
+you know one of the other methods might
+
+1053
+00:40:31,690 --> 00:40:34,990
+better suit your needs and that's fire
+
+1054
+00:40:32,800 --> 00:40:37,630
+that<font color="#E5E5E5"> could be ssl-certificates even if</font>
+
+1055
+00:40:34,990 --> 00:40:40,030
+client us is all certificates and basic
+
+1056
+00:40:37,630 --> 00:40:42,640
+off pencil you need<font color="#E5E5E5"> right</font><font color="#CCCCCC"> uh David</font>
+
+1057
+00:40:40,030 --> 00:40:44,860
+Campbell asks or I guess<font color="#E5E5E5"> it's kind of</font>
+
+1058
+00:40:42,640 --> 00:40:46,510
+influenced can we buy the better word
+
+1059
+00:40:44,860 --> 00:40:47,530
+for notifications and response I think
+
+1060
+00:40:46,510 --> 00:40:50,560
+we absolutely could that has way too
+
+1061
+00:40:47,530 --> 00:40:51,760
+many syllables in it but that's that's
+
+1062
+00:40:50,560 --> 00:40:53,680
+the one that we liked it seemed to have
+
+1063
+00:40:51,760 --> 00:40:55,120
+the most relevance for what was going on
+
+1064
+00:40:53,680 --> 00:40:56,880
+the real<font color="#CCCCCC"> the real point for putting</font>
+
+1065
+00:40:55,120 --> 00:40:59,320
+notifications in there as our suggestion
+
+1066
+00:40:56,880 --> 00:41:01,060
+was just to say you<font color="#E5E5E5"> can have a section</font>
+
+1067
+00:40:59,320 --> 00:41:02,560
+<font color="#E5E5E5">for medic made us metadata about the</font>
+
+1068
+00:41:01,060 --> 00:41:04,180
+response you should have the response
+
+1069
+00:41:02,560 --> 00:41:05,950
+itself but then keep in mind that there
+
+1070
+00:41:04,180 --> 00:41:08,350
+are things that are a better happening
+
+1071
+00:41:05,950 --> 00:41:10,330
+around the app more broadly<font color="#E5E5E5"> or more</font>
+
+1072
+00:41:08,350 --> 00:41:11,770
+globally that could be interesting<font color="#E5E5E5"> to</font>
+
+1073
+00:41:10,330 --> 00:41:13,570
+store as a separate thing to do so for
+
+1074
+00:41:11,770 --> 00:41:15,700
+your<font color="#E5E5E5"> app it might be</font><font color="#CCCCCC"> notifications for</font>
+
+1075
+00:41:13,570 --> 00:41:18,340
+someone else's app it might be alerts or
+
+1076
+00:41:15,700 --> 00:41:20,740
+info or warnings whatever it is that
+
+1077
+00:41:18,340 --> 00:41:21,850
+it's<font color="#E5E5E5"> just sorta like the idea the model</font>
+
+1078
+00:41:20,740 --> 00:41:24,370
+the pattern that we like to be idiot
+
+1079
+00:41:21,850 --> 00:41:25,780
+piggybacking more generic stuff on top
+
+1080
+00:41:24,370 --> 00:41:27,220
+of<font color="#CCCCCC"> each response because the app could</font>
+
+1081
+00:41:25,780 --> 00:41:30,280
+just render it when it gets new data
+
+1082
+00:41:27,220 --> 00:41:34,360
+back great great point though thanks for
+
+1083
+00:41:30,280 --> 00:41:36,430
+that question<font color="#CCCCCC"> alright next</font><font color="#E5E5E5"> one Matthew</font>
+
+1084
+00:41:34,360 --> 00:41:37,960
+<font color="#CCCCCC">reinbold what are some rules of thumb an</font>
+
+1085
+00:41:36,430 --> 00:41:40,330
+authorization versus authentication
+
+1086
+00:41:37,960 --> 00:41:42,070
+meaning making sure the client has
+
+1087
+00:41:40,330 --> 00:41:43,600
+permission to<font color="#E5E5E5"> make requests versus the</font>
+
+1088
+00:41:42,070 --> 00:41:47,080
+user having permissions to modify their
+
+1089
+00:41:43,600 --> 00:41:51,010
+data Oh auth to for both yeah so off
+
+1090
+00:41:47,080 --> 00:41:52,210
+<font color="#E5E5E5">tune for both so it ought to whether or</font>
+
+1091
+00:41:51,010 --> 00:41:53,860
+<font color="#E5E5E5">not the client has permission is</font>
+
+1092
+00:41:52,210 --> 00:41:54,789
+something that you're going<font color="#E5E5E5"> to have to</font>
+
+1093
+00:41:53,860 --> 00:41:57,279
+manage
+
+1094
+00:41:54,789 --> 00:42:01,150
+your client registration process and
+
+1095
+00:41:57,279 --> 00:42:05,049
+your client policies and since expose
+
+1096
+00:42:01,150 --> 00:42:06,640
+about versus a user<font color="#CCCCCC"> okay authorization</font>
+
+1097
+00:42:05,049 --> 00:42:08,559
+authentication don't get it was that
+
+1098
+00:42:06,640 --> 00:42:10,809
+avatar and how<font color="#CCCCCC"> many</font><font color="#E5E5E5"> times have you</font>
+
+1099
+00:42:08,559 --> 00:42:14,140
+really owe us back in the past month<font color="#E5E5E5"> god</font>
+
+1100
+00:42:10,809 --> 00:42:16,089
+I think<font color="#E5E5E5"> I'm up to seven now</font><font color="#CCCCCC"> one document</font>
+
+1101
+00:42:14,140 --> 00:42:18,910
+<font color="#CCCCCC">all right our last question</font><font color="#E5E5E5"> for today</font>
+
+1102
+00:42:16,089 --> 00:42:20,739
+from Peter how many items would you
+
+1103
+00:42:18,910 --> 00:42:23,380
+limit a JSON response to in the case
+
+1104
+00:42:20,739 --> 00:42:25,630
+<font color="#CCCCCC">that each object has 10,000 cute I'm</font>
+
+1105
+00:42:23,380 --> 00:42:27,609
+sorry that HIV has<font color="#E5E5E5"> 10 key value pairs I</font>
+
+1106
+00:42:25,630 --> 00:42:28,809
+use something like sending 300 merchants
+
+1107
+00:42:27,609 --> 00:42:31,119
+location to the client on one response
+
+1108
+00:42:28,809 --> 00:42:32,410
+to too big / network heavy in the
+
+1109
+00:42:31,119 --> 00:42:35,199
+previous version<font color="#E5E5E5"> of this we talked about</font>
+
+1110
+00:42:32,410 --> 00:42:38,439
+<font color="#CCCCCC">just a rule of thumb around 10 we have</font>
+
+1111
+00:42:35,199 --> 00:42:41,049
+you know we have 10 fingers we have a
+
+1112
+00:42:38,439 --> 00:42:43,359
+mostly decimal based<font color="#CCCCCC"> calming system all</font>
+
+1113
+00:42:41,049 --> 00:42:45,819
+over the world so I think using a using
+
+1114
+00:42:43,359 --> 00:42:47,199
+10<font color="#E5E5E5"> as your default makes sense if your</font>
+
+1115
+00:42:45,819 --> 00:42:48,279
+data is really really<font color="#E5E5E5"> big make it</font>
+
+1116
+00:42:47,199 --> 00:42:50,169
+smaller than 10 de this really really
+
+1117
+00:42:48,279 --> 00:42:51,339
+<font color="#E5E5E5">small make it bigger than 10 but I think</font>
+
+1118
+00:42:50,169 --> 00:42:56,529
+started with 10 is a good rule of thumb
+
+1119
+00:42:51,339 --> 00:42:58,359
+and test this out to right I mean have
+
+1120
+00:42:56,529 --> 00:42:59,769
+clients out there that you're testing
+
+1121
+00:42:58,359 --> 00:43:01,029
+with and if you know you're gonna have a
+
+1122
+00:42:59,769 --> 00:43:02,979
+<font color="#E5E5E5">bunch of mobile clients see how this</font>
+
+1123
+00:43:01,029 --> 00:43:04,689
+feels on a mobile client if you<font color="#CCCCCC"> know</font>
+
+1124
+00:43:02,979 --> 00:43:06,729
+you're going<font color="#E5E5E5"> to have a bunch of you know</font>
+
+1125
+00:43:04,689 --> 00:43:08,259
+back-end systems that our clients test
+
+1126
+00:43:06,729 --> 00:43:11,409
+it<font color="#E5E5E5"> from there because that could change</font>
+
+1127
+00:43:08,259 --> 00:43:13,029
+your payload folks thanks a bunch for
+
+1128
+00:43:11,409 --> 00:43:15,069
+tuning in today we<font color="#E5E5E5"> appreciate your</font>
+
+1129
+00:43:13,029 --> 00:43:16,959
+questions and your engagement as we
+
+1130
+00:43:15,069 --> 00:43:18,519
+<font color="#CCCCCC">mentioned before of this webcast and all</font>
+
+1131
+00:43:16,959 --> 00:43:21,039
+our webcasts are available on YouTube at
+
+1132
+00:43:18,519 --> 00:43:23,349
+youtube.com slash<font color="#E5E5E5"> Apogee please join us</font>
+
+1133
+00:43:21,039 --> 00:43:25,269
+on the google group called<font color="#CCCCCC"> api</font><font color="#E5E5E5"> craft if</font>
+
+1134
+00:43:23,349 --> 00:43:27,219
+you just<font color="#CCCCCC"> do a search for api crafts will</font>
+
+1135
+00:43:25,269 --> 00:43:29,319
+find<font color="#E5E5E5"> us fantastic community folks all</font>
+
+1136
+00:43:27,219 --> 00:43:32,319
+moving the craft<font color="#CCCCCC"> ivp eyes forward and</font>
+
+1137
+00:43:29,319 --> 00:43:33,999
+feel<font color="#E5E5E5"> free</font><font color="#CCCCCC"> to contact us directly those</font>
+
+1138
+00:43:32,319 --> 00:43:35,949
+are our emails and our<font color="#CCCCCC"> twitter accounts</font>
+
+1139
+00:43:33,999 --> 00:43:37,900
+and of course there's the apogee twitter
+
+1140
+00:43:35,949 --> 00:43:39,009
+account as well thanks<font color="#E5E5E5"> for tuning</font><font color="#CCCCCC"> in and</font>
+
+1141
+00:43:37,900 --> 00:43:41,640
+we'll catch you next time<font color="#E5E5E5"> thanks</font>
+
+1142
+00:43:39,009 --> 00:43:41,640
+everybody<font color="#E5E5E5"> bye</font>
+

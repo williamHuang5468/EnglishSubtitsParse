@@ -1,0 +1,3820 @@
+1
+00:00:00,000 --> 00:00:02,060
+you
+
+2
+00:00:03,030 --> 00:00:05,090
+you
+
+3
+00:00:12,680 --> 00:00:19,700
+I don't know if the conference will have
+
+4
+00:00:16,970 --> 00:00:24,800
+slides up somewhere in any<font color="#CCCCCC"> case you can</font>
+
+5
+00:00:19,700 --> 00:00:28,040
+get it<font color="#E5E5E5"> from my side PDF I always like to</font>
+
+6
+00:00:24,800 --> 00:00:30,980
+start explaining the range of levels not
+
+7
+00:00:28,040 --> 00:00:32,750
+a classification into beginner
+
+8
+00:00:30,980 --> 00:00:35,000
+intermediate advanced which makes
+
+9
+00:00:32,750 --> 00:00:38,720
+<font color="#CCCCCC">absolutely no sense because of</font><font color="#E5E5E5"> course</font>
+
+10
+00:00:35,000 --> 00:00:42,920
+every talk covers a range in also like
+
+11
+00:00:38,720 --> 00:00:44,960
+to call the levels by<font color="#CCCCCC"> the names given to</font>
+
+12
+00:00:42,920 --> 00:00:47,720
+them in the no<font color="#CCCCCC"> theater and later in</font>
+
+13
+00:00:44,960 --> 00:00:50,390
+Aikido and other martial art there's a
+
+14
+00:00:47,720 --> 00:00:52,460
+phase where you're learning shoe there's
+
+15
+00:00:50,390 --> 00:00:54,350
+a phase where you're detaching from the
+
+16
+00:00:52,460 --> 00:00:56,390
+learning<font color="#E5E5E5"> into the real word ha and</font>
+
+17
+00:00:54,350 --> 00:01:00,640
+there's a phase where you transcend
+
+18
+00:00:56,390 --> 00:01:03,440
+learning<font color="#CCCCCC"> read this talk addresses</font>
+
+19
+00:01:00,640 --> 00:01:05,810
+anything anybody bought to the rankest
+
+20
+00:01:03,440 --> 00:01:08,479
+beginner definitely<font color="#E5E5E5"> all intermediate</font>
+
+21
+00:01:05,810 --> 00:01:09,830
+layers if you're really advanced if you
+
+22
+00:01:08,479 --> 00:01:12,649
+spent a lot of your time and energy
+
+23
+00:01:09,830 --> 00:01:15,619
+thinking about abstraction you may well
+
+24
+00:01:12,649 --> 00:01:18,409
+get a bit bored in which case<font color="#CCCCCC"> I will</font><font color="#E5E5E5"> not</font>
+
+25
+00:01:15,619 --> 00:01:20,810
+be offended if<font color="#CCCCCC"> you leave so obstruction</font>
+
+26
+00:01:18,409 --> 00:01:24,229
+is a somewhat abstract theme so let's
+
+27
+00:01:20,810 --> 00:01:27,310
+make<font color="#E5E5E5"> it a bit more concrete we work</font>
+
+28
+00:01:24,229 --> 00:01:32,420
+think and operate on a tower of
+
+29
+00:01:27,310 --> 00:01:33,979
+abstraction I developed this to address
+
+30
+00:01:32,420 --> 00:01:36,500
+friends we're saying I don't<font color="#E5E5E5"> do</font>
+
+31
+00:01:33,979 --> 00:01:39,049
+abstraction I program in assembly
+
+32
+00:01:36,500 --> 00:01:42,290
+language you can't get<font color="#E5E5E5"> any less abstract</font>
+
+33
+00:01:39,049 --> 00:01:44,240
+than that well any more abstract but you
+
+34
+00:01:42,290 --> 00:01:48,140
+know assembly language is an abstraction
+
+35
+00:01:44,240 --> 00:01:51,500
+of machine code which i'm coding there
+
+36
+00:01:48,140 --> 00:01:54,170
+in extra decimal which is an obstruction
+
+37
+00:01:51,500 --> 00:01:58,840
+of signals controlling complex
+
+38
+00:01:54,170 --> 00:02:01,869
+integrated circuits which abstract
+
+39
+00:01:58,840 --> 00:02:04,610
+components built out of gates which
+
+40
+00:02:01,869 --> 00:02:06,650
+where a gate is the abstraction of
+
+41
+00:02:04,610 --> 00:02:09,320
+certain arrangement of transistors they
+
+42
+00:02:06,650 --> 00:02:13,150
+transistor is an abstraction of a
+
+43
+00:02:09,320 --> 00:02:15,950
+certain layout of dopants on a media the
+
+44
+00:02:13,150 --> 00:02:19,459
+reasoning in this term is obstructing
+
+45
+00:02:15,950 --> 00:02:22,340
+over the<font color="#CCCCCC"> actual particles moons and</font>
+
+46
+00:02:19,459 --> 00:02:26,640
+variants and photons that are doing the
+
+47
+00:02:22,340 --> 00:02:28,800
+work the particles are an abstraction of
+
+48
+00:02:26,640 --> 00:02:30,690
+a grid which is an abstraction of
+
+49
+00:02:28,800 --> 00:02:32,760
+Schrodinger's equation and I'm sure
+
+50
+00:02:30,690 --> 00:02:35,280
+somebody who's done more serious physics
+
+51
+00:02:32,760 --> 00:02:39,480
+<font color="#E5E5E5">than I could explain</font><font color="#CCCCCC"> to me what is</font>
+
+52
+00:02:35,280 --> 00:02:43,050
+Schrodinger's abstracting<font color="#E5E5E5"> on so why</font>
+
+53
+00:02:39,480 --> 00:02:45,510
+don't we program directly by tweaking
+
+54
+00:02:43,050 --> 00:02:48,630
+Schrodinger's equation why bother with
+
+55
+00:02:45,510 --> 00:02:50,459
+<font color="#CCCCCC">all these levels of abstraction all the</font>
+
+56
+00:02:48,630 --> 00:02:54,690
+way to assembly language and I'm told
+
+57
+00:02:50,459 --> 00:02:57,450
+there are even higher levels more
+
+58
+00:02:54,690 --> 00:03:00,630
+distance from from their model of
+
+59
+00:02:57,450 --> 00:03:03,120
+reality well essentially we're looking
+
+60
+00:03:00,630 --> 00:03:05,730
+for leverage leverage is a term that
+
+61
+00:03:03,120 --> 00:03:08,880
+comes<font color="#E5E5E5"> from a physical lever which lets</font>
+
+62
+00:03:05,730 --> 00:03:12,269
+me move a huge boulder I couldn't
+
+63
+00:03:08,880 --> 00:03:17,610
+possibly move without a lever to amplify
+
+64
+00:03:12,269 --> 00:03:20,610
+my force<font color="#CCCCCC"> leveraged by metaphor is used</font>
+
+65
+00:03:17,610 --> 00:03:23,760
+for<font color="#E5E5E5"> example when you borrow money to</font>
+
+66
+00:03:20,610 --> 00:03:27,560
+invest more than<font color="#E5E5E5"> you</font><font color="#CCCCCC"> currently have in</font>
+
+67
+00:03:23,760 --> 00:03:31,440
+your pocket great idea<font color="#CCCCCC"> it does imply</font>
+
+68
+00:03:27,560 --> 00:03:34,920
+things<font color="#E5E5E5"> however if it goes wrong has</font>
+
+69
+00:03:31,440 --> 00:03:38,340
+<font color="#CCCCCC">happened you may recall in 2008 for the</font>
+
+70
+00:03:34,920 --> 00:03:42,239
+leverage in the<font color="#E5E5E5"> monetary sense it can</font>
+
+71
+00:03:38,340 --> 00:03:44,610
+amplify the crash at least as much so
+
+72
+00:03:42,239 --> 00:03:46,380
+that's why the stock is balancing
+
+73
+00:03:44,610 --> 00:03:51,000
+between singing the praise of
+
+74
+00:03:46,380 --> 00:03:53,340
+abstraction as leverage warning about
+
+75
+00:03:51,000 --> 00:03:55,680
+the dangers of abstraction as leverage
+
+76
+00:03:53,340 --> 00:03:59,400
+and trying to give some guidelines on
+
+77
+00:03:55,680 --> 00:04:03,420
+how to do abstractions right to<font color="#E5E5E5"> maximize</font>
+
+78
+00:03:59,400 --> 00:04:06,150
+their positives and keep their negatives
+
+79
+00:04:03,420 --> 00:04:08,280
+under control you really cannot live
+
+80
+00:04:06,150 --> 00:04:10,680
+without abstraction that actually
+
+81
+00:04:08,280 --> 00:04:13,410
+applies to all of human life and thought
+
+82
+00:04:10,680 --> 00:04:16,169
+but especially applies to what we're<font color="#CCCCCC"> all</font>
+
+83
+00:04:13,410 --> 00:04:19,769
+doing knowledge work not necessarily
+
+84
+00:04:16,168 --> 00:04:24,900
+programming some of us may use may well
+
+85
+00:04:19,769 --> 00:04:29,970
+use programming as a mere tool to do a
+
+86
+00:04:24,900 --> 00:04:32,370
+DNA synthesis or financial wizardry or
+
+87
+00:04:29,970 --> 00:04:34,620
+whatever but the<font color="#E5E5E5"> point is</font><font color="#CCCCCC"> that if you're</font>
+
+88
+00:04:32,370 --> 00:04:37,830
+doing knowledge work you're using or
+
+89
+00:04:34,620 --> 00:04:38,880
+consuming not consuming as in once
+
+90
+00:04:37,830 --> 00:04:42,330
+<font color="#E5E5E5">you're done there</font>
+
+91
+00:04:38,880 --> 00:04:45,840
+no more<font color="#CCCCCC"> they're they're still there so</font>
+
+92
+00:04:42,330 --> 00:04:47,340
+<font color="#E5E5E5">using abstraction layers and often a lot</font>
+
+93
+00:04:45,840 --> 00:04:49,830
+of what you are producing on the way to
+
+94
+00:04:47,340 --> 00:04:52,770
+whatever your final goal is is other
+
+95
+00:04:49,830 --> 00:04:55,110
+abstraction layers on top therefore it
+
+96
+00:04:52,770 --> 00:04:58,110
+becomes a very attractive-looking I
+
+97
+00:04:55,110 --> 00:05:01,530
+could use the slice of that layer cake
+
+98
+00:04:58,110 --> 00:05:05,430
+so we<font color="#CCCCCC"> can't live without it</font><font color="#E5E5E5"> but can we</font>
+
+99
+00:05:01,530 --> 00:05:09,720
+live with it<font color="#CCCCCC"> joel's polski now that's</font>
+
+100
+00:05:05,430 --> 00:05:12,390
+known as they core developer<font color="#CCCCCC"> of stack</font>
+
+101
+00:05:09,720 --> 00:05:14,850
+overflow but even before then it was a
+
+102
+00:05:12,390 --> 00:05:17,490
+well-known blogger and software
+
+103
+00:05:14,850 --> 00:05:20,810
+entrepreneur and so on expressed<font color="#E5E5E5"> once</font>
+
+104
+00:05:17,490 --> 00:05:25,110
+<font color="#E5E5E5">what he called spoke is low which is all</font>
+
+105
+00:05:20,810 --> 00:05:28,020
+abstractions leak what does<font color="#CCCCCC"> that mean</font>
+
+106
+00:05:25,110 --> 00:05:30,450
+we'll explore<font color="#CCCCCC"> that in more detail it</font>
+
+107
+00:05:28,020 --> 00:05:34,490
+doesn't<font color="#CCCCCC"> necessarily mean a</font><font color="#E5E5E5"> dike with a</font>
+
+108
+00:05:30,450 --> 00:05:37,200
+whole Linda poor kid trying to stem it
+
+109
+00:05:34,490 --> 00:05:40,410
+it actually means all obstructions are
+
+110
+00:05:37,200 --> 00:05:44,870
+subject to boggs excessive load
+
+111
+00:05:40,410 --> 00:05:47,400
+deliberate attacks to ward against<font color="#E5E5E5"> these</font>
+
+112
+00:05:44,870 --> 00:05:50,220
+when you<font color="#E5E5E5"> use an</font><font color="#CCCCCC"> abstraction you must</font>
+
+113
+00:05:47,400 --> 00:05:53,210
+understand the levels below the
+
+114
+00:05:50,220 --> 00:05:56,130
+abstraction or you're completely
+
+115
+00:05:53,210 --> 00:05:59,100
+completely defenseless against the leak
+
+116
+00:05:56,130 --> 00:06:01,770
+and<font color="#CCCCCC"> this was the whole point of spoke is</font>
+
+117
+00:05:59,100 --> 00:06:05,960
+low i'm sure you can<font color="#CCCCCC"> find you can find</font>
+
+118
+00:06:01,770 --> 00:06:09,440
+his essay in a line is a great writer
+
+119
+00:06:05,960 --> 00:06:13,920
+but what<font color="#E5E5E5"> i'm adding to this is</font>
+
+120
+00:06:09,440 --> 00:06:17,540
+obstruction should leak not only do they
+
+121
+00:06:13,920 --> 00:06:21,530
+they<font color="#CCCCCC"> should in control designed</font>
+
+122
+00:06:17,540 --> 00:06:26,930
+architected ways<font color="#CCCCCC"> we'll see what i mean</font>
+
+123
+00:06:21,530 --> 00:06:30,300
+by this then there's an important aside
+
+124
+00:06:26,930 --> 00:06:32,820
+<font color="#CCCCCC">abstraction can slow you down everybody</font>
+
+125
+00:06:30,300 --> 00:06:35,100
+will probably be nothing saying yeah if
+
+126
+00:06:32,820 --> 00:06:37,740
+I program to abstractly my program will
+
+127
+00:06:35,100 --> 00:06:39,690
+<font color="#E5E5E5">be slow it's not so much that it's about</font>
+
+128
+00:06:37,740 --> 00:06:42,360
+your mind remember your technology
+
+129
+00:06:39,690 --> 00:06:46,110
+changes all the time your<font color="#E5E5E5"> mind not so</font>
+
+130
+00:06:42,360 --> 00:06:50,010
+much as I keep saying we are on release
+
+131
+00:06:46,110 --> 00:06:51,849
+1.0 beta of human beings and there
+
+132
+00:06:50,010 --> 00:06:54,909
+doesn't seem to be an
+
+133
+00:06:51,849 --> 00:06:57,309
+<font color="#E5E5E5">to prospect for an upgrade in sight so</font>
+
+134
+00:06:54,909 --> 00:06:59,379
+whatever deals with the functioning of
+
+135
+00:06:57,309 --> 00:07:01,899
+<font color="#CCCCCC">your mind is probably something you're</font>
+
+136
+00:06:59,379 --> 00:07:06,059
+<font color="#E5E5E5">going to have to work with for quite a</font>
+
+137
+00:07:01,899 --> 00:07:10,689
+while so in Psychological Science in
+
+138
+00:07:06,059 --> 00:07:13,270
+2008<font color="#CCCCCC"> McCrea Lieberman trope in Sherman</font>
+
+139
+00:07:10,689 --> 00:07:15,909
+published constructional level and
+
+140
+00:07:13,270 --> 00:07:19,959
+procrastination essentially it's a
+
+141
+00:07:15,909 --> 00:07:22,629
+<font color="#E5E5E5">well-known fact that remote events are</font>
+
+142
+00:07:19,959 --> 00:07:27,369
+construed mentally at higher levels of
+
+143
+00:07:22,629 --> 00:07:31,050
+abstraction so if you think what did I
+
+144
+00:07:27,369 --> 00:07:33,339
+have for lunch today you can probably
+
+145
+00:07:31,050 --> 00:07:38,110
+<font color="#E5E5E5">have it in your mind at a rather</font>
+
+146
+00:07:33,339 --> 00:07:41,349
+concrete level I had some lettuce and I
+
+147
+00:07:38,110 --> 00:07:44,979
+skipped the zucchini but I had the fish
+
+148
+00:07:41,349 --> 00:07:47,199
+um pretty concrete if you're<font color="#E5E5E5"> thinking</font>
+
+149
+00:07:44,979 --> 00:07:51,159
+what<font color="#E5E5E5"> did I have for lunch a year ago</font>
+
+150
+00:07:47,199 --> 00:07:55,269
+exactly you while I probably did have
+
+151
+00:07:51,159 --> 00:07:59,139
+lunch<font color="#CCCCCC"> likely some vegetable and some</font>
+
+152
+00:07:55,269 --> 00:08:03,099
+protein<font color="#E5E5E5"> you are inevitably abstracting</font>
+
+153
+00:07:59,139 --> 00:08:06,399
+the nature of<font color="#E5E5E5"> your lunch which is remote</font>
+
+154
+00:08:03,099 --> 00:08:09,279
+in time in<font color="#E5E5E5"> this case the reverse also</font>
+
+155
+00:08:06,399 --> 00:08:11,740
+holds which is the point the scholars
+
+156
+00:08:09,279 --> 00:08:14,909
+established and published in in
+
+157
+00:08:11,740 --> 00:08:20,050
+Psychological Science the higher the
+
+158
+00:08:14,909 --> 00:08:25,499
+<font color="#E5E5E5">abstraction your construing something</font>
+
+159
+00:08:20,050 --> 00:08:30,669
+they more likely it is to that you will
+
+160
+00:08:25,499 --> 00:08:33,339
+procrastinate that result is well
+
+161
+00:08:30,669 --> 00:08:36,159
+established for undergrad students of
+
+162
+00:08:33,339 --> 00:08:38,889
+psychology that remember whenever you
+
+163
+00:08:36,159 --> 00:08:40,659
+get empirical results about from from
+
+164
+00:08:38,889 --> 00:08:42,939
+psychological journals and so on<font color="#E5E5E5"> which</font>
+
+165
+00:08:40,659 --> 00:08:47,259
+are well worth reading you know they
+
+166
+00:08:42,938 --> 00:08:49,389
+will be accurate<font color="#E5E5E5"> for undergrad students</font>
+
+167
+00:08:47,259 --> 00:08:52,120
+of that discipline because those are the
+
+168
+00:08:49,389 --> 00:08:54,339
+<font color="#CCCCCC">only experimental subjects</font><font color="#E5E5E5"> the poor guys</font>
+
+169
+00:08:52,120 --> 00:08:57,100
+can get without having to like shell out
+
+170
+00:08:54,339 --> 00:08:59,319
+big money<font color="#E5E5E5"> so that</font><font color="#CCCCCC"> that's sometimes that</font>
+
+171
+00:08:57,100 --> 00:09:03,579
+actually matters so there's the famous
+
+172
+00:08:59,319 --> 00:09:05,350
+case of the attachment you know they we
+
+173
+00:09:03,579 --> 00:09:07,300
+it's well established
+
+174
+00:09:05,350 --> 00:09:09,670
+tend to value what we have more<font color="#CCCCCC"> than</font>
+
+175
+00:09:07,300 --> 00:09:11,020
+what we lack if that was universally
+
+176
+00:09:09,670 --> 00:09:14,680
+true there would be no such thing as
+
+177
+00:09:11,020 --> 00:09:16,390
+<font color="#CCCCCC">trait because each protagonist would</font>
+
+178
+00:09:14,680 --> 00:09:18,850
+value what they already have more<font color="#E5E5E5"> than</font>
+
+179
+00:09:16,390 --> 00:09:21,160
+<font color="#E5E5E5">what they could get by in exchange well</font>
+
+180
+00:09:18,850 --> 00:09:23,710
+apparently<font color="#E5E5E5"> that only applies to</font>
+
+181
+00:09:21,160 --> 00:09:25,980
+undergrad students and actual traders in
+
+182
+00:09:23,710 --> 00:09:30,010
+the market are completely<font color="#E5E5E5"> free of that</font>
+
+183
+00:09:25,980 --> 00:09:34,770
+mental effect so keep that in<font color="#CCCCCC"> mind let</font>
+
+184
+00:09:30,010 --> 00:09:42,420
+<font color="#CCCCCC">me very briefly give some example if</font>
+
+185
+00:09:34,770 --> 00:09:48,750
+they if a task is described as a write
+
+186
+00:09:42,420 --> 00:09:51,850
+500 words essay about today's lecture
+
+187
+00:09:48,750 --> 00:09:56,610
+students tend to actually do it pretty
+
+188
+00:09:51,850 --> 00:10:00,840
+promptly if it's<font color="#E5E5E5"> about write an essay on</font>
+
+189
+00:09:56,610 --> 00:10:04,120
+a lecture<font color="#CCCCCC"> you found very interesting I</font>
+
+190
+00:10:00,840 --> 00:10:07,570
+mean it shouldn't take forever to think
+
+191
+00:10:04,120 --> 00:10:10,660
+ok I've had no 20 lessons so far which
+
+192
+00:10:07,570 --> 00:10:15,210
+one was very interesting but<font color="#CCCCCC"> it's just</font>
+
+193
+00:10:10,660 --> 00:10:17,980
+one obstruction level away<font color="#E5E5E5"> from today's</font>
+
+194
+00:10:15,210 --> 00:10:20,430
+lecture which they<font color="#CCCCCC"> just heard</font><font color="#E5E5E5"> too so</font>
+
+195
+00:10:17,980 --> 00:10:24,820
+it's very present very concrete to them
+
+196
+00:10:20,430 --> 00:10:27,610
+a lot<font color="#CCCCCC"> more will fail to deliver</font><font color="#E5E5E5"> that</font>
+
+197
+00:10:24,820 --> 00:10:31,570
+essay or deliver it late that's an
+
+198
+00:10:27,610 --> 00:10:34,980
+established<font color="#CCCCCC"> right so abstraction leads</font>
+
+199
+00:10:31,570 --> 00:10:38,110
+to procrastination is that bad well as
+
+200
+00:10:34,980 --> 00:10:41,410
+usual we consult to the holy text<font color="#CCCCCC"> is a</font>
+
+201
+00:10:38,110 --> 00:10:44,610
+<font color="#E5E5E5">Zen of Python take your open your laptop</font>
+
+202
+00:10:41,410 --> 00:10:48,580
+say open a Python say import this and
+
+203
+00:10:44,610 --> 00:10:51,730
+meditate on it<font color="#E5E5E5"> again now is better than</font>
+
+204
+00:10:48,580 --> 00:10:55,720
+never although never is often better
+
+205
+00:10:51,730 --> 00:10:59,470
+than right<font color="#CCCCCC"> now like 0 zen Oracles and so</font>
+
+206
+00:10:55,720 --> 00:11:02,800
+on it kind of mysterious what do these
+
+207
+00:10:59,470 --> 00:11:05,260
+things be<font color="#CCCCCC"> ok here's the context the</font>
+
+208
+00:11:02,800 --> 00:11:07,420
+first part refers to what I was<font color="#E5E5E5"> talking</font>
+
+209
+00:11:05,260 --> 00:11:12,790
+about this<font color="#E5E5E5"> morning good enough is good</font>
+
+210
+00:11:07,420 --> 00:11:15,960
+enough don't wait until some new feature
+
+211
+00:11:12,790 --> 00:11:18,529
+or whatever is perfect release it now
+
+212
+00:11:15,960 --> 00:11:21,860
+how people<font color="#CCCCCC"> use it</font><font color="#E5E5E5"> listen to</font>
+
+213
+00:11:18,529 --> 00:11:24,470
+other feedback iterate improve iterate
+
+214
+00:11:21,860 --> 00:11:26,180
+improve the second part refers the
+
+215
+00:11:24,470 --> 00:11:29,120
+situation where you're<font color="#E5E5E5"> forced to keep</font>
+
+216
+00:11:26,180 --> 00:11:34,100
+backwards compatibility if you add<font color="#CCCCCC"> a bad</font>
+
+217
+00:11:29,120 --> 00:11:37,850
+feature if it's a<font color="#E5E5E5"> design error to have</font>
+
+218
+00:11:34,100 --> 00:11:39,470
+the feature at all you will<font color="#E5E5E5"> be</font><font color="#CCCCCC"> way down</font>
+
+219
+00:11:37,850 --> 00:11:42,079
+for<font color="#E5E5E5"> years even even when you</font><font color="#CCCCCC"> make a</font>
+
+220
+00:11:39,470 --> 00:11:45,949
+release whose whole purpose is breaking
+
+221
+00:11:42,079 --> 00:11:49,550
+backwards compatibility like Python 3
+
+222
+00:11:45,949 --> 00:11:52,160
+was respect to python to you can decide
+
+223
+00:11:49,550 --> 00:11:53,809
+also finally get to abolish the worst
+
+224
+00:11:52,160 --> 00:11:58,309
+feature<font color="#E5E5E5"> I ever had the idea of</font>
+
+225
+00:11:53,809 --> 00:12:03,259
+introducing into Python lambda Guido was
+
+226
+00:11:58,309 --> 00:12:07,160
+old decided to to abolish lambda in
+
+227
+00:12:03,259 --> 00:12:11,209
+vital<font color="#E5E5E5"> 3 he got such a surge of hate mail</font>
+
+228
+00:12:07,160 --> 00:12:14,689
+from Python users that for the first
+
+229
+00:12:11,209 --> 00:12:18,499
+time I've<font color="#E5E5E5"> ever heard of in the long time</font>
+
+230
+00:12:14,689 --> 00:12:21,680
+of<font color="#CCCCCC"> knowning well he stepped back and put</font>
+
+231
+00:12:18,499 --> 00:12:25,610
+lambda back in you do one of those
+
+232
+00:12:21,680 --> 00:12:27,319
+errors once your holes forever I mean I
+
+233
+00:12:25,610 --> 00:12:29,120
+<font color="#E5E5E5">don't think python is a bad language</font>
+
+234
+00:12:27,319 --> 00:12:32,769
+because in Atlanta it would be a better
+
+235
+00:12:29,120 --> 00:12:36,769
+one if it didn't have<font color="#E5E5E5"> it but so</font>
+
+236
+00:12:32,769 --> 00:12:38,329
+sometimes you want to procrastinate to
+
+237
+00:12:36,769 --> 00:12:41,899
+the<font color="#E5E5E5"> point of never doing something</font>
+
+238
+00:12:38,329 --> 00:12:44,809
+<font color="#E5E5E5">that's not a bad idea sometimes most of</font>
+
+239
+00:12:41,899 --> 00:12:48,230
+the time you don't so to achieve think
+
+240
+00:12:44,809 --> 00:12:50,480
+concrete consider for<font color="#CCCCCC"> example the</font>
+
+241
+00:12:48,230 --> 00:12:52,430
+getting things done they that's a title
+
+242
+00:12:50,480 --> 00:12:56,029
+<font color="#E5E5E5">of the original book by now there are a</font>
+
+243
+00:12:52,430 --> 00:12:59,930
+bazillion books self improvement courses
+
+244
+00:12:56,029 --> 00:13:01,879
+and so on the it has many principles to
+
+245
+00:12:59,930 --> 00:13:05,179
+really help you manage your time but the
+
+246
+00:13:01,879 --> 00:13:07,850
+most important is always have front and
+
+247
+00:13:05,179 --> 00:13:10,160
+center you're single<font color="#E5E5E5"> next action but</font>
+
+248
+00:13:07,850 --> 00:13:12,189
+there may be a million things you will
+
+249
+00:13:10,160 --> 00:13:15,410
+need<font color="#CCCCCC"> to do to accomplish your life</font>
+
+250
+00:13:12,189 --> 00:13:17,959
+changing universe changing ways but one
+
+251
+00:13:15,410 --> 00:13:23,149
+at a time what's the next one next
+
+252
+00:13:17,959 --> 00:13:26,929
+single action also in interaction design
+
+253
+00:13:23,149 --> 00:13:30,559
+user centric design you don't write
+
+254
+00:13:26,929 --> 00:13:32,060
+<font color="#E5E5E5">anymore like in the</font><font color="#CCCCCC"> battle days user</font>
+
+255
+00:13:30,559 --> 00:13:34,930
+story saying
+
+256
+00:13:32,060 --> 00:13:37,310
+the user wants<font color="#E5E5E5"> to do this and</font><font color="#CCCCCC"> that the</font>
+
+257
+00:13:34,930 --> 00:13:41,690
+user needs to<font color="#CCCCCC"> access this information</font>
+
+258
+00:13:37,310 --> 00:13:44,960
+you design personas specific almost
+
+259
+00:13:41,690 --> 00:13:46,790
+caricature all users your software will
+
+260
+00:13:44,960 --> 00:13:50,060
+have like if it's a trading software
+
+261
+00:13:46,790 --> 00:13:52,160
+there will be John<font color="#E5E5E5"> the</font><font color="#CCCCCC"> nuba trader with</font>
+
+262
+00:13:50,060 --> 00:13:54,620
+<font color="#E5E5E5">fast video game experience so you can</font>
+
+263
+00:13:52,160 --> 00:13:57,800
+already start imagining he wants fast
+
+264
+00:13:54,620 --> 00:13:59,690
+action a lot of graphics information
+
+265
+00:13:57,800 --> 00:14:02,210
+<font color="#CCCCCC">overload and the other hand there's mark</font>
+
+266
+00:13:59,690 --> 00:14:04,910
+the season trader from Hammurabi's time
+
+267
+00:14:02,210 --> 00:14:08,120
+is<font color="#E5E5E5"> still grumbling that he can't use the</font>
+
+268
+00:14:04,910 --> 00:14:10,580
+cuneiform characters on clay tablets so
+
+269
+00:14:08,120 --> 00:14:12,500
+you will<font color="#CCCCCC"> be designing for John and for</font>
+
+270
+00:14:10,580 --> 00:14:15,440
+market for a collection of personas
+
+271
+00:14:12,500 --> 00:14:18,410
+these this artificial concreteness if
+
+272
+00:14:15,440 --> 00:14:20,990
+you will will guide you to do your
+
+273
+00:14:18,410 --> 00:14:24,530
+design best or adjacent read of
+
+274
+00:14:20,990 --> 00:14:27,200
+37signals put it you find<font color="#E5E5E5"> I often quote</font>
+
+275
+00:14:24,530 --> 00:14:29,030
+37signals because they're kind of super
+
+276
+00:14:27,200 --> 00:14:31,790
+design guys which<font color="#CCCCCC"> is a skill I</font>
+
+277
+00:14:29,030 --> 00:14:34,610
+absolutely lack so I kind of<font color="#E5E5E5"> revere them</font>
+
+278
+00:14:31,790 --> 00:14:38,930
+from afar prefer action to abstraction
+
+279
+00:14:34,610 --> 00:14:42,740
+that if you have to choose be concrete
+
+280
+00:14:38,930 --> 00:14:44,750
+so you can do something they what you
+
+281
+00:14:42,740 --> 00:14:46,520
+<font color="#E5E5E5">probably thought when a set of structure</font>
+
+282
+00:14:44,750 --> 00:14:49,670
+<font color="#CCCCCC">you can slow you down is the so called</font>
+
+283
+00:14:46,520 --> 00:14:53,030
+abstraction penalty<font color="#CCCCCC"> steppin off so the</font>
+
+284
+00:14:49,670 --> 00:14:57,110
+<font color="#CCCCCC">architect of the</font><font color="#E5E5E5"> C++ standard template</font>
+
+285
+00:14:53,030 --> 00:15:01,070
+library published a very learned paper
+
+286
+00:14:57,110 --> 00:15:03,920
+showing that C++ allows you to program
+
+287
+00:15:01,070 --> 00:15:06,890
+at lower struction higher abstraction
+
+288
+00:15:03,920 --> 00:15:09,500
+and there's a penalty as in extra run
+
+289
+00:15:06,890 --> 00:15:11,570
+time spent if you program at<font color="#CCCCCC"> the higher</font>
+
+290
+00:15:09,500 --> 00:15:14,060
+level of abstraction however this is not
+
+291
+00:15:11,570 --> 00:15:16,340
+a fundamental rule it's at issue a
+
+292
+00:15:14,060 --> 00:15:19,160
+detail of<font color="#E5E5E5"> quality of implementation I</font>
+
+293
+00:15:16,340 --> 00:15:21,430
+said I believe<font color="#E5E5E5"> in the latest C++</font>
+
+294
+00:15:19,160 --> 00:15:24,950
+compilers it doesn't<font color="#E5E5E5"> really hold anymore</font>
+
+295
+00:15:21,430 --> 00:15:28,550
+that's taken decades but they're
+
+296
+00:15:24,950 --> 00:15:30,920
+implementing things right in fact in
+
+297
+00:15:28,550 --> 00:15:33,610
+<font color="#E5E5E5">Python we should be</font><font color="#CCCCCC"> usually thinking of</font>
+
+298
+00:15:30,920 --> 00:15:37,310
+an abstraction abstraction bonus
+
+299
+00:15:33,610 --> 00:15:39,680
+consider for example what I personally
+
+300
+00:15:37,310 --> 00:15:41,270
+consider Raymond hangers I don't think
+
+301
+00:15:39,680 --> 00:15:44,130
+is around anymore but he gave<font color="#E5E5E5"> us a</font>
+
+302
+00:15:41,270 --> 00:15:50,970
+wonderful keynote yesterday
+
+303
+00:15:44,130 --> 00:15:53,340
+i trow tools if say you just<font color="#E5E5E5"> want to do</font>
+
+304
+00:15:50,970 --> 00:15:56,940
+nothing<font color="#E5E5E5"> 42 times they doing nothing is a</font>
+
+305
+00:15:53,340 --> 00:15:58,410
+bit of strange thing but instead of the
+
+306
+00:15:56,940 --> 00:16:01,380
+past you can have something<font color="#E5E5E5"> else but</font>
+
+307
+00:15:58,410 --> 00:16:04,680
+what's the overhead of your looping well
+
+308
+00:16:01,380 --> 00:16:07,290
+you can try range you can<font color="#CCCCCC"> try x range in</font>
+
+309
+00:16:04,680 --> 00:16:09,360
+<font color="#CCCCCC">python 27 happens to be a bit faster by</font>
+
+310
+00:16:07,290 --> 00:16:12,330
+the way all these are measured on this
+
+311
+00:16:09,360 --> 00:16:14,670
+old macbook air if you have a faster
+
+312
+00:16:12,330 --> 00:16:17,250
+machine everything will be faster in
+
+313
+00:16:14,670 --> 00:16:20,870
+proportion the fastest<font color="#CCCCCC"> way</font><font color="#E5E5E5"> by a little</font>
+
+314
+00:16:17,250 --> 00:16:23,760
+is actually to use i trow tools repeat
+
+315
+00:16:20,870 --> 00:16:25,860
+it doesn't tell<font color="#E5E5E5"> you it doesn't give</font><font color="#CCCCCC"> you</font>
+
+316
+00:16:23,760 --> 00:16:30,210
+increasing number it just gives you non
+
+317
+00:16:25,860 --> 00:16:34,430
+42 times but it does<font color="#CCCCCC"> that does that a</font>
+
+318
+00:16:30,210 --> 00:16:37,560
+little faster<font color="#CCCCCC"> than even xrange there's</font>
+
+319
+00:16:34,430 --> 00:16:39,660
+issues of<font color="#E5E5E5"> abstractions in</font><font color="#CCCCCC"> python where</font>
+
+320
+00:16:37,560 --> 00:16:43,470
+the advantage is even bigger like orders
+
+321
+00:16:39,660 --> 00:16:47,220
+of magnitude this is for<font color="#CCCCCC"> example I've</font>
+
+322
+00:16:43,470 --> 00:16:50,400
+got a string and I want the reverse
+
+323
+00:16:47,220 --> 00:16:55,410
+strength exactly so they detailed
+
+324
+00:16:50,400 --> 00:16:58,920
+concrete way to do it is<font color="#CCCCCC"> to do reversed</font>
+
+325
+00:16:55,410 --> 00:17:02,310
+which gives you a generic sequence join
+
+326
+00:16:58,920 --> 00:17:04,890
+it up with empty string and that works
+
+327
+00:17:02,310 --> 00:17:08,220
+and it and for the string being
+
+328
+00:17:04,890 --> 00:17:12,060
+abracadabra it takes 113 microsecond on
+
+329
+00:17:08,220 --> 00:17:14,730
+this machine but if you do it at a
+
+330
+00:17:12,060 --> 00:17:18,900
+higher level of abstraction by indexing
+
+331
+00:17:14,730 --> 00:17:21,839
+<font color="#CCCCCC">it's rising to be technical with what my</font>
+
+332
+00:17:18,900 --> 00:17:26,160
+wonderful wife<font color="#CCCCCC"> Anna once dubbed the</font>
+
+333
+00:17:21,839 --> 00:17:31,790
+Martian smiley that is square bracket
+
+334
+00:17:26,160 --> 00:17:36,180
+colon colon minus<font color="#CCCCCC"> 1 so from to stride</font>
+
+335
+00:17:31,790 --> 00:17:40,380
+from<font color="#CCCCCC"> nothing</font><font color="#E5E5E5"> thus beginning to nothing</font>
+
+336
+00:17:36,180 --> 00:17:47,700
+thus the end stride minus<font color="#E5E5E5"> 1 so go in</font>
+
+337
+00:17:40,380 --> 00:17:50,640
+reverse<font color="#CCCCCC"> that takes six times less the</font>
+
+338
+00:17:47,700 --> 00:17:54,510
+higher abstraction level gains you a
+
+339
+00:17:50,640 --> 00:17:56,640
+huge speed up well huge it's a micro
+
+340
+00:17:54,510 --> 00:17:57,600
+second and something but on the other
+
+341
+00:17:56,640 --> 00:18:04,890
+hand
+
+342
+00:17:57,600 --> 00:18:08,190
+that's what the thing is taking so don't
+
+343
+00:18:04,890 --> 00:18:12,240
+be<font color="#E5E5E5"> summarizing this part don't be</font>
+
+344
+00:18:08,190 --> 00:18:14,429
+worried about<font color="#E5E5E5"> Python beings lower if you</font>
+
+345
+00:18:12,240 --> 00:18:16,140
+<font color="#E5E5E5">read if you program abstractly that's</font>
+
+346
+00:18:14,429 --> 00:18:18,900
+probably not be the case just wonder
+
+347
+00:18:16,140 --> 00:18:22,350
+about not procrastinating for being too
+
+348
+00:18:18,900 --> 00:18:25,350
+abstract yourself remember<font color="#E5E5E5"> Python 27 and</font>
+
+349
+00:18:22,350 --> 00:18:29,340
+even better<font color="#E5E5E5"> Python 35 haven't tried 36</font>
+
+350
+00:18:25,350 --> 00:18:31,400
+yet it's an alpha are evolving
+
+351
+00:18:29,340 --> 00:18:35,789
+technology they keep getting better
+
+352
+00:18:31,400 --> 00:18:41,370
+you're not you you want to get<font color="#E5E5E5"> better a</font>
+
+353
+00:18:35,789 --> 00:18:44,010
+bit but you do have brain that works
+
+354
+00:18:41,370 --> 00:18:47,370
+that it was evolved over a million years
+
+355
+00:18:44,010 --> 00:18:50,130
+<font color="#E5E5E5">in of ancestors roaming the savanna</font>
+
+356
+00:18:47,370 --> 00:18:52,919
+hunting and gathering and that's<font color="#E5E5E5"> not</font>
+
+357
+00:18:50,130 --> 00:18:58,559
+easily worked off so let's come to the
+
+358
+00:18:52,919 --> 00:19:01,230
+old abstractions leak that's how all
+
+359
+00:18:58,559 --> 00:19:04,440
+obstruction leak is spall skis law I'm
+
+360
+00:19:01,230 --> 00:19:07,620
+trying<font color="#E5E5E5"> to explain</font><font color="#CCCCCC"> okay</font><font color="#E5E5E5"> why why can't</font><font color="#CCCCCC"> I</font>
+
+361
+00:19:04,440 --> 00:19:11,059
+<font color="#E5E5E5">make perfect</font><font color="#CCCCCC"> run well all obstruction</font>
+
+362
+00:19:07,620 --> 00:19:14,850
+leak because all obstructions lie
+
+363
+00:19:11,059 --> 00:19:20,640
+inevitably as one of the great engineers
+
+364
+00:19:14,850 --> 00:19:23,850
+of the<font color="#CCCCCC"> 20th century Korzybski said the</font>
+
+365
+00:19:20,640 --> 00:19:27,840
+map is not the territory<font color="#CCCCCC"> horrigan luis</font>
+
+366
+00:19:23,850 --> 00:19:32,640
+borges one of the great<font color="#E5E5E5"> writers of the</font>
+
+367
+00:19:27,840 --> 00:19:34,830
+century actually made a beautiful short
+
+368
+00:19:32,640 --> 00:19:36,750
+story explaining why because if the map
+
+369
+00:19:34,830 --> 00:19:39,960
+where the territory it would completely
+
+370
+00:19:36,750 --> 00:19:43,320
+cover the whole state letting no
+
+371
+00:19:39,960 --> 00:19:46,500
+sunlight go down to the crops and they
+
+372
+00:19:43,320 --> 00:19:48,780
+the harvest would fail and everybody
+
+373
+00:19:46,500 --> 00:19:52,190
+would be starving the map isn't and
+
+374
+00:19:48,780 --> 00:19:58,200
+cannot be the territory it has to
+
+375
+00:19:52,190 --> 00:20:01,710
+abstract a lot so<font color="#E5E5E5"> therefore it lies in</font>
+
+376
+00:19:58,200 --> 00:20:05,580
+some respect<font color="#E5E5E5"> and therefore inevitably it</font>
+
+377
+00:20:01,710 --> 00:20:08,640
+will leak it will not correspond
+
+378
+00:20:05,580 --> 00:20:10,919
+perfectly to what is<font color="#CCCCCC"> trying to map if it</font>
+
+379
+00:20:08,640 --> 00:20:11,990
+did it would<font color="#CCCCCC"> be completely useless would</font>
+
+380
+00:20:10,919 --> 00:20:15,570
+be just a
+
+381
+00:20:11,990 --> 00:20:20,340
+copy of the underlying<font color="#E5E5E5"> level level of</font>
+
+382
+00:20:15,570 --> 00:20:22,710
+<font color="#E5E5E5">abstraction so before you can abstract</font>
+
+383
+00:20:20,340 --> 00:20:25,500
+you best understand every detail<font color="#E5E5E5"> I use</font>
+
+384
+00:20:22,710 --> 00:20:28,169
+the verb<font color="#CCCCCC"> grok founded by one of my</font>
+
+385
+00:20:25,500 --> 00:20:31,169
+<font color="#E5E5E5">favorite writers and Anna's Robert</font>
+
+386
+00:20:28,169 --> 00:20:35,580
+Heinlein it means to drink really deep
+
+387
+00:20:31,169 --> 00:20:40,470
+to enjoy and get every drop of your
+
+388
+00:20:35,580 --> 00:20:43,440
+drink<font color="#E5E5E5"> before you can step</font><font color="#CCCCCC"> back in the</font>
+
+389
+00:20:40,470 --> 00:20:47,210
+sense abstraction is stepping back you
+
+390
+00:20:43,440 --> 00:20:51,179
+must be close and this is actually<font color="#E5E5E5"> a</font>
+
+391
+00:20:47,210 --> 00:20:54,200
+quote from a rather more unusual source
+
+392
+00:20:51,179 --> 00:20:57,899
+the book of<font color="#E5E5E5"> five rings even if you're</font>
+
+393
+00:20:54,200 --> 00:21:01,110
+got zero interest in Aikido or any other
+
+394
+00:20:57,899 --> 00:21:04,049
+form of fencing the book of five rings
+
+395
+00:21:01,110 --> 00:21:08,360
+cell has a lot to teach you and this is
+
+396
+00:21:04,049 --> 00:21:11,399
+what before you can is talking about
+
+397
+00:21:08,360 --> 00:21:15,240
+well at one level it is talking<font color="#CCCCCC"> about</font><font color="#E5E5E5"> an</font>
+
+398
+00:21:11,399 --> 00:21:17,340
+<font color="#CCCCCC">Aikido duel and they crucial move of</font>
+
+399
+00:21:15,240 --> 00:21:20,159
+stepping back before you can<font color="#CCCCCC"> do that you</font>
+
+400
+00:21:17,340 --> 00:21:23,580
+must be<font color="#E5E5E5"> close to your adversary so you</font>
+
+401
+00:21:20,159 --> 00:21:25,799
+must<font color="#CCCCCC"> have been close before you can</font>
+
+402
+00:21:23,580 --> 00:21:28,679
+afford<font color="#CCCCCC"> to step back but it is also</font>
+
+403
+00:21:25,799 --> 00:21:32,879
+that's why<font color="#CCCCCC"> I</font><font color="#E5E5E5"> recommend the book</font><font color="#CCCCCC"> as</font>
+
+404
+00:21:28,679 --> 00:21:36,299
+general<font color="#E5E5E5"> reading it there's also always a</font>
+
+405
+00:21:32,879 --> 00:21:38,789
+more abstract metaphorical level before
+
+406
+00:21:36,299 --> 00:21:42,330
+you can abstract from something<font color="#CCCCCC"> you must</font>
+
+407
+00:21:38,789 --> 00:21:45,059
+have been close to that you can only
+
+408
+00:21:42,330 --> 00:21:48,179
+abstract when you know all details you
+
+409
+00:21:45,059 --> 00:21:49,889
+<font color="#CCCCCC">can never</font><font color="#E5E5E5"> know all details that doesn't</font>
+
+410
+00:21:48,179 --> 00:21:53,720
+mean therefore never abstract which
+
+411
+00:21:49,889 --> 00:21:59,580
+would be in a digital logic in this more
+
+412
+00:21:53,720 --> 00:22:05,009
+eastnor form it<font color="#E5E5E5"> therefore always keep a</font>
+
+413
+00:21:59,580 --> 00:22:09,659
+very<font color="#E5E5E5"> humble attitude you are doing</font>
+
+414
+00:22:05,009 --> 00:22:12,240
+<font color="#CCCCCC">something that's not in your powers but</font>
+
+415
+00:22:09,659 --> 00:22:16,049
+you must do it anyway<font color="#E5E5E5"> so be very humble</font>
+
+416
+00:22:12,240 --> 00:22:19,559
+be very flexible listen to feedback and
+
+417
+00:22:16,049 --> 00:22:22,440
+be ready to correct your course let me
+
+418
+00:22:19,559 --> 00:22:24,149
+take my very favorite obstruction if in
+
+419
+00:22:22,440 --> 00:22:25,299
+the technical field if<font color="#CCCCCC"> I only have to</font>
+
+420
+00:22:24,149 --> 00:22:30,580
+choose one the
+
+421
+00:22:25,299 --> 00:22:33,600
+CIP family of networking protocols it's
+
+422
+00:22:30,580 --> 00:22:39,519
+really<font color="#E5E5E5"> a</font><font color="#CCCCCC"> great abstraction how they</font>
+
+423
+00:22:33,600 --> 00:22:42,369
+layers correspond to the data or or
+
+424
+00:22:39,519 --> 00:22:45,960
+payload and and get enriched with
+
+425
+00:22:42,369 --> 00:22:50,590
+headers and footers in some cases as
+
+426
+00:22:45,960 --> 00:22:53,559
+they navigate through lower more
+
+427
+00:22:50,590 --> 00:22:59,139
+concrete layers so if all obstructions
+
+428
+00:22:53,559 --> 00:23:03,519
+sleek as<font color="#E5E5E5"> I claim or or</font><font color="#CCCCCC"> giorgos chose</font>
+
+429
+00:22:59,139 --> 00:23:06,100
+polka dot what does TCP week well to be
+
+430
+00:23:03,519 --> 00:23:12,450
+sufficiently generic it leaks trust it
+
+431
+00:23:06,100 --> 00:23:17,019
+was designed<font color="#CCCCCC"> in the era of brave-hearted</font>
+
+432
+00:23:12,450 --> 00:23:20,049
+spotless nights and evil overlords and
+
+433
+00:23:17,019 --> 00:23:24,190
+nobody had any trouble distinguishing
+
+434
+00:23:20,049 --> 00:23:28,359
+them the whole stack<font color="#CCCCCC"> leak so all over</font>
+
+435
+00:23:24,190 --> 00:23:30,730
+the place from below<font color="#E5E5E5"> arp caches are</font>
+
+436
+00:23:28,359 --> 00:23:33,190
+subject to poisoning from above dns
+
+437
+00:23:30,730 --> 00:23:37,029
+caches are<font color="#CCCCCC"> subjected to</font><font color="#E5E5E5"> poisoning from</font>
+
+438
+00:23:33,190 --> 00:23:40,559
+the side bgp can be vendacious from
+
+439
+00:23:37,029 --> 00:23:42,850
+inside anything is possible the
+
+440
+00:23:40,559 --> 00:23:45,759
+traditional application protocols like
+
+441
+00:23:42,850 --> 00:23:48,820
+<font color="#E5E5E5">FTP and telnet</font><font color="#CCCCCC"> sent</font><font color="#E5E5E5"> password in clear</font>
+
+442
+00:23:45,759 --> 00:23:51,429
+where anybody happening to listen could
+
+443
+00:23:48,820 --> 00:23:54,489
+get your passwords and it goes on
+
+444
+00:23:51,429 --> 00:23:56,679
+forever this is actually a rather<font color="#E5E5E5"> data</font>
+
+445
+00:23:54,489 --> 00:23:58,720
+<font color="#E5E5E5">that couldn't find an updated one but</font>
+
+446
+00:23:56,679 --> 00:24:03,299
+this is what network managers are
+
+447
+00:23:58,720 --> 00:24:06,279
+worried about<font color="#E5E5E5"> the green on the right is</font>
+
+448
+00:24:03,299 --> 00:24:08,289
+bought-in botnets so essentially<font color="#E5E5E5"> the</font>
+
+449
+00:24:06,279 --> 00:24:11,859
+distributed<font color="#CCCCCC"> denial-of-service attacks</font>
+
+450
+00:24:08,289 --> 00:24:16,720
+everything else is actually<font color="#E5E5E5"> TCP leaks</font>
+
+451
+00:24:11,859 --> 00:24:19,749
+leaks of trust everything from BGP
+
+452
+00:24:16,720 --> 00:24:23,230
+hijacking including accidents and so and
+
+453
+00:24:19,749 --> 00:24:26,889
+so forth don't know how familiar you are
+
+454
+00:24:23,230 --> 00:24:29,850
+with network but<font color="#CCCCCC"> a PDF dress solution</font>
+
+455
+00:24:26,889 --> 00:24:35,529
+protocol is our look local network
+
+456
+00:24:29,850 --> 00:24:36,920
+managers messages every everybody's
+
+457
+00:24:35,529 --> 00:24:41,050
+keeping
+
+458
+00:24:36,920 --> 00:24:47,440
+map of Internet Protocol addresses to
+
+459
+00:24:41,050 --> 00:24:50,840
+<font color="#E5E5E5">the lot of the Machine address</font><font color="#CCCCCC"> m.a.c and</font>
+
+460
+00:24:47,440 --> 00:24:52,580
+there is no authentication or validation
+
+461
+00:24:50,840 --> 00:24:54,740
+of that is not<font color="#E5E5E5"> really feasible the way</font>
+
+462
+00:24:52,580 --> 00:24:56,450
+it<font color="#E5E5E5"> was designed from the first place as</font>
+
+463
+00:24:54,740 --> 00:24:58,900
+they mentioned this morning one thing
+
+464
+00:24:56,450 --> 00:25:02,030
+you have to have from the start because
+
+465
+00:24:58,900 --> 00:25:07,850
+retrofitting it drives you<font color="#CCCCCC"> crazy is</font>
+
+466
+00:25:02,030 --> 00:25:10,960
+security so<font color="#CCCCCC"> ARP to this day</font><font color="#E5E5E5"> hardly as</font>
+
+467
+00:25:07,850 --> 00:25:16,490
+any<font color="#E5E5E5"> insecurity so if either</font><font color="#CCCCCC"> they evil</font>
+
+468
+00:25:10,960 --> 00:25:20,380
+evil for evil has a faster machine it
+
+469
+00:25:16,490 --> 00:25:23,720
+can respond to<font color="#CCCCCC"> all requests for AARP</font>
+
+470
+00:25:20,380 --> 00:25:29,210
+identification saying me me that IP is
+
+471
+00:25:23,720 --> 00:25:32,150
+my mac and that blocks<font color="#CCCCCC"> alice's slower</font>
+
+472
+00:25:29,210 --> 00:25:34,370
+machine from actually giving the real
+
+473
+00:25:32,150 --> 00:25:37,670
+map so anything on the local network
+
+474
+00:25:34,370 --> 00:25:42,230
+that's meant for<font color="#CCCCCC"> alice goes to eve</font>
+
+475
+00:25:37,670 --> 00:25:45,110
+instead from the outside you<font color="#CCCCCC"> can do the</font>
+
+476
+00:25:42,230 --> 00:25:47,390
+<font color="#E5E5E5">same for dns since you're not originally</font>
+
+477
+00:25:45,110 --> 00:25:53,330
+communicating to an internet protocol
+
+478
+00:25:47,390 --> 00:25:56,000
+address but to a dns name you risk
+
+479
+00:25:53,330 --> 00:25:59,300
+somebody interjecting i am the
+
+480
+00:25:56,000 --> 00:26:02,210
+authoritative server for this domain and
+
+481
+00:25:59,300 --> 00:26:07,040
+<font color="#CCCCCC">the proper IP</font><font color="#E5E5E5"> years which is is own</font>
+
+482
+00:26:02,210 --> 00:26:10,910
+rather than the one it should be this<font color="#E5E5E5"> is</font>
+
+483
+00:26:07,040 --> 00:26:16,970
+an actual diagram of border gateway
+
+484
+00:26:10,910 --> 00:26:23,740
+protocol attack court-mandated attack in
+
+485
+00:26:16,970 --> 00:26:27,140
+2012<font color="#CCCCCC"> Pakistani court decided that this</font>
+
+486
+00:26:23,740 --> 00:26:30,470
+YouTube thing was an insult to Islamic
+
+487
+00:26:27,140 --> 00:26:33,470
+value and ordered ISPs in Pakistan to
+
+488
+00:26:30,470 --> 00:26:37,040
+block YouTube which<font color="#CCCCCC"> is of course was at</font>
+
+489
+00:26:33,470 --> 00:26:39,740
+the time transmitting from California so
+
+490
+00:26:37,040 --> 00:26:44,930
+how they do that they came<font color="#CCCCCC"> up</font><font color="#E5E5E5"> with</font><font color="#CCCCCC"> an</font>
+
+491
+00:26:39,740 --> 00:26:48,560
+idea well let's steal their network
+
+492
+00:26:44,930 --> 00:26:50,840
+ranges by hijacking<font color="#CCCCCC"> they border gateway</font>
+
+493
+00:26:48,560 --> 00:26:54,070
+protocol locally unfortunately then
+
+494
+00:26:50,840 --> 00:26:57,470
+local hijacks that was sending all
+
+495
+00:26:54,070 --> 00:27:02,090
+youtube traffic to a local black hole
+
+496
+00:26:57,470 --> 00:27:03,860
+leaked accidentally presumably to I
+
+497
+00:27:02,090 --> 00:27:06,020
+<font color="#E5E5E5">think Hong Kong and</font><font color="#CCCCCC"> from them through</font>
+
+498
+00:27:03,860 --> 00:27:09,440
+all the world and for about<font color="#E5E5E5"> two hours</font>
+
+499
+00:27:06,020 --> 00:27:11,650
+all traffic to and from YouTube was
+
+500
+00:27:09,440 --> 00:27:17,540
+actually going to a<font color="#E5E5E5"> black hole in</font>
+
+501
+00:27:11,650 --> 00:27:20,120
+somewhere in Pakistan that's so bgp is
+
+502
+00:27:17,540 --> 00:27:22,310
+fortunately obscure enough I mean let's
+
+503
+00:27:20,120 --> 00:27:27,050
+be serious who of you could program a
+
+504
+00:27:22,310 --> 00:27:31,490
+<font color="#E5E5E5">BGP server great we have one expert so</font>
+
+505
+00:27:27,050 --> 00:27:33,230
+you see it<font color="#CCCCCC"> has</font><font color="#E5E5E5"> been and is continuously</font>
+
+506
+00:27:31,490 --> 00:27:38,030
+being improved is much harder at the
+
+507
+00:27:33,230 --> 00:27:40,400
+lower levels like AARP so we will never
+
+508
+00:27:38,030 --> 00:27:43,550
+be<font color="#E5E5E5"> without leaks even in a wonderful</font>
+
+509
+00:27:40,400 --> 00:27:45,140
+stack of abstraction however leaks may
+
+510
+00:27:43,550 --> 00:27:47,660
+be good especially<font color="#CCCCCC"> when they're</font>
+
+511
+00:27:45,140 --> 00:27:50,480
+carefully designed for a purpose suppose
+
+512
+00:27:47,660 --> 00:27:54,740
+I want<font color="#E5E5E5"> to make a remote distributed file</font>
+
+513
+00:27:50,480 --> 00:27:56,900
+system an early attempt and we're
+
+514
+00:27:54,740 --> 00:28:01,610
+talking<font color="#E5E5E5"> decades ago well I'll just have</font>
+
+515
+00:27:56,900 --> 00:28:03,560
+<font color="#CCCCCC">to emulate the local one no reason</font><font color="#E5E5E5"> to do</font>
+
+516
+00:28:01,610 --> 00:28:06,980
+anything different the problem is the
+
+517
+00:28:03,560 --> 00:28:10,430
+<font color="#CCCCCC">less local your</font><font color="#E5E5E5"> file system actually was</font>
+
+518
+00:28:06,980 --> 00:28:13,100
+the costlier was the abstraction from
+
+519
+00:28:10,430 --> 00:28:15,680
+everything from semantics to locking to
+
+520
+00:28:13,100 --> 00:28:18,230
+reliability I don't know how<font color="#CCCCCC"> many</font><font color="#E5E5E5"> of you</font>
+
+521
+00:28:15,680 --> 00:28:23,090
+are fought with trying to<font color="#E5E5E5"> make record</font>
+
+522
+00:28:18,230 --> 00:28:26,690
+locking work on NFS let's say it's<font color="#E5E5E5"> not</font>
+
+523
+00:28:23,090 --> 00:28:28,760
+fun the point is that file system is a
+
+524
+00:28:26,690 --> 00:28:32,980
+splendid abstraction local file system
+
+525
+00:28:28,760 --> 00:28:36,770
+is not it's a concrete thing and don't
+
+526
+00:28:32,980 --> 00:28:38,660
+subclass concrete classes is a great
+
+527
+00:28:36,770 --> 00:28:41,060
+principle of opportunity into
+
+528
+00:28:38,660 --> 00:28:42,980
+programming but as you see we're talking
+
+529
+00:28:41,060 --> 00:28:45,310
+about a higher level of abstraction it
+
+530
+00:28:42,980 --> 00:28:48,010
+applies there to the older is our
+
+531
+00:28:45,310 --> 00:28:50,420
+principal engineer at Google is
+
+532
+00:28:48,010 --> 00:28:53,150
+unfortunately taken down his blog but
+
+533
+00:28:50,420 --> 00:28:56,840
+thanks to the<font color="#CCCCCC"> internet archive you can</font>
+
+534
+00:28:53,150 --> 00:28:59,060
+just browse for don't subclass concrete
+
+535
+00:28:56,840 --> 00:29:01,160
+classes har and you'll see<font color="#E5E5E5"> it is talking</font>
+
+536
+00:28:59,060 --> 00:29:03,260
+about Java but really half of what is
+
+537
+00:29:01,160 --> 00:29:03,810
+saying applies perfectly well to<font color="#E5E5E5"> Python</font>
+
+538
+00:29:03,260 --> 00:29:06,780
+or
+
+539
+00:29:03,810 --> 00:29:12,750
+even to architecting a file system the
+
+540
+00:29:06,780 --> 00:29:14,940
+fact that emulating a local file system
+
+541
+00:29:12,750 --> 00:29:17,370
+with the distributed one is a horrible
+
+542
+00:29:14,940 --> 00:29:18,870
+idea doesn't mean the<font color="#CCCCCC"> obstruction is a</font>
+
+543
+00:29:17,370 --> 00:29:20,760
+bad thing you should<font color="#CCCCCC"> disrupt the right</font>
+
+544
+00:29:18,870 --> 00:29:23,880
+thing that is have a<font color="#E5E5E5"> file system</font>
+
+545
+00:29:20,760 --> 00:29:27,170
+abstraction and deliberately leaked for
+
+546
+00:29:23,880 --> 00:29:30,810
+example with methods asking or telling
+
+547
+00:29:27,170 --> 00:29:33,780
+the file system<font color="#E5E5E5"> something up local</font>
+
+548
+00:29:30,810 --> 00:29:37,590
+distributed file system will work<font color="#E5E5E5"> like</font>
+
+549
+00:29:33,780 --> 00:29:39,510
+set a time out you your local file
+
+550
+00:29:37,590 --> 00:29:42,060
+system presumably doesn't have a way to
+
+551
+00:29:39,510 --> 00:29:45,120
+set it arm out because hey it's a local
+
+552
+00:29:42,060 --> 00:29:48,300
+disk spindle on my own machine how take
+
+553
+00:29:45,120 --> 00:29:49,770
+a millisecond and 10 micro second why
+
+554
+00:29:48,300 --> 00:29:52,290
+would I need<font color="#E5E5E5"> to time out well because</font>
+
+555
+00:29:49,770 --> 00:29:54,600
+maybe it's not if it's a distributed one
+
+556
+00:29:52,290 --> 00:29:58,200
+it could be somewhere in Australia<font color="#CCCCCC"> and</font>
+
+557
+00:29:54,600 --> 00:30:00,840
+the connections are slightly slower so
+
+558
+00:29:58,200 --> 00:30:04,050
+you need systematic and usable leaks and
+
+559
+00:30:00,840 --> 00:30:05,970
+of<font color="#CCCCCC"> course in the local file system their</font>
+
+560
+00:30:04,050 --> 00:30:07,770
+implementation will be trivial so it
+
+561
+00:30:05,970 --> 00:30:10,440
+will accept a timeout parameter<font color="#E5E5E5"> and for</font>
+
+562
+00:30:07,770 --> 00:30:15,210
+example<font color="#CCCCCC"> it could ignore it no</font><font color="#E5E5E5"> problem so</font>
+
+563
+00:30:10,440 --> 00:30:17,010
+<font color="#E5E5E5">I would really like to teach you how</font><font color="#CCCCCC"> to</font>
+
+564
+00:30:15,210 --> 00:30:19,170
+obstruct right but it's a bit too hard
+
+565
+00:30:17,010 --> 00:30:21,300
+<font color="#CCCCCC">I'm</font><font color="#E5E5E5"> not quite sure I have fully</font>
+
+566
+00:30:19,170 --> 00:30:23,880
+understood so I'm<font color="#E5E5E5"> definitely going to</font>
+
+567
+00:30:21,300 --> 00:30:27,540
+teach you are a much more expert how do
+
+568
+00:30:23,880 --> 00:30:29,310
+<font color="#E5E5E5">we abstract wrong well first of all you</font>
+
+569
+00:30:27,540 --> 00:30:31,770
+want to make an abstract interface well
+
+570
+00:30:29,310 --> 00:30:33,810
+you have one<font color="#E5E5E5"> class that works just fine</font>
+
+571
+00:30:31,770 --> 00:30:35,670
+let me make that interface by
+
+572
+00:30:33,810 --> 00:30:38,520
+essentially abstracting everything that
+
+573
+00:30:35,670 --> 00:30:40,710
+cost us I<font color="#E5E5E5"> guarantee you this will</font>
+
+574
+00:30:38,520 --> 00:30:44,010
+surface some implementation detail that
+
+575
+00:30:40,710 --> 00:30:48,480
+are not conceptually part of the
+
+576
+00:30:44,010 --> 00:30:52,170
+abstraction subclassing concrete classes
+
+577
+00:30:48,480 --> 00:30:54,600
+as how<font color="#CCCCCC"> are warned against is also pretty</font>
+
+578
+00:30:52,170 --> 00:30:56,580
+much that the concrete class is never
+
+579
+00:30:54,600 --> 00:31:00,180
+going to<font color="#E5E5E5"> be</font><font color="#CCCCCC"> the right base for</font>
+
+580
+00:30:56,580 --> 00:31:02,610
+<font color="#CCCCCC">subclassing because it's always has</font>
+
+581
+00:31:00,180 --> 00:31:06,210
+implementation details by by being
+
+582
+00:31:02,610 --> 00:31:07,860
+concrete make the obstruction of the
+
+583
+00:31:06,210 --> 00:31:10,440
+multiple classes that need to implement
+
+584
+00:31:07,860 --> 00:31:12,960
+the same interface at
+
+585
+00:31:10,440 --> 00:31:17,129
+a major scale you can have encapsulation
+
+586
+00:31:12,960 --> 00:31:21,299
+error for example in the<font color="#E5E5E5"> microsoft</font><font color="#CCCCCC"> NFC</font>
+
+587
+00:31:17,129 --> 00:31:24,899
+library all throughout release for each
+
+588
+00:31:21,299 --> 00:31:26,850
+windows had a private member which was a
+
+589
+00:31:24,899 --> 00:31:30,299
+toolbar class that window would use
+
+590
+00:31:26,850 --> 00:31:32,250
+which meant if you wanted to use to
+
+591
+00:31:30,299 --> 00:31:35,370
+customize a toolbar you<font color="#CCCCCC"> were</font><font color="#E5E5E5"> completely</font>
+
+592
+00:31:32,250 --> 00:31:39,539
+<font color="#CCCCCC">out of luck because you essentially had</font>
+
+593
+00:31:35,370 --> 00:31:43,860
+to<font color="#E5E5E5"> copy the whole window class and to</font>
+
+594
+00:31:39,539 --> 00:31:47,029
+edit the thing going to get larger scale
+
+595
+00:31:43,860 --> 00:31:49,259
+as anybody ever heard of taligent
+
+596
+00:31:47,029 --> 00:31:51,450
+taligent was a<font color="#E5E5E5"> joint venture between</font>
+
+597
+00:31:49,259 --> 00:31:54,990
+Apple IBM and I believe you have
+
+598
+00:31:51,450 --> 00:31:57,720
+occurred in the early stages to make the
+
+599
+00:31:54,990 --> 00:31:59,909
+world<font color="#CCCCCC"> a better place by doing a lot of</font>
+
+600
+00:31:57,720 --> 00:32:03,240
+frameworks a lot of those frameworks
+
+601
+00:31:59,909 --> 00:32:06,389
+were based on<font color="#E5E5E5"> all those experience with</font>
+
+602
+00:32:03,240 --> 00:32:09,450
+one application in that field you<font color="#CCCCCC"> can</font>
+
+603
+00:32:06,389 --> 00:32:13,649
+guess how well that went down in how
+
+604
+00:32:09,450 --> 00:32:17,820
+long taligent lasted ok<font color="#E5E5E5"> I will actually</font>
+
+605
+00:32:13,649 --> 00:32:20,279
+try to mention how to abstract well you
+
+606
+00:32:17,820 --> 00:32:23,700
+have to master at least one or two
+
+607
+00:32:20,279 --> 00:32:28,490
+layers below the one you're designing
+
+608
+00:32:23,700 --> 00:32:33,179
+the abstraction at to understand how is
+
+609
+00:32:28,490 --> 00:32:35,549
+in several ways that abstraction could
+
+610
+00:32:33,179 --> 00:32:37,320
+be<font color="#E5E5E5"> implemented if there's only one way</font>
+
+611
+00:32:35,549 --> 00:32:39,179
+the abstraction can possibly be
+
+612
+00:32:37,320 --> 00:32:42,110
+implemented it's not a real abstraction
+
+613
+00:32:39,179 --> 00:32:44,399
+it masquerades as one it's<font color="#E5E5E5"> really as</font>
+
+614
+00:32:42,110 --> 00:32:47,820
+concrete as the only<font color="#E5E5E5"> possible</font>
+
+615
+00:32:44,399 --> 00:32:49,590
+implementation so better be deeply
+
+616
+00:32:47,820 --> 00:32:52,820
+familiar with several possible
+
+617
+00:32:49,590 --> 00:32:56,490
+implementation it's best<font color="#E5E5E5"> if you</font><font color="#CCCCCC"> also</font>
+
+618
+00:32:52,820 --> 00:32:59,250
+think from the other side several
+
+619
+00:32:56,490 --> 00:33:01,350
+intended uses how are different systems
+
+620
+00:32:59,250 --> 00:33:03,929
+going to use this interface this
+
+621
+00:33:01,350 --> 00:33:06,059
+abstraction you can't<font color="#E5E5E5"> afford any</font>
+
+622
+00:33:03,929 --> 00:33:08,480
+blinders or shortcuts saying go I<font color="#E5E5E5"> don't</font>
+
+623
+00:33:06,059 --> 00:33:10,950
+need<font color="#E5E5E5"> to care about the users I'm</font>
+
+624
+00:33:08,480 --> 00:33:12,769
+<font color="#E5E5E5">focusing my instruction I don't need to</font>
+
+625
+00:33:10,950 --> 00:33:15,990
+care about the implementation I'm
+
+626
+00:33:12,769 --> 00:33:19,669
+<font color="#E5E5E5">focusing on my distraction you do need</font>
+
+627
+00:33:15,990 --> 00:33:23,350
+<font color="#CCCCCC">to care both on the above n below</font>
+
+628
+00:33:19,669 --> 00:33:27,100
+remember you can be the next
+
+629
+00:33:23,350 --> 00:33:28,960
+user of that interface you can be that's
+
+630
+00:33:27,100 --> 00:33:30,700
+possibly even more likely the next
+
+631
+00:33:28,960 --> 00:33:32,350
+implementer of that interface once
+
+632
+00:33:30,700 --> 00:33:35,530
+you've implemented and published your
+
+633
+00:33:32,350 --> 00:33:37,030
+neural interface well<font color="#E5E5E5"> you need</font><font color="#CCCCCC"> to put</font>
+
+634
+00:33:35,530 --> 00:33:40,809
+code where your mouth is and<font color="#CCCCCC"> actually</font>
+
+635
+00:33:37,030 --> 00:33:44,289
+implemented the Golden<font color="#CCCCCC"> Rule doing to</font>
+
+636
+00:33:40,809 --> 00:33:45,700
+somebody not doing to somebody else what
+
+637
+00:33:44,289 --> 00:33:49,330
+you wouldn't want to be done to yourself
+
+638
+00:33:45,700 --> 00:33:51,520
+is actually a core principle of software
+
+639
+00:33:49,330 --> 00:33:53,559
+development when you design an
+
+640
+00:33:51,520 --> 00:33:56,770
+abstraction think of yourself<font color="#CCCCCC"> as the</font>
+
+641
+00:33:53,559 --> 00:34:01,419
+<font color="#E5E5E5">next user and next implementer and I</font>
+
+642
+00:33:56,770 --> 00:34:05,230
+strongly recommend the old wiki at<font color="#E5E5E5"> sea</font>
+
+643
+00:34:01,419 --> 00:34:09,129
+<font color="#E5E5E5">to point calm for a deeper discussion of</font>
+
+644
+00:34:05,230 --> 00:34:11,649
+<font color="#E5E5E5">this very thing of issues but that</font>
+
+645
+00:34:09,129 --> 00:34:13,359
+sounds like a really really hard job I
+
+646
+00:34:11,649 --> 00:34:15,540
+me now I should<font color="#E5E5E5"> be looking at</font>
+
+647
+00:34:13,359 --> 00:34:20,260
+implementation<font color="#CCCCCC"> end users that's like</font>
+
+648
+00:34:15,540 --> 00:34:23,950
+well you if according<font color="#CCCCCC"> to Donald news you</font>
+
+649
+00:34:20,260 --> 00:34:28,179
+can that's an interview we gave to<font color="#E5E5E5"> the</font>
+
+650
+00:34:23,949 --> 00:34:31,239
+dr.<font color="#E5E5E5"> Dobbs journal the psychological</font>
+
+651
+00:34:28,179 --> 00:34:34,840
+profiling oh we actually use the term
+
+652
+00:34:31,239 --> 00:34:37,949
+computer scientist but I don't I don't
+
+653
+00:34:34,840 --> 00:34:40,990
+like to insult people by using the term
+
+654
+00:34:37,949 --> 00:34:43,178
+let's say a good software developer is
+
+655
+00:34:40,989 --> 00:34:46,089
+mostly the ability to shift level of
+
+656
+00:34:43,179 --> 00:34:48,040
+abstraction low level to high level see
+
+657
+00:34:46,090 --> 00:34:50,500
+something in the small see something in
+
+658
+00:34:48,040 --> 00:34:53,740
+the large and a great software developer
+
+659
+00:34:50,500 --> 00:34:55,510
+sees things simultaneously at the<font color="#E5E5E5"> low</font>
+
+660
+00:34:53,739 --> 00:34:58,780
+level and the high level<font color="#E5E5E5"> of distraction</font>
+
+661
+00:34:55,510 --> 00:35:01,510
+in other word the microcosm is the
+
+662
+00:34:58,780 --> 00:35:04,390
+macrocosm to get all cosmic on you
+
+663
+00:35:01,510 --> 00:35:07,180
+there's a<font color="#E5E5E5"> wonderful books on the subject</font>
+
+664
+00:35:04,390 --> 00:35:09,369
+but they tend to be in the exoteric a
+
+665
+00:35:07,180 --> 00:35:11,560
+section of the<font color="#E5E5E5"> library of the bookstore</font>
+
+666
+00:35:09,369 --> 00:35:14,520
+rather than<font color="#CCCCCC"> the technical one but it</font>
+
+667
+00:35:11,560 --> 00:35:18,100
+still applies to the design of
+
+668
+00:35:14,520 --> 00:35:21,369
+abstraction and just to quote not for
+
+669
+00:35:18,100 --> 00:35:25,180
+the<font color="#CCCCCC"> first time</font><font color="#E5E5E5"> jacent read you really</font>
+
+670
+00:35:21,369 --> 00:35:29,850
+have to do this homework he's talking
+
+671
+00:35:25,180 --> 00:35:33,010
+<font color="#CCCCCC">about copying explaining in that dot URL</font>
+
+672
+00:35:29,850 --> 00:35:35,589
+the problem is copying is that copying
+
+673
+00:35:33,010 --> 00:35:36,370
+skips understand understanding is the
+
+674
+00:35:35,589 --> 00:35:38,860
+way you
+
+675
+00:35:36,370 --> 00:35:42,010
+roll you have to understand why
+
+676
+00:35:38,860 --> 00:35:46,360
+something<font color="#CCCCCC"> works why something is how it</font>
+
+677
+00:35:42,010 --> 00:35:48,730
+is<font color="#CCCCCC"> if you</font><font color="#E5E5E5"> just copy it you don't you</font>
+
+678
+00:35:46,360 --> 00:35:51,310
+miss the understanding you're just
+
+679
+00:35:48,730 --> 00:35:53,230
+repurposing the last layer not
+
+680
+00:35:51,310 --> 00:35:57,910
+understanding layers underneath in other
+
+681
+00:35:53,230 --> 00:36:00,100
+words it's not ever going to be any good
+
+682
+00:35:57,910 --> 00:36:04,870
+he's<font color="#E5E5E5"> talking about copying but you know</font>
+
+683
+00:36:00,100 --> 00:36:08,350
+what use existing level<font color="#CCCCCC"> high level</font>
+
+684
+00:36:04,870 --> 00:36:10,840
+<font color="#CCCCCC">abstractions blindly even though</font><font color="#E5E5E5"> it</font>
+
+685
+00:36:08,350 --> 00:36:12,610
+probably violates no copyright law or
+
+686
+00:36:10,840 --> 00:36:16,360
+nothing but still if you<font color="#E5E5E5"> don't</font>
+
+687
+00:36:12,610 --> 00:36:19,480
+understand why is it this way how does
+
+688
+00:36:16,360 --> 00:36:23,620
+this help the implementer or the user or
+
+689
+00:36:19,480 --> 00:36:27,570
+both then you're<font color="#CCCCCC"> not understanding</font>
+
+690
+00:36:23,620 --> 00:36:31,780
+you're not growing you're not getting a
+
+691
+00:36:27,570 --> 00:36:33,700
+real education so Jeff Atwood the
+
+692
+00:36:31,780 --> 00:36:38,920
+partner of<font color="#CCCCCC"> Joe's polski in the</font>
+
+693
+00:36:33,700 --> 00:36:42,970
+foundation<font color="#CCCCCC"> of staccato saw put it don't</font>
+
+694
+00:36:38,920 --> 00:36:47,260
+rain then the wheel<font color="#CCCCCC"> unless you</font><font color="#E5E5E5"> plant</font>
+
+695
+00:36:42,970 --> 00:36:50,800
+learning more about wheels in which case
+
+696
+00:36:47,260 --> 00:36:54,210
+it may be a painful experience when you
+
+697
+00:36:50,800 --> 00:36:56,620
+have your<font color="#CCCCCC"> first attempt but by the time</font>
+
+698
+00:36:54,210 --> 00:37:01,210
+<font color="#CCCCCC">you've made it round again you</font>
+
+699
+00:36:56,620 --> 00:37:04,630
+understand why the distance between<font color="#E5E5E5"> the</font>
+
+700
+00:37:01,210 --> 00:37:14,610
+point touching of a ground and the hell
+
+701
+00:37:04,630 --> 00:37:18,940
+is constant one good example of hacks of
+
+702
+00:37:14,610 --> 00:37:21,610
+deliberately inserted in an architecture
+
+703
+00:37:18,940 --> 00:37:23,730
+is in Google App Engine specifically the
+
+704
+00:37:21,610 --> 00:37:25,750
+Python version<font color="#E5E5E5"> they're often</font>
+
+705
+00:37:23,730 --> 00:37:27,520
+<font color="#E5E5E5">unfortunately not quite as familiar with</font>
+
+706
+00:37:25,750 --> 00:37:30,100
+<font color="#E5E5E5">many other languages supported</font>
+
+707
+00:37:27,520 --> 00:37:32,110
+essentially everything that's happening
+
+708
+00:37:30,100 --> 00:37:36,880
+in App Engine goes through a layer of
+
+709
+00:37:32,110 --> 00:37:40,300
+remote procedure calls to the servers<font color="#E5E5E5"> to</font>
+
+710
+00:37:36,880 --> 00:37:43,320
+<font color="#E5E5E5">Google servers which supply the various</font>
+
+711
+00:37:40,300 --> 00:37:48,480
+services data store
+
+712
+00:37:43,320 --> 00:37:50,580
+user identification everything that<font color="#CCCCCC"> need</font>
+
+713
+00:37:48,480 --> 00:37:52,650
+funnel architecture has already been
+
+714
+00:37:50,580 --> 00:37:58,290
+used ever since the very first days of
+
+715
+00:37:52,650 --> 00:38:01,290
+App Engine to offer a local development
+
+716
+00:37:58,290 --> 00:38:03,930
+server which essentially runs exactly
+
+717
+00:38:01,290 --> 00:38:08,280
+all the<font color="#CCCCCC"> open-source part that's above</font>
+
+718
+00:38:03,930 --> 00:38:10,200
+the<font color="#E5E5E5"> RPC but simulates the RPC locally so</font>
+
+719
+00:38:08,280 --> 00:38:12,920
+it serves it locally so you can do<font color="#CCCCCC"> your</font>
+
+720
+00:38:10,200 --> 00:38:16,350
+development without bothering to upload
+
+721
+00:38:12,920 --> 00:38:25,320
+code to Google all the<font color="#CCCCCC"> time so let's</font>
+
+722
+00:38:16,350 --> 00:38:29,760
+focus<font color="#E5E5E5"> on</font><font color="#CCCCCC"> that RPC how do you for example</font>
+
+723
+00:38:25,320 --> 00:38:32,790
+do testing everything is going through
+
+724
+00:38:29,760 --> 00:38:36,980
+specifically they make sync call
+
+725
+00:38:32,790 --> 00:38:40,440
+function in<font color="#CCCCCC"> epic proxy</font><font color="#E5E5E5"> stuff map they</font>
+
+726
+00:38:36,980 --> 00:38:44,670
+traditional and wrong technique is to
+
+727
+00:38:40,440 --> 00:38:47,730
+monkey patch it so you get the actual
+
+728
+00:38:44,670 --> 00:38:51,510
+call you write your own fake which for
+
+729
+00:38:47,730 --> 00:38:55,170
+example does more logging or or measure
+
+730
+00:38:51,510 --> 00:38:58,800
+<font color="#CCCCCC">times or let you control interactively</font>
+
+731
+00:38:55,170 --> 00:39:01,560
+and after doing all that goes<font color="#E5E5E5"> back</font><font color="#CCCCCC"> to</font>
+
+732
+00:38:58,800 --> 00:39:05,940
+<font color="#CCCCCC">the original</font><font color="#E5E5E5"> and you put you monkey</font>
+
+733
+00:39:01,560 --> 00:39:08,550
+patch the fake India you<font color="#CCCCCC"> will note that</font>
+
+734
+00:39:05,940 --> 00:39:10,740
+the monkey is actually very sad you may
+
+735
+00:39:08,550 --> 00:39:13,830
+wonder why isn't this neat no it isn't
+
+736
+00:39:10,740 --> 00:39:17,340
+take for example the<font color="#E5E5E5"> memcache client</font>
+
+737
+00:39:13,830 --> 00:39:22,260
+object the memcache client object has
+
+738
+00:39:17,340 --> 00:39:25,580
+they make sinkhole at as the default
+
+739
+00:39:22,260 --> 00:39:29,340
+value<font color="#CCCCCC"> of mixing call this is like</font><font color="#E5E5E5"> all</font>
+
+740
+00:39:25,580 --> 00:39:33,120
+<font color="#E5E5E5">all default values are computed once at</font>
+
+741
+00:39:29,340 --> 00:39:37,560
+<font color="#E5E5E5">Def time so the moment then the memcache</font>
+
+742
+00:39:33,120 --> 00:39:40,200
+client object is imported the module
+
+743
+00:39:37,560 --> 00:39:45,060
+containing this is imported the make
+
+744
+00:39:40,200 --> 00:39:47,610
+sinkhole is fixed to the real one and
+
+745
+00:39:45,060 --> 00:39:52,330
+all your monkey patching after the fact
+
+746
+00:39:47,610 --> 00:39:57,120
+will never change it this is
+
+747
+00:39:52,330 --> 00:40:00,850
+the crucial bit and it's very<font color="#CCCCCC"> normal</font>
+
+748
+00:39:57,120 --> 00:40:07,380
+when guido van rossum for a few years
+
+749
+00:40:00,850 --> 00:40:11,220
+joined<font color="#CCCCCC"> Google to work on App Engine he</font>
+
+750
+00:40:07,380 --> 00:40:15,490
+came up with a better idea<font color="#CCCCCC"> hugs</font>
+
+751
+00:40:11,220 --> 00:40:18,940
+deliberately have a pre hook and a
+
+752
+00:40:15,490 --> 00:40:21,520
+phosphor actually for every you can have
+
+753
+00:40:18,940 --> 00:40:29,710
+the pre call and the post call hooks to
+
+754
+00:40:21,520 --> 00:40:34,380
+every every function there and that's a
+
+755
+00:40:29,710 --> 00:40:38,020
+systematic<font color="#E5E5E5"> leak around the API calls</font>
+
+756
+00:40:34,380 --> 00:40:41,080
+what if<font color="#E5E5E5"> you don't have a natural funnel</font>
+
+757
+00:40:38,020 --> 00:40:42,700
+such as an RPC look at your application
+
+758
+00:40:41,080 --> 00:40:45,280
+look at your architecture you'll find
+
+759
+00:40:42,700 --> 00:40:47,200
+some there are<font color="#E5E5E5"> going to be key</font>
+
+760
+00:40:45,280 --> 00:40:51,450
+semantical bottlenecks for example if
+
+761
+00:40:47,200 --> 00:40:55,150
+you query a database consider adding
+
+762
+00:40:51,450 --> 00:40:58,180
+systematically a pre hook a change of
+
+763
+00:40:55,150 --> 00:41:01,450
+pre hooks which accept the sequel<font color="#E5E5E5"> and</font>
+
+764
+00:40:58,180 --> 00:41:04,210
+may modified or post end post hooks
+
+765
+00:41:01,450 --> 00:41:07,360
+which accept the results and can modify
+
+766
+00:41:04,210 --> 00:41:09,310
+them if you have a synchronous
+
+767
+00:41:07,360 --> 00:41:13,540
+architecture events and callbacks are
+
+768
+00:41:09,310 --> 00:41:16,480
+great semantic stopping points it's the
+
+769
+00:41:13,540 --> 00:41:20,230
+pre and post hooks approximate the
+
+770
+00:41:16,480 --> 00:41:23,200
+design pattern observer template method
+
+771
+00:41:20,230 --> 00:41:25,570
+is a bit rigid but you can use<font color="#CCCCCC"> it look</font>
+
+772
+00:41:23,200 --> 00:41:27,880
+at they to the<font color="#E5E5E5"> Python to Python 3 has</font>
+
+773
+00:41:25,570 --> 00:41:31,180
+changed things a bit implementation of
+
+774
+00:41:27,880 --> 00:41:34,480
+the<font color="#CCCCCC"> cue class but the</font><font color="#E5E5E5"> one I have time to</font>
+
+775
+00:41:31,180 --> 00:41:37,410
+cover is designed for this purpose it's
+
+776
+00:41:34,480 --> 00:41:40,510
+a design pattern dependency injection
+
+777
+00:41:37,410 --> 00:41:43,780
+for example say you have you want to
+
+778
+00:41:40,510 --> 00:41:46,120
+make a scheduler so you add event by
+
+779
+00:41:43,780 --> 00:41:51,250
+pushing something on a priority queue
+
+780
+00:41:46,120 --> 00:41:53,950
+and when you run you get the<font color="#CCCCCC"> thing wait</font>
+
+781
+00:41:51,250 --> 00:41:56,740
+until<font color="#E5E5E5"> its appointed time and then make</font>
+
+782
+00:41:53,950 --> 00:42:00,100
+it<font color="#CCCCCC"> happen the priority queue by the way</font>
+
+783
+00:41:56,740 --> 00:42:02,440
+is an obvious construct on top of the
+
+784
+00:42:00,100 --> 00:42:04,000
+heap cube module I don't know why it was
+
+785
+00:42:02,440 --> 00:42:06,190
+never added it should
+
+786
+00:42:04,000 --> 00:42:07,570
+obviously have been so that's the
+
+787
+00:42:06,190 --> 00:42:10,060
+Knights of structure however you have a
+
+788
+00:42:07,570 --> 00:42:15,190
+<font color="#E5E5E5">problem how do you test this without</font>
+
+789
+00:42:10,060 --> 00:42:16,600
+long delays well the problem is or how
+
+790
+00:42:15,190 --> 00:42:21,780
+do you integrate it with other event
+
+791
+00:42:16,600 --> 00:42:25,300
+groups they think concretely depends on
+
+792
+00:42:21,780 --> 00:42:28,380
+the time sleep and phone calls so you
+
+793
+00:42:25,300 --> 00:42:31,480
+could hatch it with monkey patching
+
+794
+00:42:28,380 --> 00:42:34,000
+which is a subtle hidden communication
+
+795
+00:42:31,480 --> 00:42:37,360
+in via dark alleys or you could use
+
+796
+00:42:34,000 --> 00:42:40,540
+<font color="#E5E5E5">dependency injection do you recognize</font>
+
+797
+00:42:37,360 --> 00:42:43,350
+this from<font color="#E5E5E5"> the point before where I</font>
+
+798
+00:42:40,540 --> 00:42:45,820
+explain why not to monkey patch just use
+
+799
+00:42:43,350 --> 00:42:50,260
+time time and<font color="#CCCCCC"> time sleep at the default</font>
+
+800
+00:42:45,820 --> 00:42:53,350
+values and then save them up just like
+
+801
+00:42:50,260 --> 00:42:58,540
+sked in<font color="#CCCCCC"> Python 2 standard library does</font>
+
+802
+00:42:53,350 --> 00:43:01,210
+and dependency injection is a great way
+
+803
+00:42:58,540 --> 00:43:05,410
+to hook this is for example<font color="#CCCCCC"> a fake time</font>
+
+804
+00:43:01,210 --> 00:43:08,160
+which justice for testing asleep just
+
+805
+00:43:05,410 --> 00:43:12,610
+advances the fake time indicator and
+
+806
+00:43:08,160 --> 00:43:14,530
+this is where<font color="#E5E5E5"> we see</font><font color="#CCCCCC"> the exact same code</font>
+
+807
+00:43:12,610 --> 00:43:18,280
+again but this time we understand why
+
+808
+00:43:14,530 --> 00:43:22,690
+this is<font color="#E5E5E5"> not so you can do dependency</font>
+
+809
+00:43:18,280 --> 00:43:25,090
+injection into the API call if the hooks
+
+810
+00:43:22,690 --> 00:43:29,970
+aren't enough you can use dependency
+
+811
+00:43:25,090 --> 00:43:33,370
+injection and this takes us to you na
+
+812
+00:43:29,970 --> 00:43:36,930
+again this<font color="#CCCCCC"> is i don't know why i forgot</font>
+
+813
+00:43:33,370 --> 00:43:41,020
+the HTTP this case but it's over<font color="#E5E5E5"> there</font>
+
+814
+00:43:36,930 --> 00:43:45,370
+incidentally this URL is where you<font color="#E5E5E5"> can</font>
+
+815
+00:43:41,020 --> 00:43:46,810
+get the early<font color="#E5E5E5"> release of the</font><font color="#CCCCCC"> 3rd</font><font color="#E5E5E5"> edition</font>
+
+816
+00:43:45,370 --> 00:43:49,450
+of<font color="#CCCCCC"> python in a nutshell which</font><font color="#E5E5E5"> i'm</font>
+
+817
+00:43:46,810 --> 00:43:53,580
+writing together with my wife anna and
+
+818
+00:43:49,450 --> 00:43:58,360
+steve holden the inventor of pike on and
+
+819
+00:43:53,580 --> 00:44:02,040
+what you get there is ebooks because of
+
+820
+00:43:58,360 --> 00:44:05,560
+why about once a month you<font color="#E5E5E5"> can you can</font>
+
+821
+00:44:02,040 --> 00:44:08,260
+get updates all the way until<font color="#E5E5E5"> the final</font>
+
+822
+00:44:05,560 --> 00:44:13,540
+release which may be at the beginning of
+
+823
+00:44:08,260 --> 00:44:16,520
+next<font color="#E5E5E5"> year you get all formats of of</font>
+
+824
+00:44:13,540 --> 00:44:21,020
+ebooks from PDF to
+
+825
+00:44:16,520 --> 00:44:23,630
+<font color="#CCCCCC">Moby's to epubs they're all drm free and</font>
+
+826
+00:44:21,020 --> 00:44:25,550
+guaranteed to<font color="#CCCCCC"> stay free of</font><font color="#E5E5E5"> DRM forever</font>
+
+827
+00:44:23,630 --> 00:44:27,740
+and if at checkout you apply the
+
+828
+00:44:25,550 --> 00:44:30,020
+discount code oath d which stands for
+
+829
+00:44:27,740 --> 00:44:34,640
+author discount you'll get<font color="#E5E5E5"> a fifty</font>
+
+830
+00:44:30,020 --> 00:44:37,100
+percent off on and the big deal<font color="#E5E5E5"> is that</font>
+
+831
+00:44:34,640 --> 00:44:40,750
+if you do that you get to send us
+
+832
+00:44:37,100 --> 00:44:44,390
+feedback in time for us<font color="#CCCCCC"> to react as</font>
+
+833
+00:44:40,750 --> 00:44:47,870
+deeply as appropriate if you wait to buy
+
+834
+00:44:44,390 --> 00:44:50,240
+the paper edition and point out some
+
+835
+00:44:47,870 --> 00:44:52,460
+problem there we may do some minor fixes
+
+836
+00:44:50,240 --> 00:44:55,490
+if I fix a type or something in<font color="#CCCCCC"> arata</font>
+
+837
+00:44:52,460 --> 00:44:58,130
+but that's about it because of<font color="#CCCCCC"> the whole</font>
+
+838
+00:44:55,490 --> 00:44:59,900
+structure of<font color="#E5E5E5"> the book is by then set in</font>
+
+839
+00:44:58,130 --> 00:45:02,810
+paper which isn't quite as bad as being
+
+840
+00:44:59,900 --> 00:45:05,660
+set in stone but pretty much<font color="#E5E5E5"> if you send</font>
+
+841
+00:45:02,810 --> 00:45:07,730
+us feedback now and you convince sense
+
+842
+00:45:05,660 --> 00:45:11,630
+that we should change something deeply
+
+843
+00:45:07,730 --> 00:45:15,370
+we have months of time to do so so
+
+844
+00:45:11,630 --> 00:45:17,690
+please get or pirate<font color="#E5E5E5"> I haven't said that</font>
+
+845
+00:45:15,370 --> 00:45:20,710
+copies of this and send me feedback
+
+846
+00:45:17,690 --> 00:45:20,710
+thank you so<font color="#E5E5E5"> much</font>
+
+847
+00:45:25,670 --> 00:45:34,230
+so we have some time for questions thank
+
+848
+00:45:30,060 --> 00:45:36,450
+you um anyone who is designing
+
+849
+00:45:34,230 --> 00:45:38,100
+abstractions I think should hear your
+
+850
+00:45:36,450 --> 00:45:41,610
+talk or see your slides and that would
+
+851
+00:45:38,100 --> 00:45:43,260
+<font color="#CCCCCC">be</font><font color="#E5E5E5"> great</font><font color="#CCCCCC"> I'm using some libraries that</font>
+
+852
+00:45:41,610 --> 00:45:45,600
+other people who've written who haven't
+
+853
+00:45:43,260 --> 00:45:47,610
+<font color="#E5E5E5">seen your slides yet and so sometimes</font>
+
+854
+00:45:45,600 --> 00:45:52,230
+I'm faced with a choice between monkey
+
+855
+00:45:47,610 --> 00:45:54,960
+patching subclassing a concrete class or
+
+856
+00:45:52,230 --> 00:46:01,560
+you know copying or doing something else
+
+857
+00:45:54,960 --> 00:46:05,970
+awful I don't know that's if those are
+
+858
+00:46:01,560 --> 00:46:11,940
+<font color="#CCCCCC">open source libraries remember the</font>
+
+859
+00:46:05,970 --> 00:46:14,940
+nuclear option fork if they're not open
+
+860
+00:46:11,940 --> 00:46:19,320
+source libraries I'm sorry<font color="#E5E5E5"> for you but</font>
+
+861
+00:46:14,940 --> 00:46:27,930
+there's nothing I<font color="#CCCCCC"> can do to help other</font>
+
+862
+00:46:19,320 --> 00:46:30,000
+<font color="#E5E5E5">questions so thank you very much for</font>
+
+863
+00:46:27,930 --> 00:46:32,640
+<font color="#CCCCCC">your talk um I have a question about</font>
+
+864
+00:46:30,000 --> 00:46:34,440
+dependency injection I generally don't
+
+865
+00:46:32,640 --> 00:46:36,690
+like to use dependency injection because
+
+866
+00:46:34,440 --> 00:46:38,340
+i feel like it ends up polluting all the
+
+867
+00:46:36,690 --> 00:46:40,530
+signatures of all my functions and the
+
+868
+00:46:38,340 --> 00:46:42,480
+classes definitions and so on is there
+
+869
+00:46:40,530 --> 00:46:44,420
+some way<font color="#CCCCCC"> around it that's clean and</font>
+
+870
+00:46:42,480 --> 00:46:50,130
+elegant in<font color="#CCCCCC"> python they would</font><font color="#E5E5E5"> recommend</font>
+
+871
+00:46:44,420 --> 00:46:52,620
+so consider how does this pollute the
+
+872
+00:46:50,130 --> 00:46:55,850
+signature compared<font color="#E5E5E5"> with one where you</font>
+
+873
+00:46:52,620 --> 00:46:58,200
+were not able to<font color="#E5E5E5"> customize this a</font>
+
+874
+00:46:55,850 --> 00:47:00,570
+dependency injection must always come
+
+875
+00:46:58,200 --> 00:47:04,340
+with by definition<font color="#E5E5E5"> is part of the</font>
+
+876
+00:47:00,570 --> 00:47:06,660
+pattern with<font color="#E5E5E5"> a default poly you just</font>
+
+877
+00:47:04,340 --> 00:47:08,790
+don't<font color="#E5E5E5"> need to use dependency injection</font>
+
+878
+00:47:06,660 --> 00:47:11,040
+in a certain case you don't which<font color="#CCCCCC"> is</font>
+
+879
+00:47:08,790 --> 00:47:13,440
+probably not the<font color="#E5E5E5"> normal case is in</font>
+
+880
+00:47:11,040 --> 00:47:16,790
+operation in production you just don't
+
+881
+00:47:13,440 --> 00:47:20,850
+pass it<font color="#E5E5E5"> but this is there for your tests</font>
+
+882
+00:47:16,790 --> 00:47:23,760
+and occasional we're needs where you
+
+883
+00:47:20,850 --> 00:47:27,120
+need to hook up in for<font color="#E5E5E5"> example a</font>
+
+884
+00:47:23,760 --> 00:47:28,830
+scheduler to I don't know<font color="#E5E5E5"> QT event loop</font>
+
+885
+00:47:27,120 --> 00:47:33,810
+or something which isn't<font color="#CCCCCC"> something you</font>
+
+886
+00:47:28,830 --> 00:47:36,369
+do every<font color="#E5E5E5"> day the signature could</font>
+
+887
+00:47:33,810 --> 00:47:39,069
+perfectly well and<font color="#E5E5E5"> with the self</font>
+
+888
+00:47:36,369 --> 00:47:40,960
+and in<font color="#CCCCCC"> that case you would not be able</font>
+
+889
+00:47:39,069 --> 00:47:44,769
+<font color="#E5E5E5">to do dependency injection when you need</font>
+
+890
+00:47:40,960 --> 00:47:47,999
+it but<font color="#E5E5E5"> you can still call it without any</font>
+
+891
+00:47:44,769 --> 00:47:47,999
+arguments and all behind
+
+892
+00:47:51,390 --> 00:47:59,579
+I just wanted to<font color="#E5E5E5"> add to that the</font>
+
+893
+00:47:56,609 --> 00:48:02,460
+generally dependency injection can be
+
+894
+00:47:59,579 --> 00:48:05,190
+replaced with registry if you look<font color="#E5E5E5"> at</font>
+
+895
+00:48:02,460 --> 00:48:06,690
+<font color="#CCCCCC">the Martin Fowler site his</font><font color="#E5E5E5"> Java guy java</font>
+
+896
+00:48:05,190 --> 00:48:09,660
+promote the dependency injection with
+
+897
+00:48:06,690 --> 00:48:12,329
+spring he also lists a registry as
+
+898
+00:48:09,660 --> 00:48:14,069
+another way of<font color="#E5E5E5"> doing the same thing in</font>
+
+899
+00:48:12,329 --> 00:48:17,130
+Python community if you<font color="#E5E5E5"> look at the old</font>
+
+900
+00:48:14,069 --> 00:48:19,740
+soap packages you will find that<font color="#E5E5E5"> you can</font>
+
+901
+00:48:17,130 --> 00:48:22,140
+use interface register utility that
+
+902
+00:48:19,740 --> 00:48:24,329
+provides that interface and then provide
+
+903
+00:48:22,140 --> 00:48:27,720
+your own and register instead of that
+
+904
+00:48:24,329 --> 00:48:30,109
+one to go together the familiar
+
+905
+00:48:27,720 --> 00:48:33,119
+registries tend to be global objects
+
+906
+00:48:30,109 --> 00:48:38,190
+when I can avoid<font color="#E5E5E5"> Global's I avoid</font>
+
+907
+00:48:33,119 --> 00:48:40,230
+Global's hi I was wondering what do you
+
+908
+00:48:38,190 --> 00:48:43,890
+do when you don't have the<font color="#CCCCCC"> ability to</font>
+
+909
+00:48:40,230 --> 00:48:45,269
+pass on your dependency dependency
+
+910
+00:48:43,890 --> 00:48:48,119
+injected object for instance you're
+
+911
+00:48:45,269 --> 00:48:50,700
+calling some other library which might
+
+912
+00:48:48,119 --> 00:48:52,500
+have<font color="#E5E5E5"> like you referred to before might</font>
+
+913
+00:48:50,700 --> 00:48:54,750
+have cashed the original time that time
+
+914
+00:48:52,500 --> 00:48:57,900
+and time not sleep here so<font color="#E5E5E5"> essentially</font>
+
+915
+00:48:54,750 --> 00:48:59,700
+if I'm calling an intermediate library
+
+916
+00:48:57,900 --> 00:49:02,519
+which doesn't support dependency
+
+917
+00:48:59,700 --> 00:49:05,880
+injection and the dependency injection
+
+918
+00:49:02,519 --> 00:49:09,299
+is needed<font color="#E5E5E5"> on</font><font color="#CCCCCC"> the lower levels that's</font>
+
+919
+00:49:05,880 --> 00:49:11,670
+when I if the lower levels are
+
+920
+00:49:09,299 --> 00:49:14,190
+supporting dependency injection and an
+
+921
+00:49:11,670 --> 00:49:17,599
+intermediate layer of abstraction is
+
+922
+00:49:14,190 --> 00:49:21,420
+suppressing that will go back to<font color="#E5E5E5"> the</font>
+
+923
+00:49:17,599 --> 00:49:23,640
+advice to<font color="#CCCCCC"> a previous questioner offer a</font>
+
+924
+00:49:21,420 --> 00:49:28,140
+pull request to improve the intermediate
+
+925
+00:49:23,640 --> 00:49:32,910
+library if they don't accept it consider
+
+926
+00:49:28,140 --> 00:49:36,000
+forking it well I think<font color="#E5E5E5"> we're three</font>
+
+927
+00:49:32,910 --> 00:49:38,599
+minutes past the scheduled I think we
+
+928
+00:49:36,000 --> 00:49:38,599
+have<font color="#E5E5E5"> two minutes</font>
+
+929
+00:49:41,440 --> 00:49:50,710
+okay hi just<font color="#E5E5E5"> curious how do you feel</font>
+
+930
+00:49:48,280 --> 00:49:52,780
+about syntactic macros like macro<font color="#CCCCCC"> pi as</font>
+
+931
+00:49:50,710 --> 00:49:57,910
+an abstraction and an<font color="#CCCCCC"> alternative for</font>
+
+932
+00:49:52,780 --> 00:49:59,950
+dependency injection I've I used macros
+
+933
+00:49:57,910 --> 00:50:02,500
+back in the days when I programmed him
+
+934
+00:49:59,950 --> 00:50:07,510
+scheme I thought they were<font color="#E5E5E5"> the cat's</font>
+
+935
+00:50:02,500 --> 00:50:14,079
+pajamas until I started debugging macro
+
+936
+00:50:07,510 --> 00:50:16,240
+using buggy code by now I've been one of
+
+937
+00:50:14,079 --> 00:50:19,150
+those who fought really really hard
+
+938
+00:50:16,240 --> 00:50:22,000
+against a ver having macros in Python<font color="#E5E5E5"> I</font>
+
+939
+00:50:19,150 --> 00:50:25,180
+I like what you see is what you get and
+
+940
+00:50:22,000 --> 00:50:27,300
+the point<font color="#E5E5E5"> of</font><font color="#CCCCCC"> magro macros is making sure</font>
+
+941
+00:50:25,180 --> 00:50:31,810
+that<font color="#CCCCCC"> what you see is not what</font><font color="#E5E5E5"> you get so</font>
+
+942
+00:50:27,300 --> 00:50:35,410
+not particularly friendly<font color="#E5E5E5"> I realize they</font>
+
+943
+00:50:31,810 --> 00:50:38,130
+sound like an awesome<font color="#CCCCCC"> idea until you</font>
+
+944
+00:50:35,410 --> 00:50:42,369
+start trying<font color="#CCCCCC"> to debug with them another</font>
+
+945
+00:50:38,130 --> 00:50:45,010
+concept i got fell out of love with very
+
+946
+00:50:42,369 --> 00:50:47,650
+deeply is code generation hey why do<font color="#CCCCCC"> i</font>
+
+947
+00:50:45,010 --> 00:50:50,230
+have<font color="#CCCCCC"> to</font><font color="#E5E5E5"> code all this sequel I can just</font>
+
+948
+00:50:47,650 --> 00:50:55,230
+strike right or use an object-relational
+
+949
+00:50:50,230 --> 00:50:59,859
+mapping sure now try having a bog and
+
+950
+00:50:55,230 --> 00:51:06,819
+debugging machine-generated sequel kodwa
+
+951
+00:50:59,859 --> 00:51:09,369
+haha sorry i'll write<font color="#CCCCCC"> seagull I think</font>
+
+952
+00:51:06,819 --> 00:51:12,670
+<font color="#E5E5E5">that's all</font><font color="#CCCCCC"> the time we have thank you</font>
+
+953
+00:51:09,369 --> 00:51:16,290
+all very much for your<font color="#CCCCCC"> attention and see</font>
+
+954
+00:51:12,670 --> 00:51:18,350
+you at the next talk
+
+955
+00:51:16,290 --> 00:51:18,350
+you
+

@@ -2,6 +2,7 @@ import re
 import sys
 import os
 
+# If the subtitle has not comma or symbol like .?!
 class findSub():
     result = []
     def set_intput_file_path(self, fileName, fileType):
@@ -15,13 +16,21 @@ class findSub():
     def connectSentence(self, sentenceList):
         result = []
         storeSentence = ""
+        count = 0
+        extractString = [] 
+        extractString.append("<font color=\"#E5E5E5\">")
+        extractString.append("<font color=\"#CCCCCC\">")
+        extractString.append("</font>")
+
         for data in sentenceList:
             if(len(data) == 0):
                 pass
-            elif re.match(r'[^?!.]', data[len(data.strip())-1]):
-                storeSentence += "%s " % data.strip()
             else:
-                storeSentence += data.strip()
+                string = data.strip()
+                string = string.replace(extractString[0], '')
+                string = string.replace(extractString[1], '')
+                string = string.replace(extractString[2], '')
+                storeSentence += "%s " % string
                 result.append(storeSentence)
                 storeSentence = ""
         return self.consist_string(result)
@@ -58,7 +67,7 @@ class findSub():
 if __name__ == '__main__':
     model = findSub()
     #fileName = "Example/Government Surveillance"
-    fileName = "Example/" + str(sys.argv[1])
+    fileName = "Youtube Subtitle/" + str(sys.argv[1])
     fileType = ".srt"
     if os.path.isfile(fileName+fileType):
         model.set_intput_file_path(fileName, fileType)

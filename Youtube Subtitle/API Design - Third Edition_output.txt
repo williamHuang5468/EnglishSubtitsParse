@@ -1,0 +1,1137 @@
+hello welcome to today's webcast API 
+design 3rd edition if you haven't 
+checked it out already we highly 
+encourage you to check out the API craft 
+group on Google it's filled with folks 
+who are doing wonderful things around 
+API design API implementation and the 
+business of AP is this webcast and all 
+the webcasts that we've done in the past 
+and will do in the future are available 
+on YouTube at youtube.com slash Apogee 
+and the slides will be available on 
+SlideShare it's slideshare.net / effigy 
+I'm Brian Malloy you can find me on 
+Twitter as landlessness kevin's fire you 
+can find me on twitter at kevin's water 
+Donna moment talks a lot about design 
+and there's a particular article he uses 
+to talk about the differences between 
+simplicity and features you know we 
+always get pounded with hey we need more 
+features while we need to keep it more 
+simple and he has a quote here that I 
+really like that says the issue isn't 
+about simplicity is about design so as 
+we go through this today we're going to 
+try to give some pointers of how you can 
+take what's normally pretty complex and 
+add that usability to look forward at 
+the end developer as well so if you 
+think about it it's more like like 
+you're building a big cathedral right 
+which has so much complexity but to the 
+people walk you through there to the 
+users it has to be beautiful so that's 
+our goal on the agenda today we're going 
+to do a recap of previous editions of 
+this API design presentation we'd have 
+thought a little bit about epi modeling 
+how that can help you and your team 
+getting some issues around security or 
+some methods for for implementing 
+security new API talk a little bit about 
+message design get into some benefits of 
+hypermedia and talk a little bit about 
+modeling transactions so the design 
+materials that we've covered in the past 
+in the the first two editions of this 
+webcast are also available in an e-book 
+called Web API design like McDonald's 
+has served billions of burgers over 
+design book 
+and it's our intention to base the next 
+edition of the API design book on the on 
+the webcast that we're doing today as 
+Kevin mentioned in the past we focused 
+on some aspects of API design which are 
+we've recapped on this cheat sheet here 
+if you really look at the previous 
+editions of this of this content we 
+really focused on you are I design that 
+was the heart of the matter and we 
+hinted that some things around 
+versioning errors and some client 
+considerations so what we want to do 
+today is is go beyond these topics and 
+talk about things like designing your 
+messages especially the response 
+messages and then take a look at some 
+other things like what's happening with 
+with hypermedia great so how do you 
+start with our API so I talk a lot about 
+about API modeling and a lot of folks 
+have questions around that so before we 
+get too deep into what we can do with 
+some of these responses and then some of 
+these different methodologies we can 
+take on just want to spend a moment 
+talking about what API modeling really 
+is and in the software world with we do 
+modeling all the time this is really 
+using those same concepts except 
+applying it to your API so usually 
+advise folks to to collaborate with all 
+the stakeholders involved that's 
+marketing business analyst software 
+engineers key business people these are 
+folks in your epit most likely develop a 
+language that everyone understands and 
+use that language in building your 
+resources building out the parts of your 
+messages it's it's really key to keeping 
+everyone on the same page and of course 
+document how you do that is up to you 
+write a lot of folks use UML some people 
+have their own version of you know 
+modeling language that they use that's 
+that's fine whatever you're comfortable 
+with and then continue to iterate the 
+key point here is don't go off on your 
+own right is as soon as you say you know 
+what I'm going to solve this for the 
+company all by myself you'll put in 
+hours and hours of work only realize 
+that hey marketing doesn't really use 
+this term that way or this really isn't 
+the direction 
+want to go with our resources in our API 
+so deftly include that API team they're 
+really important part so security I know 
+through some of our FG webcast you're 
+talking about security before we're 
+going to touch on it again because it's 
+a pretty important thing the Twitter API 
+uses in for their streaming API anyway 
+they have the option of using HTTP basic 
+authentication which is essentially a 
+username and password base64 encoded 
+that's that's one way to go for sure 
+amazon decided to roll their own 
+authorization their own authentication 
+so they built on top of HTTP 
+authorization and they have this AWS 
+authorization type Google is using OAuth 
+specifically they're using OAuth 2 point 
+is to go the google route use OAuth 2 
+HTTP basic is only so secure lots of 
+folks are moving away from it and 
+willing your own is a huge hassle you 
+don't have typically we don't have the 
+resources the security resources to 
+verify that our design is is perfect in 
+is it's rock solid Oh off has been 
+through the paces quite a bit and there 
+are even more secure options coming in 
+the future for access tokens all right 
+so when we approach message design 
+that's one of the key topics that we 
+want to cover today and we're going to 
+do that started out pretty simple here 
+first of all regardless of how you 
+design the messages you have to answer 
+what kind of format you want it to be in 
+it's our strong suggestion that you 
+support both JSON and XML there are 
+folks who have libraries that do great 
+stuff with accent mother be loved and 
+there are folks who can't stand XML have 
+great libraries that do stuff with JSON 
+that they love unless you have really 
+strong business requirements or 
+objectives that will limit you to XML or 
+JSON you ought to just support both and 
+if you're not sure about which one to 
+make the default pic JSON if you know 
+should be XML go ahead and make it XML 
+but you're not sure our suggestion is to 
+make your default JSON now over here is 
+talk about how you model in your in your 
+response message both a single item like 
+a single resource and also will 
+clutching of resources and we're going 
+to do that by taking a look at how 
+three big public api's do it what you 
+see here is a response from Twitter 
+Foursquare and Instagram for each of the 
+primary objects from those systems so 
+for example in Twitter you're looking at 
+a tweet in Foursquare you're looking at 
+the check-in and Instagram you're 
+looking at a media or an image and what 
+we do here is what we're looking at is 
+the top-level view of each of these so 
+you see twitter is pretty verbose at the 
+top level four square has included meta 
+notifications and response and instagram 
+has included meta and data now the next 
+side we're going to do a double click 
+down on both Foursquare Instagram to see 
+what they reveal beneath that so what 
+we've done is a single single click down 
+on Instagram so we're just seeing what's 
+inside there meta attribute and then the 
+force where we had just click twice once 
+we clicked on response and then that's a 
+check in and then we opened up check in 
+so what you see here is that real real 
+core object is represented at the heart 
+of each of these in the case of some 
+objects there are more verbose than 
+others it's question is what is written 
+for us to learn from this in terms of 
+how we go about designing our primary 
+resource and this is what we think you 
+ought to do include a property for meta 
+where you can put in meta information 
+about the object and then include the 
+actual name of the object type itself as 
+the primary where area where you hold 
+the data to contrast that I'm just gonna 
+go back one slide quickly here if you 
+contrast that foursquare put their 
+information under response and then 
+under checking so I like the fact they 
+use check-in but I don't like the fact 
+that they buried under response because 
+you've already separated the response 
+from the rest of the metadata by having 
+a meditech there and Instagram they just 
+call it data which is kind of really 
+annoying I think both to me and Kevin 
+yeah it's just kind of a throwaway word 
+so we like the idea having the dog there 
+and I think it's really clever what 
+Foursquare has done with notifications 
+because you can imagine every response 
+that you get back from the API there 
+might be some global state or global 
+information that's changed that you 
+could also you know take advantage of 
+kind of piggyback in that information on 
+the API response so i can surely clara 
+that they've included notifications in 
+in the response so that you know how 
+that translates is foremost app 
+developers who are using this 
+yeah they go okay both the notifications 
+coming back every time with every 
+response i can go ahead and include that 
+and kind of that information so i can 
+throw stuff you know at the top of the 
+screen or somewhere interesting in my 
+app so that's our guidance on doing the 
+resource kind of take the best of both 
+worlds from Foursquare and Instagram and 
+use a meta meta data area name your 
+primary resource and then include 
+notifications or other global 
+information if that makes sense so 
+that's the single that's a single 
+resource now how do we represent 
+collections of resources this is the 
+case we have more than one so we're 
+gonna take a look at this again now what 
+you'll see here is a Twitter Foursquare 
+and Instagram they all do pretty much 
+the same thing which is throwing the 
+objects into an array of multiple 
+objects and with one minor exception 
+this is an important point Twitter 
+Foursquare and Instagram all include the 
+same exact information in the collection 
+that they do in this single so that if 
+you're thinking about how you make this 
+decision for your API as Kevin and I 
+were talking about it I think both of 
+our inclination was well what you really 
+want to do is provide a limited subset 
+of the data in the collection and then 
+when you want to drill down it then you 
+provide the poor bigger verbose thing 
+with the idea that you're going to 
+preserve on bandwidth but I at least 
+meeting I know if you won't go to I 
+really warm up to the idea of including 
+the same exact information in both of 
+the collection and in the single in the 
+single response just because there's a 
+sense of predictability there and it 
+seems more deterministic and you count 
+on it being there the one exception that 
+i mentioned is actually Foursquare 
+includes one extra property called 
+source the standalone resource they 
+don't include on the collection I'm not 
+really sure what the what the point of 
+that one was so you can pair other stuff 
+together my feeling is do the same thing 
+make sure you include that metadata 
+include your notifications or other 
+global information that impact the app 
+and then you know put in the nice 
+portable version of the primary resource 
+in this case it would be dogs for our 
+modeling include all that same 
+information that was that would be 
+included in a single resource and you're 
+off and running now if you have a 
+ridiculous model where the single 
+resource is super huge and you are 
+worried about bandwidth then you can 
+kind of trim down the one that goes in 
+the 
+and although Kevin doesn't always agree 
+with it you can use partial selection to 
+help you narrow that down as well and 
+you can see the previous versions of 
+this talk professional selections so to 
+do search results this is an important 
+point this is actually a quote from the 
+Facebook API documentation selecting 
+results is not the same as searching and 
+sometimes it's easy to over-exaggerate 
+why these are separate activities but 
+essentially the idea of searching is you 
+can create a just some sort of natural 
+language string in the query box and it 
+can search across resource types so 
+instead of limiting to say select like 
+hey giving all the photos you're saying 
+generally give me anything about fubar 
+and you get the results across all the 
+resource types so you're let's take a 
+look at how three api's approach this 
+this is being their search api google 
+custom search and read it for searching 
+their listings and without taking a lot 
+of time to drill into the details of 
+what is coming back in the response 
+design here just keep in mind that there 
+is metadata about the results there's 
+another data about the query and then 
+there's the actual data itself that is 
+being we is being returned from the 
+search so it pretty overwhelming you'd 
+be would start digging into this to 
+figure out which stuff should you 
+include in the search response in which 
+stuff should you should not so here's 
+our suggestion for the most part follow 
+Google custom search they do really good 
+stuff on this well we did those we took 
+the key pieces of metadata that they 
+included we just they put it under a 
+different couple of nested objects we 
+just consolidated all under one metadata 
+property so here we're saying include 
+the limit and offset for the pagination 
+include the total results that are 
+available because that's how do you want 
+to do pagination in a family way and 
+important to include the the query 
+string that that was sent to make the 
+crew happen and then if you want to show 
+off how fast your search engine is you 
+go ahead and conclude the search time 
+then of course in the results property 
+would be the actual array of all the 
+results that came back from the search 
+so best that on the next one now we're 
+switching gears here how do you 
+represent links inside the response sure 
+cell links links are queues inside of 
+your message that point so different 
+right so if we look at the netflix API 
+they're using something called web 
+linking there's actually a spec around 
+this an RFC you can see an HR up there 
+that's pointing to a URL where you can 
+find what we're looking for you see of a 
+rel value there in that link and they're 
+special meaning to that real value if 
+you look at netflix if documentation 
+will say that we don't person about 
+actor is an actor in a film and a title 
+associated associated with that Elijah 
+would visit the github API that we're 
+going for more of a Netflix API when 
+they were in beta but now there they've 
+changed it up a little bit under their 
+organization is easy or so if you look 
+at a repository of the 17 organization 
+you find the organization ser el you 
+would go to that URL to get to that 
+particular resource our recommendation 
+is to follow Netflix and the web looking 
+spec and a big part of that is because 
+there is a specification around that and 
+you can point your developers to that to 
+understand how to interact with your API 
+which is usually poor before it before 
+we cloth links and you might even set it 
+in went by pretty quickly how how do you 
+help people understand if they should 
+put links in their response or not it's 
+just you always do it you never do it 
+certain times you do it what's the 
+listed that he restricts for me to use 
+links yeah so I mean links are really 
+helpful for developers right so if 
+you're looking at a response message and 
+you see that there's a relationship 
+there between say a film and an actor 
+you can look at that message and 
+continue on your exploration of that API 
+right I find myself going back to the 
+documentation less and less and just 
+able to focus on I'll exploring that epi 
+so that's one huge benefit yeah and i 
+think the contrast is the alternative is 
+you what you hear the word templating 
+thrown around a lot like instead of 
+giving back the link you might just give 
+back the ID and a developer has to know 
+that this idea gets plugged into the 
+template in the right spot so in this 
+case coming back here's a catalog of 
+people so if i just saw the people i 
+being that i would grab that ID and say 
+hey i'm going to do a get on / people 
+and drop the ID and 
+at the end rest or that's sort of trade 
+off right correct and that takes some 
+context switching if you're doing 
+explore exploratory work and takes you 
+know some different coding structures 
+and then to make sure that you do the 
+ornate temples properly but yeah any 
+other kind of thing is correlated this 
+is all I need going out of band if you 
+don't include the link in the response 
+and the developers have to go a lot of 
+band you can go recent documentation or 
+something outside of the API to figure 
+out what to do next so right we all 
+other context switching as a big cost 
+and US bank right happens cool beans 
+okay so we'll move it how to represent 
+actions and as we do this Brian kept 
+saying like is there a better definition 
+for this or what what our actions right 
+and actions are typically state 
+transitions coming off of that 
+particular resource that you're looking 
+at so we can get some of the examples 
+here give up documents this so again we 
+see we're going away from the message 
+and we're looking at documentation to 
+figure out how to do this in this case 
+we're doing an update to a repository on 
+github when the documents you know the 
+HTTP method that you need to use your I 
+template you need to use and on the 
+input fields I couldn't find a good 
+example of this out in the wild in 
+public API is but if you look at the 
+four based API example it is taking 
+exactly what gift up is doing and 
+applying that in line formed based 
+meeting like HTML form so if you leave 
+with HTML you know reform tag there's a 
+method there's a URL in there where you 
+can you know where you go to dad execute 
+that method and their list of fields so 
+we're recommending the form based 
+approach seeing this more and more in 
+the wild not not too many folks but i 
+think it's it's something we need to 
+keep an eye on moving towards that form 
+based approach allows a lot of things 
+for instance hidden fields or a big 
+thing that we use in HTML forms today we 
+throw those into your API right that 
+means you have David coming back and 
+forth keeping that stateless nature to 
+your API and still getting what you need 
+on the server without affecting your 
+clients at all so to make this come to 
+life for me when this comes when that 
+when they actually comes back in my HTTP 
+response I would my code is going to go 
+ahead and parse this and then 
+whether I'm creating an HTML form or iOS 
+form and Android form I'm an introspect 
+this all the properties here and build 
+my form based off of that exactly and 
+then at the end of post or that started 
+the method that is telling me patch in 
+this case is going to go back to this 
+href so if I were building HTML form 
+that's obvious it's going to go there 
+and I'm doing iOS it's going to be an 
+API call with that data correct cool got 
+it how do we represent metadata so we 
+have a couple examples here flickr 
+include some metadata in line with their 
+items in this case it's a photo there's 
+not a whole lot of metadata there but 
+you know some exists Dropbox they 
+decided to have an entire metadata 
+resource to access so you know if you go 
+look at a file itself or a folder in 
+dropbox there's a lot of data associated 
+with that if it's the path if it's you 
+know how many bikes are there all sorts 
+of things so you know we like having 
+metadata in the response itself and 
+we'll move usually favor that but there 
+are cases to consider you know having 
+that meta resource and again that's when 
+your your metadata become so significant 
+that it actually should be modeled on 
+your API so I think this makes a lot of 
+sense for dropbox that it makes a lot of 
+sense for for flipping they should have 
+talked it all over but you know some 
+kind of meta hitting interesting but 
+it's good to have that in time so you 
+know as we're talking everything we've 
+been talking about for the vestry 
+ministers around designing the message 
+of response message the message design a 
+lot of what hypermedia thinking does is 
+address the message design so what can 
+we learn from other media types so Adam 
+Adam public one of the wheelie one of 
+the first media types out there to be 
+used for api's its attention was for 
+feeds and editing you know articles in 
+the list and things like that but one 
+important thing that they showed us is 
+to build a protocol around link 
+relations if you see if that link rel 
+equals at it should be in bold they're 
+there they're using that standard link 
+role 
+type to communicate to the developer or 
+the client that's consuming this this 
+API where to go to edit this particular 
+resource I wouldn't see this this too 
+much but XHTML this next lady dies 
+rights for urs that's not what's going 
+on here so the cool thing about XHTML is 
+that it's a valid XML which means that 
+partial errs like it quite a bit have a 
+difficult to build HTML parser because 
+they kind of allow quite a bit going on 
+in there whereas xml is pretty well 
+formed so this is from psycho our status 
+they're implementing an alp 
+specification that you can find out 
+there on the internet and helps has 
+certain meaning around classes such as 
+avatars users userlist search you can 
+see that in XHTML we're including that 
+in there and you really get that that 
+semantic connection so some people might 
+say it's a weird use of XHTML but you 
+know it exists it's out there and 
+there's a there's a gentleman on the API 
+craft who's really been pretty active 
+about pushing a system index HTML as a 
+standard right it's interesting stuff 
+cool okay now we have a few Jason based 
+hypermedia types this one's how how is 
+is really student towards augmenting 
+your existing API so if you have a Jason 
+message out there adding this underscore 
+links to your existing Jason message 
+which will hopefully not collide with 
+any with an existing underscore links 
+property you have and your j subject can 
+start adding some of those hypermedia 
+elements here we see the link relation 
+becomes like a key in this key value 
+pair inside the links object so we have 
+a link to self next and previous 
+iterating through orders in the 
+collection so sometimes there are 
+options for augmenting your existing API 
+without breaking clients 
+collection plus jason is a media type 
+out there that is trying to model adam 
+pub and what they were doing except in 
+Jason so it's you know a little more 
+palatable to to some folks it also 
+allows for extensions and in it you can 
+see that there are queries that are 
+modeled here but there's also write 
+templates that you can use so it sitting 
+back to those actions and allowing 
+actually editing the different resources 
+that you have so and then they're sorry 
+and siren has a mixture of all of these 
+so it's it's really taking a the goal 
+anyways to take a lot of the the best of 
+what we know about hypermedia and make a 
+media type that is suitable api's so 
+here we see actions just as we saw when 
+we were talking about using form-based 
+api's and entities which imply 
+relationship there they are also using 
+that lick relation that we talked about 
+being in the web linking spec and also 
+makes for navigational purposes of you 
+know next previous things like that cool 
+and who's the author of summer I guess I 
+should display that I am I the author 
+sorry click siren school soon all right 
+how do we accept binary data all right 
+you know this question comes up a lot 
+maybe I craft group because there's no 
+one way to do it because there's no one 
+way to do it right and is it seems that 
+folks only need to do this sometimes but 
+when they need to do it it's very 
+important that they give ton soon so one 
+method is to use multi-part form data 
+this is exactly what your browser does 
+when you're filling out a form and you 
+need to submit a file this is kind of 
+that looks like there's some 
+content-disposition that you put in 
+there too to name the field with a value 
+and you have the option of assigning 
+different content types to each bit they 
+sent so the second part there is is a 
+JPEG image that's being sent along with 
+that so you can do the same thing in 
+your API 
+another option is to just in line some 
+base64 encoded version of it so the 
+downside to that is when you base 64 
+encoded it gets a little bit bigger but 
+at least you can put it in a textual 
+representation right so you can have 
+your client do that base64 encoding and 
+then just dump this string in there and 
+submit it up to the server that will 
+decode it and then the last option is a 
+two-step process it's you know creating 
+a new resource to hold that metadata 
+that you have and then submitting a file 
+that attaches to it and I always say no 
+opt for multi-part form data first there 
+are a lot of tools out there that will 
+help you do this as a client and that's 
+pretty significant the big thing that 
+was no matter which one you choose and I 
+think multi-part for me is the way to go 
+just be consistent don't have three or 
+four different ways in your API to 
+upload a file it's just not worth the 
+headache caching caching is another one 
+of those topics that affect i'm really 
+not talking about everything do with 
+caching is what are the design 
+implications are not caching is that 
+right right cool so first we'll go 
+through different ways to do that right 
+so the three main ways to to do caching 
+one is exploration so you use a cache 
+control headers say this is private 
+which means that only the clients can 
+cash this no proxy in the middle should 
+be cashing this in a max age in seconds 
+so this is 30 days I think this is a 
+direct message to the client saying hold 
+on to this and it should be good for 
+this length of time right another method 
+is etags etags are sometimes calculated 
+is a checksum of a file or different 
+data elements that you have you can use 
+your some databases do a good like 
+revision number on each document that 
+they have or you can manage your own 
+keys for etags much like Twitter 
+they have like their own key generator 
+service but yeah so when you pull down a 
+resource representation will have any 
+tag associated with it and if you want 
+to make sure that you have the latest 
+you can do a gap at that same URL and 
+include the header if not match and 
+include any tag that you already that 
+you received if there are no tanks with 
+that then you get the latest response 
+third option is using the last modified 
+header as a hint how fresh the the 
+representation is if you get that's 
+modified back with your representation 
+the next time you go to get it you can 
+put a header in there that says if 
+modified since with that same date and 
+you only get it back if it's newer so 
+it's a network call but you don't get 
+the full body of the message back and 
+you know while there's no one particular 
+caching method to do at all times it 
+really depends on use cases a common 
+pitfall that we get into is that we 
+don't think about the client we think 
+about cashing in terms of saving 
+resources and saving bandwidth on the 
+server but we don't think about it on 
+the client right a lot of times that 
+client doesn't need to make another 
+network call and you know that saving 
+that time is very valuable for them so 
+just keep that away do we need a 
+JavaScript API so often folks ask we see 
+this in a number of ways where the API 
+and maybe the domain of the system 
+itself has some a lot of complexity 
+around it so maybe you do an API for say 
+payment processing and you can set 
+payments from credit cards checking 
+accounts paypal google wallet and so on 
+your api in order for a developer to 
+learn how to use the API and then 
+Express how to use it to through the 
+user interface to the end user it can be 
+very difficult so oftentimes there's 
+pressure on the API to maybe want to 
+start giving hints about UI elements or 
+how to actually use this and that's 
+always a mistake you want to clean 
+separation between the the API and the 
+consumer however some people think of 
+this as an SDK some people call it an 
+API the question is you're so there's so 
+much understanding of JavaScript I vsat 
+a rudimentary level that this kind of 
+presents itself as an anomalous thing 
+like should hey we build 
+kpi we have little bit of resources 
+should we use those guys to build the 
+next version of the API or should we do 
+with JavaScript API I'm feeling more and 
+more that if you're doing an API and you 
+want a really good adoption and you want 
+to have an easier job of explaining how 
+to use it to folks you should go ahead 
+and also create a JavaScript library or 
+JavaScript SDK or API however you want 
+to call it and if you want to see an 
+example of spokes who are doing this 
+really really well take a look at 
+LinkedIn the JavaScript API does a great 
+job of handling all of the 
+authentication stuff so the developers 
+don't have to get down on the weeds on 
+that and the the way that the JavaScript 
+library maps on sit the pants of the 
+core API is really transparent and it 
+fits really nicely so I do recommend if 
+this is a question you were thinking 
+about go ahead and tackle the JavaScript 
+API now should you do the iOS API an 
+Android API or SDK yeah maybe but that 
+you know take a look at your priorities 
+but definitely if you had to do one I 
+would do javascript and take a look at 
+LinkedIn cool what about posting data so 
+talk a little bit about actions and you 
+know submitting changes to state of our 
+representations this is more about let's 
+talk about how new serialize that data 
+how and what what form does it take when 
+we take that request and send it to the 
+server one options to use application 
+xww form URL encoded really long name 
+but is it's really simple it looks just 
+like a query string so some folks said 
+XML as the request body can get kind of 
+verbose sometimes as XML tends to do but 
+that's an option and then there's Jason 
+right so 
+we favor the for me well and coated 
+version it's it's pretty simple it's 
+easy there are certainly many different 
+tools out there that folks can use for 
+that is it wrong to use the alternatives 
+no but definitely favor the simplicity 
+all right how do we handle transactions 
+of the Caddy idea is we're not going to 
+do a deep dive on transactions we're 
+just going to gets at it and very likely 
+will do another web cast just on how to 
+handle transactions with an API right 
+let's take a look at it me safely he's 
+just so handsome in one way you could do 
+this you can model the transaction 
+directly in your API right for for this 
+example we're going to use the concept 
+of a shopping cart you can have in our 
+API we have some user they create a 
+shopping cart with post they get a 201 
+created back then you know from the 
+product catalog they add you know some 
+mittens to their their cart let me check 
+out right I mean it's it's just a matter 
+of creating that that transaction adding 
+items to it and then doing a commit 
+right certainly problems can happen you 
+can get errors back and you know you'll 
+have to deal with that yeah we'll talk 
+we'll talk more on that cool so in 
+summary we talked about the previous 
+editions for URI design we've got a new 
+book out there and there's a cheat sheet 
+at the top of the slide deck I can just 
+run you through really quickly what our 
+suggestions are for designing URIs and a 
+little bit on errors and revisions it's 
+kevin said start with api modeling it's 
+a good idea to create a common language 
+and a comment understanding among your 
+API team use OAuth the latest version 
+other for security it's almost always 
+the right one to use and keep in mind 
+when you're designing your response 
+messages that the message design is for 
+developers to parse into those resources 
+into some objects in their language and 
+it's a good idea to be terse and brief 
+and let them get to the data as soon as 
+possible while also including metadata 
+and notifications and things like that 
+we give you a quick a quick overview of 
+what's happening in the hypermedia area 
+with the different specs that are out 
+there 
+and as you dig into those you'll see 
+there's a lot to learn in terms of how 
+you should think about links and 
+designing your messages and finally we 
+talked touched briefly on transactions 
+and will do more about that later at 
+this what we'd like to go over to 
+questions and I know there are some 
+piling up in the Q&A area here but feel 
+free to start adding some more the first 
+this is from Burke Audrey thanks for 
+writing the question the question is 
+they making that they may get to this 
+but we have an exception in quotes which 
+is very verbal like we have a payment 
+engine that we want to expose and we 
+can't decide on the best way to model 
+that we don't need to store the results 
+no post or put and get seem strange any 
+thoughts so yeah we encountered this 
+pretty often if you are doing things in 
+your API and the words that express that 
+are things like calculate or exchange or 
+convert oftentimes those are on those 
+are non resource like API on its and we 
+suggest and you can read this in the 
+e-book we suggest to be very careful to 
+use verbs for those types of things and 
+documents and kind of demarcate that the 
+most part of this API as a bunch of 
+resources in it but there are 
+occasionally things you need to do which 
+are much more like algorithms and no 
+David artifacts created from it so treat 
+them separately and yeah I like the idea 
+of using verbs to do that just as you 
+out mine and that's a good general rule 
+for design right nothing is ever perfect 
+when you make it exception to the rule 
+make sure it's documented right cool 
+Michael Stewart asks how the links work 
+with the JSON response this is probably 
+asked at the point where we'd only shown 
+XML should we go back and show is that 
+Dana sirens going to example that yeah 
+right so there's there's a week at the 
+bottom there that is just a link to self 
+which is really common also the entities 
+can be seen like links here to where I'm 
+an owner resource that we're linking to 
+a dog so sorry includes all this in a 
+renter array all the the rel values are 
+in it right because we have more than 
+one some other formats don't do that but 
+example here is how how does the more of 
+a key value approach 
+can only have one rail value for the 
+resource cool thanks again Michael for 
+asking that question next one is from 
+Jason hunt maybe I missed this why would 
+you put this form based API on top of 
+rest doesn't rest already have a URL and 
+action yeah so that form based API is 
+just communicating which action you 
+should use to do that and which you are 
+I you should use to make that call and 
+again the alternatives put all that in 
+documentation but you lose a little bit 
+of evolvability on that right if your 
+your I start changing if maybe you want 
+to switch from a patch to a-put for 
+certain architectural reasons you'd have 
+to update documentation attention to 
+break your clients putting it right into 
+the message itself allows for that 
+evolution fantastic and really just 
+stresses this is you're talking about 
+doing one of the actions it's about that 
+you're not the current requests and 
+responses but we are you going to do for 
+the next request and response exactly 
+but I'm moving for cool alright the next 
+question is from lon Miller lon asks so 
+for the meta slide should each URL offer 
+a meta service foo / service / meta food 
+/ think / minute and so on so we hinted 
+at it how would you know that we should 
+think about having a dedicated meta 
+resource so how would you actually do it 
+so I don't think I'd have a meta service 
+but that doesn't feel right to me and 
+I'd make a meadow resource but only for 
+those resources that require it again we 
+really favor putting that in the message 
+encapsulated some kind of meta object 
+and inside the message one all possible 
+all right let's question from andreas 
+Tosh he asks XML vs. Jason isn't JSON 
+limited / less maintainable for example 
+you want to add attributes later or for 
+example if you want to add the currency 
+to a price later on see slides 1 1 0 2 2 
+won't click on it not because we can't 
+share the screen sure you know this is 
+almost like the which is your favorite 
+text editor battle there are pros and 
+cons all over the place with Jason with 
+some of these hypermedia formats I've 
+shown they are extensible if you look at 
+the speck you can add 
+I think there's a new link relation type 
+called profile I don't know if it is a 
+full-blown standard yet it might be an 
+internet draft but the profile link 
+relation will be a way to mix in certain 
+functionality into an existing JSON API 
+right now it work with XML time cool my 
+taking that is XML definitely has a much 
+stronger set of tooling and wisdom and 
+knowledge that's out there in the world 
+especially in the fortune 500 co 2000 
+enterprises JSON is the is the 
+representation for javascript in 
+javascript is like the second everybody 
+second language in the world of 
+programming it's not the first language 
+so those are I think you we can we 
+suggest supporting both make JSON your 
+default but definitely there are cases 
+where XML is gonna make more sense lon 
+dollar SYE tags is the e-tag value of 
+crc or a transaction receipt number of 
+both easy tag only useful for a 
+deterministic service you know the e-tag 
+can be calculated anyone you want 
+there's no general rule in HTTP spec 
+about how you calculate a new tag so 
+again I mean use whatever makes sense 
+cool Jason Kemp asks how our patch 
+requests handled on the back end are you 
+parsing it into a dynamic sequel string 
+or what are the best practices around 
+that we're currently using an ORM and to 
+DMV framework if that's not net well I 
+mean there are a bunch of pieces to this 
+question here first of all if you're 
+putting your you putting your API 
+directly over your data layer there's 
+sherman there's a lot you have to think 
+about their would you generate a dynamic 
+sequel string I don't know that doesn't 
+feel too comfortable for me I probably 
+modeling some kind of API model between 
+between that debt service and the 
+back-end data stuff good cool Mike Rossi 
+asks what is your opinion of odata Kevin 
+what's your opinion of whole data with 
+my opinion about it you know I think the 
+OData guys are headed 
+the direction with where they're going 
+they're the latest version at least last 
+I heard I'm not entirely close to it I 
+think they've had and they were based on 
+Adam pub at some point maybe they have 
+other formats that they're doing now 
+again this is kind of how do we model 
+sequel over our API right they really 
+get into how you filter results never 
+comes like that you know what there are 
+cases that I am comfortable with that 
+good usually I'm not okay what's up cool 
+question from the vector V in case we 
+would like to call it the eyes from 
+static pages for example HTML and not 
+from PHP or other programs i imagine the 
+key thing is that the build other 
+program front of the server is there any 
+way to embed the credentials on your 
+respective of OAuth basic etcetera and 
+that make them fall prey to other eyes 
+we deal with this all the time as we're 
+building apps yeah so just with static 
+pages how do you protect that you don't 
+you don't yeah and that's where using we 
+of course apogee we have a product a 
+free product available on FG com that 
+will allow you to create a proxy and you 
+can store some that information in the 
+proxy keep it off of the dynamic pages 
+and do some do some stuff back that way 
+but it's pretty tough overall yeah okay 
+next question is from bish how can a 
+client requests templates for creating 
+new resources and I think that's what 
+you talked about the action right 
+actually see that in siren and in the 
+collection plus Jason they have right 
+templates easy enough yeah so user use 
+dancers use a media type that supports 
+it alright um anis fuck swallow asks how 
+to facilitate the XML transformation of 
+JSON response there are a bunch of tools 
+that can help you do that there's open 
+source packages at the G has some stuff 
+other folks have some stuff to transform 
+XML into JSON sometimes it's really 
+straightforward in fact the XML the JSON 
+is actually often simpler than the other 
+way around but 
+which was out there don't easier to find 
+out google you can start with a pudgy if 
+you want okay Christopher asks to 
+provide minimal security / tracking is 
+an access token enough I have a bunch of 
+JavaScript widgets which clients will 
+embed into their user interfaces and i'm 
+planning on proving each client 
+providing i guess each client with the 
+token the data is not private a lot 
+seems like overkill oooff might be an 
+overkill if you're not using user data 
+right if your service manages user data 
+and you have clients that need to access 
+that user data Olaf is perfect otherwise 
+you know one of the other methods might 
+better suit your needs and that's fire 
+that could be ssl-certificates even if 
+client us is all certificates and basic 
+off pencil you need right uh David 
+Campbell asks or I guess it's kind of 
+influenced can we buy the better word 
+for notifications and response I think 
+we absolutely could that has way too 
+many syllables in it but that's that's 
+the one that we liked it seemed to have 
+the most relevance for what was going on 
+the real the real point for putting 
+notifications in there as our suggestion 
+was just to say you can have a section 
+for medic made us metadata about the 
+response you should have the response 
+itself but then keep in mind that there 
+are things that are a better happening 
+around the app more broadly or more 
+globally that could be interesting to 
+store as a separate thing to do so for 
+your app it might be notifications for 
+someone else's app it might be alerts or 
+info or warnings whatever it is that 
+it's just sorta like the idea the model 
+the pattern that we like to be idiot 
+piggybacking more generic stuff on top 
+of each response because the app could 
+just render it when it gets new data 
+back great great point though thanks for 
+that question alright next one Matthew 
+reinbold what are some rules of thumb an 
+authorization versus authentication 
+meaning making sure the client has 
+permission to make requests versus the 
+user having permissions to modify their 
+data Oh auth to for both yeah so off 
+tune for both so it ought to whether or 
+not the client has permission is 
+something that you're going to have to 
+manage 
+your client registration process and 
+your client policies and since expose 
+about versus a user okay authorization 
+authentication don't get it was that 
+avatar and how many times have you 
+really owe us back in the past month god 
+I think I'm up to seven now one document 
+all right our last question for today 
+from Peter how many items would you 
+limit a JSON response to in the case 
+that each object has 10,000 cute I'm 
+sorry that HIV has 10 key value pairs I 
+use something like sending 300 merchants 
+location to the client on one response 
+to too big / network heavy in the 
+previous version of this we talked about 
+just a rule of thumb around 10 we have 
+you know we have 10 fingers we have a 
+mostly decimal based calming system all 
+over the world so I think using a using 
+data is really really big make it 
+smaller than 10 de this really really 
+small make it bigger than 10 but I think 
+started with 10 is a good rule of thumb 
+and test this out to right I mean have 
+clients out there that you're testing 
+with and if you know you're gonna have a 
+bunch of mobile clients see how this 
+feels on a mobile client if you know 
+you're going to have a bunch of you know 
+back-end systems that our clients test 
+it from there because that could change 
+your payload folks thanks a bunch for 
+tuning in today we appreciate your 
+questions and your engagement as we 
+mentioned before of this webcast and all 
+our webcasts are available on YouTube at 
+youtube.com slash Apogee please join us 
+on the google group called api craft if 
+you just do a search for api crafts will 
+find us fantastic community folks all 
+moving the craft ivp eyes forward and 
+feel free to contact us directly those 
+are our emails and our twitter accounts 
+and of course there's the apogee twitter 
+account as well thanks for tuning in and 
+we'll catch you next time thanks 
+everybody bye 
